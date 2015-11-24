@@ -1,0 +1,61 @@
+{
+  "name": "semantic-ui-react",
+  "version": "0.0.1",
+  "description": "Semantic UI components built with React",
+  "main": "src/index.js",
+  "scripts": {
+    "compile": "babel -d lib/ src/",
+    "prepublish": "npm run compile",
+    "demo": "webpack-dev-server --config webpack.config.dev.js --hot",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/shinzui/semantic-ui-react.git"
+  },
+  "keywords": [
+    "semantic-ui",
+    "react"
+  ],
+  "author": "Nadeem Bitar <nadeem@productatelier.com> (https://productatelier.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shinzui/semantic-ui-react/issues"
+  },
+  "homepage": "https://github.com/shinzui/semantic-ui-react#readme",
+  "peerDependencies": {
+    "classnames": "^2.2.0",
+    "react": "^0.14.3",
+    "react-dom": "^0.14.3",
+    "react-immutable-proptypes": "^1.5.0",
+    "semantic-ui-css": "^2.1.6"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.2.0",
+    "babel-eslint": "^4.1.5",
+    "babel-loader": "^6.2.0",
+    "babel-plugin-transform-runtime": "^6.1.18",
+    "babel-preset-es2015": "^6.1.18",
+    "babel-preset-react": "^6.1.18",
+    "babel-preset-stage-0": "^6.1.18",
+    "classnames": "^2.2.0",
+    "css-loader": "^0.23.0",
+    "eslint": "^1.10.1",
+    "eslint-loader": "^1.1.1",
+    "eslint-plugin-react": "^3.10.0",
+    "extract-text-webpack-plugin": "^0.9.1",
+    "file-loader": "^0.8.4",
+    "html-webpack-plugin": "^1.7.0",
+    "immutable": "^3.7.5",
+    "install": "^0.3.0",
+    "npm": "^3.4.1",
+    "react": "^0.14.3",
+    "react-dom": "^0.14.3",
+    "react-immutable-proptypes": "^1.5.0",
+    "semantic-ui-css": "^2.1.6",
+    "style-loader": "^0.13.0",
+    "url-loader": "^0.5.6",
+    "webpack": "^1.12.8",
+    "webpack-dev-server": "^1.12.1"
+  }
+}
