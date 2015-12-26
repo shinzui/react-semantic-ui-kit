@@ -3,6 +3,7 @@ import React, { Component, PropTypes } from 'react'
 import ImmutablePropTypes from 'react-immutable-proptypes'
 
 import PointingLabel from '../elements/Label'
+import spellNumber from '../util/spellNumber'
 
 import classNames from 'classnames'
 
@@ -28,6 +29,7 @@ class FormField extends Component {
 
   static propTypes = {
     name: PropTypes.string.isRequired,
+    width: PropTypes.number,
     errors: ImmutablePropTypes.list,
     onChange: PropTypes.func.isRequired,
     onBlur: PropTypes.func.isRequired,
@@ -43,7 +45,7 @@ class FormField extends Component {
   }
 
   widthClasses() {
-    const width = this.props.width
+    const { width } = this.props
 
     if(width) return `${spellNumber(width)} wide`
   }
@@ -89,13 +91,6 @@ class FormField extends Component {
   }
 }
 
-const spellNumber = (number) => {
-  const intNumber = parseInt(number, 10)
-
-  const nums = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen']
-
-  return nums[intNumber + 1]
-}
 
 export {
   Form,
