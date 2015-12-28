@@ -2,7 +2,7 @@
   "name": "react-sm-ui",
   "version": "0.0.2",
   "description": "Semantic UI components built with React",
-  "main": "src/index.js",
+  "main": "lib/index.js",
   "scripts": {
     "compile": "babel -d lib/ src/",
     "prepublish": "npm run compile",
