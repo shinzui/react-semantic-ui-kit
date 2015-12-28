@@ -5,13 +5,14 @@ export default class Button extends Component {
 
   static propTypes = {
     primary: PropTypes.bool,
-    secondary: PropTypes.bool
+    secondary: PropTypes.bool,
+    fluid: PropTypes.bool
   }
 
-
   render() {
-    const { primary, secondary } = this.props
-    const classes = classNames('ui button', {'primary': primary}, {'secondary': secondary},  this.props.className)
+    const { primary, secondary, fluid } = this.props
+    const classes = classNames('ui button', {'primary': primary},
+                               {'secondary': secondary},  {'fluid': fluid}, this.props.className)
 
     return <button className={classes}>{this.props.children}</button>
   }
