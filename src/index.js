@@ -13,6 +13,7 @@ import Container from './elements/Container'
 import Divider from './elements/Divider'
 import Label from './elements/Label'
 import Segment from './elements/Segment'
+import Image from './elements/Image'
 
 export {
   Button,
@@ -22,6 +23,7 @@ export {
   Form,
   FormField,
   Grid,
+  Image,
   Menu,
   Modal,
   ModalHeader,

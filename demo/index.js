@@ -7,6 +7,7 @@ import { Container, Message, Grid, Column, Menu } from '../src/index'
 import FormDemo from './FormDemo'
 import ButtonDemo from './ButtonDemo'
 import DividerDemo from './DividerDemo'
+import ImageDemo from './ImageDemo'
 
 const root = document.createElement('div')
 document.body.appendChild(root)
@@ -31,6 +32,7 @@ class Page extends Component {
     const pages = {
       forms: FormDemo,
       buttons: ButtonDemo,
+      images: ImageDemo,
       divider: DividerDemo
     }
 
@@ -60,6 +62,7 @@ class Page extends Component {
           <Menu>
             <a className='item' href='#forms'>Form Demo</a>
             <a className='item' href='#buttons'>Button Demo</a>
+            <a className='item' href='#images'>Images Demo</a>
             <a className='item' href='#divider'>Divider Demo</a>
           </Menu>
         </Column>

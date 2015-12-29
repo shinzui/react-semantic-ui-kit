@@ -56,7 +56,7 @@ module.exports = {
       test: /\.css$/,
       loaders: ['style', 'css']
     }, {
-      test: /\.(otf|eot|png|gif|svg|ttf|woff|woff2)(\?(\d+#?.*|v=[0-9]\.[0-9]\.[0-9]))?$/,
+      test: /\.(otf|eot|jpg|png|gif|svg|ttf|woff|woff2)(\?(\d+#?.*|v=[0-9]\.[0-9]\.[0-9]))?$/,
       loader: 'url?limit=8192'
     }]
   },
