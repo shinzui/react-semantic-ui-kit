@@ -6,6 +6,7 @@ import 'semantic-ui-css/semantic.css'
 import { Container, Message, Grid, Column, Menu } from '../src/index'
 import FormDemo from './FormDemo'
 import ButtonDemo from './ButtonDemo'
+import DividerDemo from './DividerDemo'
 
 const root = document.createElement('div')
 document.body.appendChild(root)
@@ -29,7 +30,8 @@ class Page extends Component {
   setPage() {
     const pages = {
       forms: FormDemo,
-      buttons: ButtonDemo
+      buttons: ButtonDemo,
+      divider: DividerDemo
     }
 
     let hash = window.location.hash
@@ -58,6 +60,7 @@ class Page extends Component {
           <Menu>
             <a className='item' href='#forms'>Form Demo</a>
             <a className='item' href='#buttons'>Button Demo</a>
+            <a className='item' href='#divider'>Divider Demo</a>
           </Menu>
         </Column>
         <Column width={13}>

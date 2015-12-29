@@ -9,13 +9,16 @@ import ModalContent from './modules/ModalContent'
 import ModalActions from './modules/ModalActions'
 
 import Button from './elements/Button'
-import Label from './elements/Label'
 import Container from './elements/Container'
+import Divider from './elements/Divider'
+import Label from './elements/Label'
+import Segment from './elements/Segment'
 
 export {
   Button,
   Container,
   Column,
+  Divider,
   Form,
   FormField,
   Grid,
@@ -25,5 +28,6 @@ export {
   ModalContent,
   ModalActions,
   Message,
-  Row
+  Row,
+  Segment
 }
