@@ -3,6 +3,7 @@
   "version": "0.0.4",
   "description": "Semantic UI components built with React",
   "main": "lib/index.js",
+  "files": [ "lib" ],
   "scripts": {
     "compile": "babel -d lib/ src/",
     "prepublish": "npm run compile",
