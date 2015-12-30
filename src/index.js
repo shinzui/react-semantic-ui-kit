@@ -24,6 +24,7 @@ export {
   FormField,
   Grid,
   Image,
+  Label,
   Menu,
   Modal,
   ModalHeader,

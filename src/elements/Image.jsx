@@ -1,6 +1,8 @@
 import React, { Component, PropTypes } from 'react'
 import classNames from 'classnames'
 
+import propsToClasses from '../util/propsToClasses'
+
 export default class Image extends Component {
 
   static propTypes = {
@@ -21,21 +23,9 @@ export default class Image extends Component {
     wrapper: false
   }
 
-  propsToClasses(props) {
-    let classes = []
-
-    props.forEach( (prop) => {
-      if(this.props[prop]) {
-        classes.push(prop)
-      }
-    })
-
-    return classes
-  }
-
   render() {
     const { wrapper, size, src, href, className } = this.props
-    const classesFromProps = this.propsToClasses(['avatar', 'bordered', 'fluid', 'rounded', 'circular', 'centered' ])
+    const classesFromProps = propsToClasses(['avatar', 'bordered', 'fluid', 'rounded', 'circular', 'centered' ], this.props)
     const classes = classNames('ui', size, classesFromProps, 'image', className)
 
     if(wrapper) {

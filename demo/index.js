@@ -8,6 +8,7 @@ import FormDemo from './FormDemo'
 import ButtonDemo from './ButtonDemo'
 import DividerDemo from './DividerDemo'
 import ImageDemo from './ImageDemo'
+import LabelDemo from './LabelDemo'
 
 const root = document.createElement('div')
 document.body.appendChild(root)
@@ -33,7 +34,8 @@ class Page extends Component {
       forms: FormDemo,
       buttons: ButtonDemo,
       images: ImageDemo,
-      divider: DividerDemo
+      divider: DividerDemo,
+      labels: LabelDemo
     }
 
     let hash = window.location.hash
@@ -63,6 +65,7 @@ class Page extends Component {
             <a className='item' href='#forms'>Form Demo</a>
             <a className='item' href='#buttons'>Button Demo</a>
             <a className='item' href='#images'>Images Demo</a>
+            <a className='item' href='#labels'>Label Demo</a>
             <a className='item' href='#divider'>Divider Demo</a>
           </Menu>
         </Column>
