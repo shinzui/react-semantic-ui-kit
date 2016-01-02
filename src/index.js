@@ -15,6 +15,8 @@ import Label from './elements/Label'
 import Segment from './elements/Segment'
 import Image from './elements/Image'
 
+import Statistic from './views/Statistic'
+
 export {
   Button,
   Container,
@@ -32,5 +34,6 @@ export {
   ModalActions,
   Message,
   Row,
-  Segment
+  Segment,
+  Statistic
 }
