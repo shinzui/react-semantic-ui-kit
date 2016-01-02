@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react'
 import classNames from 'classnames'
 
+import SemanticUiPropTypes from '../common/SemanticUiPropTypes'
 import propsToClasses from '../util/propsToClasses'
 
 export default class Image extends Component {
@@ -9,7 +10,7 @@ export default class Image extends Component {
     children: PropTypes.node,
     src: PropTypes.string,
     href: PropTypes.string,
-    size: PropTypes.oneOf(['mini', 'tiny', 'small', 'medium', 'large', 'big', 'huge', 'massive']),
+    size: SemanticUiPropTypes.size,
     wrapper: PropTypes.bool,
     avatar: PropTypes.bool,
     bordered: PropTypes.bool,
