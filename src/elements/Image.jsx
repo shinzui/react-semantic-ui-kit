@@ -29,7 +29,9 @@ export default class Image extends Component {
     const classesFromProps = propsToClasses(['avatar', 'bordered', 'fluid', 'rounded', 'circular', 'centered' ], this.props)
     const classes = classNames('ui', size, classesFromProps, 'image', className)
 
-    if(wrapper) {
+    if(wrapper && src) {
+      return <div className={classes}><img src={src} /></div>
+    } else if(wrapper) {
       return <div className={classes}>{this.props.children}</div>
     } else if(href) {
       return <a href={href} className={classes}><img src={src} /></a>

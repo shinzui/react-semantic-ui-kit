@@ -16,6 +16,8 @@ import Segment from './elements/Segment'
 import Image from './elements/Image'
 
 import Statistic from './views/Statistic'
+import { ItemGroup, Item } from './views/Item'
+
 
 export {
   Button,
@@ -26,6 +28,8 @@ export {
   FormField,
   Grid,
   Image,
+  Item,
+  ItemGroup,
   Label,
   Menu,
   Modal,
