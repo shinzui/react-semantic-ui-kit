@@ -15,6 +15,7 @@ import Header from './elements/Header'
 import Label from './elements/Label'
 import Segment from './elements/Segment'
 import Image from './elements/Image'
+import { List, ListItem} from './elements/List'
 
 import Statistic from './views/Statistic'
 import { ItemGroup, Item } from './views/Item'
@@ -33,6 +34,8 @@ export {
   Item,
   ItemGroup,
   Label,
+  List,
+  ListItem,
   Menu,
   Modal,
   ModalHeader,

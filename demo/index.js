@@ -13,6 +13,7 @@ import MessageDemo from './MessageDemo'
 import StatisticDemo from './StatisticDemo'
 import ItemDemo from './ItemDemo'
 import HeaderDemo from './HeaderDemo'
+import ListDemo from './ListDemo'
 
 const root = document.createElement('div')
 document.body.appendChild(root)
@@ -43,7 +44,8 @@ class Page extends Component {
       messages: MessageDemo,
       statistic: StatisticDemo,
       item: ItemDemo,
-      header: HeaderDemo
+      header: HeaderDemo,
+      list: ListDemo
     }
 
     let hash = window.location.hash
@@ -79,6 +81,7 @@ class Page extends Component {
             <a className='item' href='#statistic'>Statistic Demo</a>
             <a className='item' href='#item'>Item Demo</a>
             <a className='item' href='#header'>Header Demo</a>
+            <a className='item' href='#list'>List Demo</a>
           </Menu>
         </Column>
         <Column width={13}>
