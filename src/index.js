@@ -11,6 +11,7 @@ import ModalActions from './modules/ModalActions'
 import Button from './elements/Button'
 import Container from './elements/Container'
 import Divider from './elements/Divider'
+import Header from './elements/Header'
 import Label from './elements/Label'
 import Segment from './elements/Segment'
 import Image from './elements/Image'
@@ -24,6 +25,7 @@ export {
   Container,
   Column,
   Divider,
+  Header,
   Form,
   FormField,
   Grid,
