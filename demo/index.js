@@ -14,6 +14,7 @@ import StatisticDemo from './StatisticDemo'
 import ItemDemo from './ItemDemo'
 import HeaderDemo from './HeaderDemo'
 import ListDemo from './ListDemo'
+import RailDemo from './RailDemo'
 
 const root = document.createElement('div')
 document.body.appendChild(root)
@@ -45,7 +46,8 @@ class Page extends Component {
       statistic: StatisticDemo,
       item: ItemDemo,
       header: HeaderDemo,
-      list: ListDemo
+      list: ListDemo,
+      rail: RailDemo
     }
 
     let hash = window.location.hash
@@ -72,16 +74,17 @@ class Page extends Component {
       <Grid page>
         <Column width={3}>
           <Menu>
-            <a className='item' href='#forms'>Form Demo</a>
-            <a className='item' href='#buttons'>Button Demo</a>
-            <a className='item' href='#images'>Images Demo</a>
-            <a className='item' href='#labels'>Label Demo</a>
-            <a className='item' href='#messages'>Message Demo</a>
-            <a className='item' href='#divider'>Divider Demo</a>
-            <a className='item' href='#statistic'>Statistic Demo</a>
-            <a className='item' href='#item'>Item Demo</a>
-            <a className='item' href='#header'>Header Demo</a>
-            <a className='item' href='#list'>List Demo</a>
+            <a className='item' href='#forms'>Form </a>
+            <a className='item' href='#buttons'>Button </a>
+            <a className='item' href='#images'>Images </a>
+            <a className='item' href='#labels'>Label </a>
+            <a className='item' href='#messages'>Message </a>
+            <a className='item' href='#divider'>Divider </a>
+            <a className='item' href='#statistic'>Statistic </a>
+            <a className='item' href='#item'>Item </a>
+            <a className='item' href='#header'>Header </a>
+            <a className='item' href='#list'>List </a>
+            <a className='item' href='#rail'>Rail </a>
           </Menu>
         </Column>
         <Column width={13}>

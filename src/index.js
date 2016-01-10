@@ -16,6 +16,7 @@ import Label from './elements/Label'
 import Segment from './elements/Segment'
 import Image from './elements/Image'
 import { List, ListItem} from './elements/List'
+import Rail from './elements/Rail'
 
 import Statistic from './views/Statistic'
 import { ItemGroup, Item } from './views/Item'
@@ -42,6 +43,7 @@ export {
   ModalContent,
   ModalActions,
   Message,
+  Rail,
   Row,
   Segment,
   Statistic
