@@ -1,6 +1,6 @@
 {
   "name": "react-sm-ui",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Semantic UI components built with React",
   "main": "lib/index.js",
   "files": [
