@@ -1,6 +1,5 @@
 {
   "name": "react-sm-ui",
-  "version": "0.0.7",
   "description": "Semantic UI components built with React",
   "main": "lib/index.js",
   "files": [
@@ -11,11 +10,12 @@
     "prepublish": "npm run compile",
     "demo": "webpack-dev-server --config webpack.config.dev.js",
     "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js 'test/**/*.@(js|jsx)'",
-    "test:watch": "npm run test -- --watch"
+    "test:watch": "npm run test -- --watch",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/shinzui/semantic-ui-react.git"
+    "url": "https://github.com/shinzui/semantic-ui-react.git"
   },
   "keywords": [
     "semantic-ui",
@@ -65,7 +65,8 @@
     "style-loader": "^0.13.0",
     "url-loader": "^0.5.6",
     "webpack": "^1.12.8",
-    "webpack-dev-server": "^1.12.1"
+    "webpack-dev-server": "^1.12.1",
+    "semantic-release": "^4.3.5"
   },
   "dependencies": {
     "react": "^0.14.3"
