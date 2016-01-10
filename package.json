@@ -8,6 +8,7 @@
   ],
   "scripts": {
     "compile": "babel -d lib/ src/",
+    "prepublish": "npm run compile",
     "demo": "webpack-dev-server --config webpack.config.dev.js",
     "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js 'test/**/*.@(js|jsx)'",
     "test:watch": "npm run test -- --watch"
