@@ -6,9 +6,5 @@ node_js:
 
 sudo: false
 
-before_install:
-  - npm install -g npm
-
 script:
-  - babel --version
   - npm test
