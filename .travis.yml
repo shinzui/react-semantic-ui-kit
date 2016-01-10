@@ -10,4 +10,5 @@ before_install:
   - npm install -g npm
 
 script:
+  - babel --version
   - npm test
