@@ -21,7 +21,8 @@ import { List, ListItem} from './elements/List'
 import Rail from './elements/Rail'
 
 import Statistic from './views/Statistic'
-import { ItemGroup, Item } from './views/Item'
+import ItemGroup from './views/item/ItemGroup'
+import Item from './views/item/Item'
 
 
 export {

@@ -1,20 +1,9 @@
 import React, { Component, PropTypes } from 'react'
 import classNames from 'classnames'
 
-import propsToClasses from '../util/propsToClasses'
+import propsToClasses from '../../util/propsToClasses'
 
-/*eslint "react/no-multi-comp": 0 */
-class Item extends Component {
-
-
-  render() {
-    const classes = classNames('item', this.props.className)
-
-    return <div className={classes}>{this.props.children}</div>
-  }
-}
-
-class ItemGroup extends Component {
+export default class ItemGroup extends Component {
 
   static proptypes = {
     divided: PropTypes.bool,
@@ -28,9 +17,4 @@ class ItemGroup extends Component {
 
     return <div className={classes}>{this.props.children}</div>
   }
-}
-
-export {
-  Item,
-  ItemGroup
 }
