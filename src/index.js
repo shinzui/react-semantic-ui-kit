@@ -1,5 +1,7 @@
 import { Form, FormField } from './collections/Form'
-import { Grid, Column, Row } from './collections/Grid'
+import Grid from './collections/grid/Grid'
+import Column from './collections/grid/Column'
+import Row from './collections/grid/Row'
 import Menu from './collections/Menu'
 import Message from './collections/Message'
 
