@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import { Segment, Header} from '../src/index'
+import { Segment, SegmentGroup, Header} from '../src/index'
 
 const SegmentDemo = (props) => {
   return (
@@ -44,6 +44,66 @@ const SegmentDemo = (props) => {
       <Segment attached='bottom'>
         Bottom attached segment
       </Segment>
+
+      <SegmentGroup>
+        <Segment>
+          First segment in a group
+        </Segment>
+        <Segment>
+          Second segment in a group
+        </Segment>
+        <Segment>
+          Third segment in a group
+        </Segment>
+      </SegmentGroup>
+
+      <SegmentGroup raised>
+        <Segment>
+          First segment in a raised group
+        </Segment>
+        <Segment>
+          Second segment in a group
+        </Segment>
+        <Segment>
+          Third segment in a group
+        </Segment>
+      </SegmentGroup>
+
+      <SegmentGroup stacked>
+        <Segment>
+          First segment in a stacked group
+        </Segment>
+        <Segment>
+          Second segment in a group
+        </Segment>
+        <Segment>
+          Third segment in a group
+        </Segment>
+      </SegmentGroup>
+
+      <SegmentGroup piled>
+        <Segment>
+          First segment in a piled group
+        </Segment>
+        <Segment>
+          Second segment in a group
+        </Segment>
+        <Segment>
+          Third segment in a group
+        </Segment>
+      </SegmentGroup>
+
+      <SegmentGroup horizontal>
+        <Segment>
+          First segment in a horizontal group
+        </Segment>
+        <Segment>
+          Second segment in a group
+        </Segment>
+        <Segment>
+          Third segment in a group
+        </Segment>
+      </SegmentGroup>
 
     </div>
   )

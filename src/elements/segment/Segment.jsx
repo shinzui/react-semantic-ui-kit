@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react'
 
 import classNames from 'classnames'
 
-import propsToClasses from '../util/propsToClasses'
+import propsToClasses from '../../util/propsToClasses'
 
 export default class Segment extends Component {
 

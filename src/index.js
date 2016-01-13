@@ -15,7 +15,8 @@ import Container from './elements/Container'
 import Divider from './elements/Divider'
 import Header from './elements/Header'
 import Label from './elements/Label'
-import Segment from './elements/Segment'
+import Segment from './elements/segment/Segment'
+import SegmentGroup from './elements/segment/SegmentGroup'
 import Image from './elements/Image'
 import { List, ListItem} from './elements/List'
 import Rail from './elements/Rail'
@@ -49,5 +50,6 @@ export {
   Rail,
   Row,
   Segment,
+  SegmentGroup,
   Statistic
 }
