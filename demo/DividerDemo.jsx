@@ -42,6 +42,12 @@ export default class ButtonDemo extends Component {
             </Column>
           </Grid>
         </Segment>
+        <Segment>
+          <Divider horizontal header element='h4'>
+            <i className='tag icon' />
+            <span className='content'>Header divider</span>
+          </Divider>
+        </Segment>
       </div>
     )
   }
