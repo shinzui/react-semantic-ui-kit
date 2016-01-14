@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Divider, Segment } from '../src/index'
+import { Divider, Segment, Message } from '../src/index'
 import { Grid, Row, Column } from '../src/index'
 
 export default class ButtonDemo extends Component {
@@ -47,6 +47,13 @@ export default class ButtonDemo extends Component {
             <i className='tag icon' />
             <span className='content'>Header divider</span>
           </Divider>
+          <Message warning>
+            <p>
+              You need to wrap the text inside the header with {"<span class='content'>"} element otherwise React's inserted span wrappers would break Semantic UI's css.
+            </p>
+
+            Take a look at <a href='https://github.com/Semantic-Org/Semantic-UI/issues/2918'>issue 2918</a>
+          </Message>
         </Segment>
       </div>
     )
