@@ -10,11 +10,12 @@ export default class Message extends Component {
     children: PropTypes.node,
     size: PropTypes.oneOf(['small', 'large', 'huge', 'massive']),
     dismissable: PropTypes.bool,
-    compact: PropTypes.bool
+    compact: PropTypes.bool,
+    warning: PropTypes.bool
   }
 
   render() {
-    const classesFromProps = propsToClasses(['compact'], this.props)
+    const classesFromProps = propsToClasses(['compact', 'warning'], this.props)
     let classes = classNames('ui', classesFromProps, this.props.size, 'message', this.props.className)
     let dismissIcon = this.props.dismissable ? <i className='close icon' /> : undefined
 
