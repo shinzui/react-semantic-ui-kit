@@ -13,6 +13,7 @@ import ModalActions from './modules/ModalActions'
 import Button from './elements/Button'
 import Container from './elements/Container'
 import Divider from './elements/Divider'
+import Flag from './elements/Flag'
 import Header from './elements/Header'
 import Label from './elements/Label'
 import Segment from './elements/segment/Segment'
@@ -32,6 +33,7 @@ export {
   Column,
   Divider,
   Header,
+  Flag,
   Form,
   FormField,
   Grid,
