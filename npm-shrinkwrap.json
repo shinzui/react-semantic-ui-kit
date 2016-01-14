@@ -2799,9 +2799,9 @@
       "resolved": "https://registry.npmjs.org/jodid25519/-/jodid25519-1.0.2.tgz"
     },
     "jquery": {
-      "version": "2.1.4",
+      "version": "2.2.0",
       "from": "jquery@*",
-      "resolved": "https://registry.npmjs.org/jquery/-/jquery-2.1.4.tgz"
+      "resolved": "https://registry.npmjs.org/jquery/-/jquery-2.2.0.tgz"
     },
     "js-base64": {
       "version": "2.1.9",
@@ -4003,9 +4003,9 @@
       "resolved": "https://registry.npmjs.org/sax/-/sax-1.1.4.tgz"
     },
     "semantic-ui-css": {
-      "version": "2.1.7",
-      "from": "semantic-ui-css@>=2.1.6 <3.0.0",
-      "resolved": "https://registry.npmjs.org/semantic-ui-css/-/semantic-ui-css-2.1.7.tgz"
+      "version": "2.1.8",
+      "from": "semantic-ui-css@2.1.8",
+      "resolved": "https://registry.npmjs.org/semantic-ui-css/-/semantic-ui-css-2.1.8.tgz"
     },
     "semver": {
       "version": "4.3.6",
