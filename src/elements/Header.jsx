@@ -11,6 +11,7 @@ export default class Header extends Component {
     element: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4', 'h5']),
     header: PropTypes.string,
     subheader: PropTypes.string,
+    icon: PropTypes.bool,
     disabled: PropTypes.bool,
     dividing: PropTypes.bool,
     block: PropTypes.bool,
@@ -24,7 +25,7 @@ export default class Header extends Component {
   render() {
     const { className, element, header, subheader } = this.props
     const subheaderOnly = subheader && (header === undefined)
-    const classesFromProps = propToClasses(['disabled', 'dividing', 'justified', 'block', 'inverted'], this.props)
+    const classesFromProps = propToClasses(['icon', 'disabled', 'dividing', 'justified', 'block', 'inverted'], this.props)
     const classes = classNames('ui', classesFromProps, {'sub': subheaderOnly},
                                attachedClasses(this.props), alignedClasses(this.props), floatedClasses(this.props),
                                'header', className)

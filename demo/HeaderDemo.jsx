@@ -33,6 +33,15 @@ export default class HeaderDemo extends Component {
         </Segment>
 
         <Segment>
+          <Header element='h2' icon>
+            <i className='settings icon' />
+            <div className='content'>
+              Icon header
+            </div>
+          </Header>
+        </Segment>
+
+        <Segment>
           <Header element='h1' disabled>Disabled header</Header>
         </Segment>
 
