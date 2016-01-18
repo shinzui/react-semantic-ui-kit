@@ -2,6 +2,7 @@ import React, { Component, PropTypes } from 'react'
 import classNames from 'classnames'
 
 import SemanticUiPropTypes from '../common/SemanticUiPropTypes'
+import { alignedClasses, floatedClasses } from '../common/semanticClasses'
 import propsToClasses from '../util/propsToClasses'
 
 export default class Image extends Component {
@@ -17,7 +18,11 @@ export default class Image extends Component {
     fluid: PropTypes.bool,
     rounded: PropTypes.bool,
     circular: PropTypes.bool,
-    centered: PropTypes.bool
+    centered: PropTypes.bool,
+    hidden: PropTypes.bool,
+    disabled: PropTypes.bool,
+    aligned: SemanticUiPropTypes.imageAlignment,
+    floated: SemanticUiPropTypes.floated
   }
 
   static defaultProps = {
@@ -25,9 +30,11 @@ export default class Image extends Component {
   }
 
   render() {
-    const { wrapper, size, src, href, className } = this.props
+    const { wrapper, size, src, href, hidden, disabled, className } = this.props
     const classesFromProps = propsToClasses(['avatar', 'bordered', 'fluid', 'rounded', 'circular', 'centered' ], this.props)
-    const classes = classNames('ui', size, classesFromProps, 'image', className)
+    const classes = classNames({'hidden': hidden}, {'disabled': disabled}, 'ui',
+                               alignedClasses(this.props), size, floatedClasses(this.props),
+                               classesFromProps, 'image', className)
 
     if(wrapper && src) {
       return <div className={classes}><img src={src} /></div>

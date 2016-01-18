@@ -20,6 +20,12 @@ export const alignedClasses = (props) => {
     return 'left aligned'
   } else if(aligned === 'center') {
     return 'center aligned'
+  } else if(aligned === 'middle') {
+    return 'middle aligned'
+  } else if(aligned === 'top') {
+    return 'top aligned'
+  } else if(aligned === 'bottom') {
+    return 'bottom aligned'
   }
 }
 
