@@ -1,9 +1,9 @@
 import React, { Component, PropTypes } from 'react'
 import classNames from 'classnames'
 
-import SemanticUiPropTypes from '../common/SemanticUiPropTypes'
-import { alignedClasses, floatedClasses } from '../common/semanticClasses'
-import propsToClasses from '../util/propsToClasses'
+import SemanticUiPropTypes from '../../common/SemanticUiPropTypes'
+import { alignedClasses, floatedClasses } from '../../common/semanticClasses'
+import propsToClasses from '../../util/propsToClasses'
 
 export default class Image extends Component {
 

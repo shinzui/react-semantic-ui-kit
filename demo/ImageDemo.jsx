@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Image , Segment, Divider } from '../src/index'
+import { Image , ImageGroup, Segment, Divider } from '../src/index'
 import { Grid, Row, Column } from '../src/index'
 
 import bomi from './bomi.jpg'
@@ -66,7 +66,17 @@ export default class ImageDemo extends Component {
 
         <Image src={bomi} disabled size='small'/>
       </Segment>
+
+      <Segment>
+        <h3>Image Group</h3>
+        <ImageGroup size='small'>
+          <Image src={bomi} />
+          <Image src={bomi} />
+          <Image src={bomi} />
+        </ImageGroup>
+      </Segment>
       </div>
+
     )
   }
 }

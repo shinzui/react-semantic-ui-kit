@@ -18,7 +18,8 @@ import Header from './elements/Header'
 import Label from './elements/Label'
 import Segment from './elements/segment/Segment'
 import SegmentGroup from './elements/segment/SegmentGroup'
-import Image from './elements/Image'
+import Image from './elements/image/Image'
+import ImageGroup from './elements/image/ImageGroup'
 import { List, ListItem} from './elements/List'
 import Rail from './elements/Rail'
 
@@ -38,6 +39,7 @@ export {
   FormField,
   Grid,
   Image,
+  ImageGroup,
   Item,
   ItemGroup,
   Label,
