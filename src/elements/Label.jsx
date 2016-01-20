@@ -2,6 +2,7 @@ import React, { Component, PropTypes } from 'react'
 import classNames from 'classnames'
 
 import propsToClasses from '../util/propsToClasses'
+import SemanticUiPropTypes from '../common/SemanticUiPropTypes'
 
 export default class Label extends Component {
 
@@ -9,8 +10,13 @@ export default class Label extends Component {
     basic: PropTypes.bool,
     tag: PropTypes.bool,
     circular: PropTypes.bool,
+    image: PropTypes.bool,
     pointing: PropTypes.bool,
-    pointingDirection: PropTypes.oneOf(['below', 'left', 'right'])
+    size: SemanticUiPropTypes.size,
+    pointingDirection: PropTypes.oneOf(['below', 'left', 'right']),
+    color: PropTypes.oneOf(['red', 'orange', 'yellow', 'olive', 'green', 'teal', 'blue',
+                            'violet', 'purple', 'pink', 'brown', 'grey', 'black'])
+
   }
 
   pointingClasses() {
@@ -31,9 +37,11 @@ export default class Label extends Component {
   }
 
   render() {
-    const { className, pointingDirection } = this.props
-    const classesFromProps = propsToClasses(['basic', 'tag', 'circular'], this.props)
-    const classes = classNames('ui', this.pointingClasses() ,classesFromProps, 'label', className )
+    const { className, pointingDirection, color, size } = this.props
+
+    const classesFromProps = propsToClasses(['basic', 'tag', 'circular', 'image'], this.props)
+
+    const classes = classNames('ui', this.pointingClasses() , color, classesFromProps, size, 'label', className )
 
     return <div className={classes}>{this.props.children}</div>
   }
