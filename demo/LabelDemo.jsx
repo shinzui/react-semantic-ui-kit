@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Label , LabelGroup, Header, Segment, Image } from '../src/index'
+import { Label , LabelGroup, List, ListItem, Header, Segment, Image } from '../src/index'
 
 import bomi from './bomi.jpg'
 
@@ -27,6 +27,19 @@ export default class LabelDemo extends Component {
             <Image src={bomi} size='tiny' />
             Bomi
           </Label>
+        </Segment>
+        <Segment>
+          <Header element='h3'>Horizontal label</Header>
+          <List divided>
+            <ListItem>
+              <Label color='green' horizontal>Node</Label>
+              Hapi
+            </ListItem>
+            <ListItem>
+              <Label color='red' horizontal>Ruby</Label>
+              Rails
+            </ListItem>
+          </List>
         </Segment>
         <Segment>
           <h3>Tags</h3>
