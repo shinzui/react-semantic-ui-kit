@@ -1,8 +1,8 @@
 import React, { Component, PropTypes } from 'react'
 import classNames from 'classnames'
 
-import propsToClasses from '../util/propsToClasses'
-import SemanticUiPropTypes from '../common/SemanticUiPropTypes'
+import propsToClasses from '../../util/propsToClasses'
+import SemanticUiPropTypes from '../../common/SemanticUiPropTypes'
 
 export default class Label extends Component {
 
@@ -14,9 +14,7 @@ export default class Label extends Component {
     pointing: PropTypes.bool,
     size: SemanticUiPropTypes.size,
     pointingDirection: PropTypes.oneOf(['below', 'left', 'right']),
-    color: PropTypes.oneOf(['red', 'orange', 'yellow', 'olive', 'green', 'teal', 'blue',
-                            'violet', 'purple', 'pink', 'brown', 'grey', 'black'])
-
+    color: SemanticUiPropTypes.color
   }
 
   pointingClasses() {

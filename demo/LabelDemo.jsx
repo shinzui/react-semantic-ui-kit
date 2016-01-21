@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Label , Header, Segment, Image } from '../src/index'
+import { Label , LabelGroup, Header, Segment, Image } from '../src/index'
 
 import bomi from './bomi.jpg'
 
@@ -55,6 +55,42 @@ export default class LabelDemo extends Component {
           {colors.map( color => {
             return <Label key={color} color={color}>{color} label</Label>
           })}
+        </Segment>
+
+        <Segment>
+          <Header element='h3'>Huge label group</Header>
+          <LabelGroup size='huge'>
+            <Label>First</Label>
+            <Label>Second</Label>
+            <Label>Third</Label>
+          </LabelGroup>
+        </Segment>
+
+        <Segment>
+          <Header element='h3'>Colored label group</Header>
+          <LabelGroup color='green'>
+            <Label>First</Label>
+            <Label>Second</Label>
+            <Label>Third</Label>
+          </LabelGroup>
+        </Segment>
+
+        <Segment>
+          <Header element='h3'>Tag group</Header>
+          <LabelGroup tag>
+            <Label>javascript</Label>
+            <Label>node</Label>
+            <Label>react</Label>
+          </LabelGroup>
+        </Segment>
+
+        <Segment>
+          <Header element='h3'>Circular group</Header>
+          <LabelGroup circular>
+            <Label>1</Label>
+            <Label>2</Label>
+            <Label>3</Label>
+          </LabelGroup>
         </Segment>
       </div>
     )

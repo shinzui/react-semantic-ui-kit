@@ -15,7 +15,8 @@ import Container from './elements/Container'
 import Divider from './elements/Divider'
 import Flag from './elements/Flag'
 import Header from './elements/Header'
-import Label from './elements/Label'
+import Label from './elements/label/Label'
+import LabelGroup from './elements/label/LabelGroup'
 import Segment from './elements/segment/Segment'
 import SegmentGroup from './elements/segment/SegmentGroup'
 import Image from './elements/image/Image'
@@ -43,6 +44,7 @@ export {
   Item,
   ItemGroup,
   Label,
+  LabelGroup,
   List,
   ListItem,
   Menu,

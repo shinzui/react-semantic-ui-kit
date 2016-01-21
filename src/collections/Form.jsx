@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react'
 
 import ImmutablePropTypes from 'react-immutable-proptypes'
 
-import PointingLabel from '../elements/Label'
+import Label from '../index'
 import spellNumber from '../util/spellNumber'
 
 import classNames from 'classnames'
@@ -76,7 +76,7 @@ class FormField extends Component {
     let widthClasses = this.widthClasses()
     let label = labelText ? <label>{labelText}</label> : ''
     let fieldClasses = classNames('ui', 'field', {'error': hasErrors}, widthClasses )
-    let pointingLabel = hasErrors ? <PointingLabel type='basic' className='prompt red' pointing>{errors.get(0)}</PointingLabel> : undefined
+    let pointingLabel = hasErrors ? <Label basic pointing className='prompt red'>{errors.get(0)}</Label> : undefined
 
     const input = this.inputControl()
     return (
