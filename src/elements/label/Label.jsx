@@ -17,7 +17,9 @@ export default class Label extends Component {
     pointingDirection: PropTypes.oneOf(['below', 'left', 'right']),
     color: SemanticUiPropTypes.color,
     leftCorner: PropTypes.bool,
-    rightCornor: PropTypes.bool
+    rightCornor: PropTypes.bool,
+    leftRibbon: PropTypes.bool,
+    rightRibbon: PropTypes.bool
   }
 
   pointingClasses() {
@@ -47,14 +49,25 @@ export default class Label extends Component {
     }
   }
 
+  ribbonClasses() {
+    const { leftRibbon, rightRibbon} = this.props
+
+    if(leftRibbon) {
+      return 'left ribbon'
+    } else if(rightRibbon) {
+      return 'right ribbon'
+    }
+  }
+
   render() {
     const { className, pointingDirection, color, size } = this.props
 
     const classesFromProps = propsToClasses(['basic', 'tag', 'circular', 'image', 'horizontal'], this.props)
 
-    const classes = classNames('ui', this.pointingClasses() , color, this.cornerClasses(), classesFromProps, size, 'label', className )
+    const classes = classNames('ui', this.pointingClasses() , color,
+                               this.ribbonClasses(), this.cornerClasses(),
+                               classesFromProps, size, 'label', className )
 
     return <div className={classes}>{this.props.children}</div>
   }
 }
-

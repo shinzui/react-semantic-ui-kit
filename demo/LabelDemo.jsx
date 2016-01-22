@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Label , LabelGroup, List, ListItem, 
+import { Label , LabelGroup, List, ListItem,
         Grid, Column,
         Header, Segment, Image } from '../src/index'
 
@@ -17,7 +17,7 @@ export default class LabelDemo extends Component {
       <div>
         <Segment>
           <Label pointing pointingDirection='right'>Pointing label</Label> Some text.
-          <Label pointing pointingDirection='below'>Bottom pointing label</Label> 
+          <Label pointing pointingDirection='below'>Bottom pointing label</Label>
           <Label pointing pointingDirection='left'>Left pointing label</Label>
           <Label pointing>Top pointing label</Label>
         </Segment>
@@ -25,7 +25,7 @@ export default class LabelDemo extends Component {
           <Label pointing pointingDirection='left' basic color='red'>Left pointing red basic label</Label>
         </Segment>
         <Segment>
-          <Header element='h3'>Image label</Header> 
+          <Header element='h3'>Image label</Header>
           <Label image>
             <Image src={bomi} size='tiny' />
             Bomi
@@ -74,6 +74,41 @@ export default class LabelDemo extends Component {
                 </Label>
                 <img src={image} />
               </Image>
+            </Column>
+          </Grid>
+        </Segment>
+
+        <Segment>
+          <Grid columns={2}>
+            <Column>
+              <Segment raised>
+                <Label leftRibbon color='red'>Overview</Label>
+                <span>Account details</span>
+                <p>
+                  Lorem ipsum is a pseudo-Latin text used in web design, typography, layout, and printing in place of English to emphasise design elements over content.
+                  It's also called placeholder (or filler) text. It's a convenient tool for mock-ups.
+                </p>
+                <Label leftRibbon color='blue'>Community</Label>
+                <span>User reviews</span>
+                <p>
+                  It helps to outline the visual elements of a document or presentation, eg typography, font, or layout.
+                  Lorem ipsum is mostly a part of a Latin text by the classical author and philosopher Cicero.
+                </p>
+              </Segment>
+            </Column>
+            <Column>
+              <Segment>
+                <Label rightRibbon color='orange'>Overview</Label>
+                <p>
+                  Its words and letters have been changed by addition or removal, so to deliberately render its content nonsensical;
+                  it's not genuine, correct, or comprehensible Latin anymore.
+                </p>
+                <Label rightRibbon color='green'>Conclusion</Label>
+                <p>
+                  While lorem ipsum's still resembles classical Latin, it actually has no meaning whatsoever. As Cicero's text doesn't contain the letters K, W, or Z, alien to latin,
+                   these, and others are often inserted randomly to mimic the typographic appearence of European languages, as are digraphs not to be found in the original.
+                </p>
+              </Segment>
             </Column>
           </Grid>
         </Segment>
