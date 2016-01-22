@@ -1,7 +1,10 @@
 import React, { Component } from 'react'
-import { Label , LabelGroup, List, ListItem, Header, Segment, Image } from '../src/index'
+import { Label , LabelGroup, List, ListItem, 
+        Grid, Column,
+        Header, Segment, Image } from '../src/index'
 
 import bomi from './bomi.jpg'
+import image from './image.png'
 
 export default class LabelDemo extends Component {
 
@@ -52,6 +55,27 @@ export default class LabelDemo extends Component {
           <Label circular>Circular Label</Label>
           <Label circular>1</Label>
           <Label color='red' circular>2</Label>
+        </Segment>
+
+        <Segment>
+          <Grid columns={2}>
+            <Column>
+              <Image wrapper fluid >
+                <Label leftCorner>
+                  <i className='heart icon' />
+                </Label>
+                <img src={image} />
+              </Image>
+            </Column>
+            <Column>
+              <Image wrapper fluid >
+                <Label rightCorner color='red'>
+                  <i className='heart icon' />
+                </Label>
+                <img src={image} />
+              </Image>
+            </Column>
+          </Grid>
         </Segment>
 
         <Segment>
