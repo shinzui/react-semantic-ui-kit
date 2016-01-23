@@ -22,7 +22,8 @@ export default class Label extends Component {
     leftCorner: PropTypes.bool,
     rightCornor: PropTypes.bool,
     leftRibbon: PropTypes.bool,
-    rightRibbon: PropTypes.bool
+    rightRibbon: PropTypes.bool,
+    href: PropTypes.string
   }
 
   pointingClasses() {
@@ -63,7 +64,7 @@ export default class Label extends Component {
   }
 
   render() {
-    const { className, pointingDirection, color, size, floating } = this.props
+    const { className, pointingDirection, color, size, floating, href } = this.props
 
     const classesFromProps = propsToClasses(['basic', 'tag', 'circular', 'image', 'horizontal'], this.props)
 
@@ -72,6 +73,10 @@ export default class Label extends Component {
                                this.ribbonClasses(), this.cornerClasses(),
                                classesFromProps, size, 'label', className )
 
-    return <div className={classes}>{this.props.children}</div>
+    if(href) {
+      return <a className={classes} href={href}>{this.props.children}</a>
+    } else {
+      return <div className={classes}>{this.props.children}</div>
+    }
   }
 }

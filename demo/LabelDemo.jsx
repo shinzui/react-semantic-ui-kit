@@ -80,6 +80,11 @@ export default class LabelDemo extends Component {
         </Segment>
 
         <Segment>
+          <Header element='h3'>Link label</Header>
+          <Label href='https://facebook.github.io/react/'>React</Label>
+        </Segment>
+
+        <Segment>
           <Grid columns={2}>
             <Column>
               <Segment raised>
