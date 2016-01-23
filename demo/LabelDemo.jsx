@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
 import { Label , LabelGroup, List, ListItem,
-        Grid, Column, Menu,
+        Grid, Column, Row, Menu,
         Header, Segment, Image } from '../src/index'
 
 import bomi from './bomi.jpg'
 import image from './image.png'
+import paragraph from './paragraph.png'
 
 export default class LabelDemo extends Component {
 
@@ -126,6 +127,54 @@ export default class LabelDemo extends Component {
               <Label floating color='blue'>7</Label>
             </a>
           </Menu>
+        </Segment>
+
+        <Segment>
+          <Header element='h3'>
+            Attached labels
+          </Header>
+          <Grid columns={3}>
+            <Row>
+              <Column>
+              <Segment>
+                <Label attached='top'>Top</Label>
+                <Image src={paragraph} style={{opacity: '0.5'}} />
+              </Segment>
+              </Column>
+              <Column>
+              <Segment>
+                <Label attached='bottom'>Bottom</Label>
+                <Image src={paragraph} style={{opacity: '0.5'}} />
+              </Segment>
+              </Column>
+              <Column>
+              <Segment>
+                <Label attached='topRight'>Top right</Label>
+                <Image src={paragraph} style={{opacity: '0.5'}} />
+              </Segment>
+              </Column>
+            </Row>
+            <Row>
+              <Column>
+              <Segment>
+                <Label attached='topLeft'>Top left</Label>
+                <Image src={paragraph} style={{opacity: '0.5'}} />
+              </Segment>
+              </Column>
+              <Column>
+              <Segment>
+                <Label attached='bottomRight'>Bottom right</Label>
+                <Image src={paragraph} style={{opacity: '0.5'}} />
+              </Segment>
+              </Column>
+              <Column>
+              <Segment>
+                <Label attached='bottomLeft'>Bottom left</Label>
+                <Image src={paragraph} style={{opacity: '0.5'}} />
+              </Segment>
+              </Column>
+            </Row>
+          </Grid>
         </Segment>
 
         <Segment>

@@ -3,6 +3,7 @@ import classNames from 'classnames'
 
 import propsToClasses from '../../util/propsToClasses'
 import SemanticUiPropTypes from '../../common/SemanticUiPropTypes'
+import { attachedClasses } from '../../common/semanticClasses'
 
 export default class Label extends Component {
 
@@ -16,6 +17,7 @@ export default class Label extends Component {
     floating: PropTypes.bool,
     size: SemanticUiPropTypes.size,
     pointingDirection: PropTypes.oneOf(['below', 'left', 'right']),
+    attached: SemanticUiPropTypes.labelAttachment,
     color: SemanticUiPropTypes.color,
     leftCorner: PropTypes.bool,
     rightCornor: PropTypes.bool,
@@ -39,7 +41,6 @@ export default class Label extends Component {
     }
 
   }
-
 
   cornerClasses() {
     const { leftCorner, rightCorner } = this.props
@@ -66,7 +67,8 @@ export default class Label extends Component {
 
     const classesFromProps = propsToClasses(['basic', 'tag', 'circular', 'image', 'horizontal'], this.props)
 
-    const classes = classNames({'floating': floating}, 'ui', this.pointingClasses() , color,
+    const classes = classNames({'floating': floating}, 'ui', this.pointingClasses(),
+                               color, attachedClasses(this.props),
                                this.ribbonClasses(), this.cornerClasses(),
                                classesFromProps, size, 'label', className )
 

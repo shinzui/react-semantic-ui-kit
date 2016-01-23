@@ -7,8 +7,15 @@ export const attachedClasses = (props) => {
     return 'bottom attached'
   } else if(attached === 'both') {
     return 'attached'
+  } else if(attached === 'topRight') {
+    return 'top right attached'
+  } else if(attached === 'topLeft') {
+    return 'top left attached'
+  } else if(attached === 'bottomRight') {
+    return 'bottom right attached'
+  } else if(attached === 'bottomLeft') {
+    return 'bottom left attached'
   }
-
 }
 
 export const alignedClasses = (props) => {
