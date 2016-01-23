@@ -15,7 +15,7 @@
 
 ## Current status
 
-The project is still in its infancy but you can check the demo to see what's already implemented. 
+The project is still in its infancy but you can check the demo to see what's already implemented.
 
 To run the demo:
 
@@ -24,5 +24,7 @@ To run the demo:
 
 Then go to http://localhost:8080/demo
 
-Please note that the API will likely change as I use it on my projects.
+Alternatively, you can look at the [closed component issues](https://github.com/shinzui/react-sm-ui/issues?q=is%3Aissue+label%3AComponent+is%3Aclosed) which has all the
+**fully implemented** Semantic UI components.
 
+Please note that the API will likely change as I use it on my projects.
