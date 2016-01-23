@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Label , LabelGroup, List, ListItem,
-        Grid, Column,
+        Grid, Column, Menu,
         Header, Segment, Image } from '../src/index'
 
 import bomi from './bomi.jpg'
@@ -111,6 +111,21 @@ export default class LabelDemo extends Component {
               </Segment>
             </Column>
           </Grid>
+        </Segment>
+        <Segment>
+          <Header element='h3'>
+            Floating label
+          </Header>
+          <Menu basic>
+            <a className='item'>
+              <i className='icon mail' /> Messages
+              <Label floating color='red'>23</Label>
+            </a>
+            <a className='item'>
+              <i className='icon users' /> Friends
+              <Label floating color='blue'>7</Label>
+            </a>
+          </Menu>
         </Segment>
 
         <Segment>

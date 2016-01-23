@@ -77,7 +77,7 @@ class Page extends Component {
     return (
       <Grid page>
         <Column width={3}>
-          <Menu>
+          <Menu vertical>
             <a className='item' href='#forms'>Form </a>
             <a className='item' href='#buttons'>Button </a>
             <a className='item' href='#images'>Images </a>

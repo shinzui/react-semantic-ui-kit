@@ -13,6 +13,7 @@ export default class Label extends Component {
     horizontal: PropTypes.bool,
     image: PropTypes.bool,
     pointing: PropTypes.bool,
+    floating: PropTypes.bool,
     size: SemanticUiPropTypes.size,
     pointingDirection: PropTypes.oneOf(['below', 'left', 'right']),
     color: SemanticUiPropTypes.color,
@@ -39,6 +40,7 @@ export default class Label extends Component {
 
   }
 
+
   cornerClasses() {
     const { leftCorner, rightCorner } = this.props
 
@@ -60,11 +62,11 @@ export default class Label extends Component {
   }
 
   render() {
-    const { className, pointingDirection, color, size } = this.props
+    const { className, pointingDirection, color, size, floating } = this.props
 
     const classesFromProps = propsToClasses(['basic', 'tag', 'circular', 'image', 'horizontal'], this.props)
 
-    const classes = classNames('ui', this.pointingClasses() , color,
+    const classes = classNames({'floating': floating}, 'ui', this.pointingClasses() , color,
                                this.ribbonClasses(), this.cornerClasses(),
                                classesFromProps, size, 'label', className )
 
