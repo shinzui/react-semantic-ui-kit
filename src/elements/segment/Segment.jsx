@@ -23,18 +23,21 @@ export default class Segment extends Component {
     tertiary: PropTypes.bool,
     circular: PropTypes.bool,
     clearing: PropTypes.bool,
+    basic: PropTypes.bool,
+    color: SemanticUiPropTypes.color,
     attached: SemanticUiPropTypes.attached,
     aligned: SemanticUiPropTypes.aligned,
     floated: SemanticUiPropTypes.floated
   }
 
   render() {
-    const props = ['raised', 'stacked', 'piled', 'vertical', 'disabled', 'loading',
+    const props = ['basic', 'raised', 'stacked', 'piled', 'vertical', 'disabled', 'loading',
       'secondary', 'tertiary', 'inverted', 'padded', 'compact', 'circular', 'clearing']
 
     const classesFromProps = propsToClasses(props, this.props)
-    const classes = classNames('ui', classesFromProps,
+    const classes = classNames('ui', classesFromProps, this.props.color,
                                attachedClasses(this.props), alignedClasses(this.props), floatedClasses(this.props),
+                               {'very padded': this.props.veryPadded},
                                'segment', this.props.className)
 
     return <div className={classes} style={this.props.style}>{this.props.children}</div>

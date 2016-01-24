@@ -10,12 +10,13 @@ export default class SegmentGroup extends Component {
     horizontal: PropTypes.bool,
     raised: PropTypes.bool,
     stacked: PropTypes.bool,
-    piled: PropTypes.bool
+    piled: PropTypes.bool,
+    compact: PropTypes.bool
   }
 
   render() {
 
-    const classesFromProps = propsToClasses(['horizontal', 'raised', 'stacked', 'piled'], this.props)
+    const classesFromProps = propsToClasses(['horizontal', 'raised', 'stacked', 'piled', 'compact'], this.props)
     const classes = classNames('ui', classesFromProps, 'segments', this.props.className)
 
     return <div className={classes}>{this.props.children}</div>
