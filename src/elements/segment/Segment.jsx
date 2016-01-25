@@ -23,6 +23,7 @@ export default class Segment extends Component {
     tertiary: PropTypes.bool,
     circular: PropTypes.bool,
     clearing: PropTypes.bool,
+    container: PropTypes.bool,
     basic: PropTypes.bool,
     color: SemanticUiPropTypes.color,
     attached: SemanticUiPropTypes.attached,
@@ -32,7 +33,7 @@ export default class Segment extends Component {
 
   render() {
     const props = ['basic', 'raised', 'stacked', 'piled', 'vertical', 'disabled', 'loading',
-      'secondary', 'tertiary', 'inverted', 'padded', 'compact', 'circular', 'clearing']
+      'secondary', 'tertiary', 'inverted', 'padded', 'compact', 'circular', 'clearing', 'container']
 
     const classesFromProps = propsToClasses(props, this.props)
     const classes = classNames('ui', classesFromProps, this.props.color,

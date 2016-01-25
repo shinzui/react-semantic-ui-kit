@@ -17,6 +17,7 @@ import ListDemo from './ListDemo'
 import RailDemo from './RailDemo'
 import SegmentDemo from './SegmentDemo'
 import FlagDemo from './FlagDemo'
+import ContainerDemo from './ContainerDemo'
 
 const root = document.createElement('div')
 document.body.appendChild(root)
@@ -51,7 +52,8 @@ class Page extends Component {
       list: ListDemo,
       rail: RailDemo,
       segment: SegmentDemo,
-      flag: FlagDemo
+      flag: FlagDemo,
+      container: ContainerDemo
     }
 
     let hash = window.location.hash
@@ -91,6 +93,7 @@ class Page extends Component {
             <a className='item' href='#rail'>Rail </a>
             <a className='item' href='#segment'>Segment </a>
             <a className='item' href='#flag'>Flag </a>
+            <a className='item' href='#container'>Container</a>
           </Menu>
         </Column>
         <Column width={13}>
