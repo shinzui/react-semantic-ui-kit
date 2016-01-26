@@ -9,7 +9,8 @@ export default class Grid extends Component {
   static propTypes = {
     children: PropTypes.node,
     columns: PropTypes.number,
-    page: PropTypes.bool
+    page: PropTypes.bool,
+    container: PropTypes.bool
   }
 
   columnClasses() {
@@ -19,7 +20,8 @@ export default class Grid extends Component {
   }
 
   render() {
-    let classes = classNames('ui', this.columnClasses(), 'grid', {'container': this.props.page},  this.props.className)
+    const { page, container, className } = this.props
+    const classes = classNames('ui', this.columnClasses(), 'grid', {'container': page || container},  className)
 
     return <div {...this.props} className={classes}>{this.props.children}</div>
   }

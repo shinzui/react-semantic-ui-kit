@@ -16,7 +16,9 @@ export default class Column extends Component {
   }
 
   render() {
-    let classes = classNames('column', this.props.className, this.widthClasses())
-    return <div className={classes}>{this.props.children}</div>
+    const { className } = this.props
+    const classes = classNames(this.widthClasses(), 'column', className)
+
+    return <div className={classes} style={this.props.style}>{this.props.children}</div>
   }
 }
