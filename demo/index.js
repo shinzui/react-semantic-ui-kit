@@ -19,6 +19,7 @@ import SegmentDemo from './SegmentDemo'
 import FlagDemo from './FlagDemo'
 import ContainerDemo from './ContainerDemo'
 import GridDemo from './GridDemo'
+import InputDemo from './InputDemo'
 
 import './example.css'
 
@@ -58,7 +59,8 @@ class Page extends Component {
       segment: SegmentDemo,
       flag: FlagDemo,
       container: ContainerDemo,
-      grid: GridDemo
+      grid: GridDemo,
+      input: InputDemo
     }
 
     let hash = window.location.hash
@@ -86,6 +88,7 @@ class Page extends Component {
         <Column width={3}>
           <Menu vertical>
             <a className='item' href='#forms'>Form </a>
+            <a className='item' href='#input'>Input</a>
             <a className='item' href='#buttons'>Button </a>
             <a className='item' href='#images'>Images </a>
             <a className='item' href='#labels'>Label </a>

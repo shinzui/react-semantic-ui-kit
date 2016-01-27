@@ -15,6 +15,7 @@ import Container from './elements/Container'
 import Divider from './elements/Divider'
 import Flag from './elements/Flag'
 import Header from './elements/Header'
+import Input from './elements/Input'
 import Label from './elements/label/Label'
 import LabelGroup from './elements/label/LabelGroup'
 import Segment from './elements/segment/Segment'
@@ -35,6 +36,7 @@ export {
   Column,
   Divider,
   Header,
+  Input,
   Flag,
   Form,
   FormField,
