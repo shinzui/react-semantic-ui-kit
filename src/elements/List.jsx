@@ -11,13 +11,14 @@ class List extends Component {
     divided: PropTypes.bool,
     bulleted: PropTypes.bool,
     ordered: PropTypes.bool,
-    simple: PropTypes.bool
+    simple: PropTypes.bool,
+    link: PropTypes.bool
   }
 
   element = 'div'
 
   render() {
-    const { bulleted, ordered, simple } = this.props
+    const { bulleted, ordered, simple, link } = this.props
     const classesFromProps = propsToClasses(['relaxed', 'divided', 'bulleted', 'ordered'], this.props)
     const classes = classNames('ui', classesFromProps, 'list', this.props.className)
 
@@ -25,7 +26,7 @@ class List extends Component {
     if(ordered && simple) this.element = 'ol'
 
     const children = React.Children.map(this.props.children, (child) => {
-      return React.cloneElement(child, { bulleted: bulleted, ordered: ordered, simple: simple })
+      return React.cloneElement(child, { bulleted: bulleted, ordered: ordered, simple: simple, link: link })
     })
 
     return (
@@ -37,16 +38,29 @@ class List extends Component {
 }
 
 class ListItem extends Component {
+
+  static propTypes = {
+    bulleted: PropTypes.bool,
+    ordered: PropTypes.bool,
+    simple: PropTypes.bool,
+    href: PropTypes.string,
+    link: PropTypes.bool,
+    active: PropTypes.bool
+  }
+
   element = 'div'
 
   render() {
-    const { bulleted, ordered, simple } = this.props
+    const { bulleted, ordered, simple, href, link, active } = this.props
     const classes = classNames('item', {'bulleted': bulleted && !simple}, { 'ordered': ordered && !simple},  this.props.className)
 
     if((bulleted || ordered) && simple) this.element = 'li'
 
+    if(href) this.element = 'a'
+    if(link && !active) this.element = 'a'
+
     return (
-      <this.element className={classes}>
+      <this.element className={classes} href={href}>
         {this.props.children}
       </this.element>
     )

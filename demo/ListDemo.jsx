@@ -77,6 +77,41 @@ export default class ListDemo extends Component {
           </List>
         </Segment>
 
+        <Segment>
+          <h3>Simple ordered list</h3>
+          <List simple ordered>
+            <ListItem>Need to know</ListItem>
+            <ListItem>Culture</ListItem>
+            <ListItem>Hotels</ListItem>
+            <ListItem>Food and drinks
+              <List>
+                <ListItem>Smart bites</ListItem>
+                <ListItem>Top stops</ListItem>
+                <ListItem>Coffee</ListItem>
+              </List>
+            </ListItem>
+            <ListItem>Retail</ListItem>
+          </List>
+        </Segment>
+
+        <Segment>
+          <h3>Ordered list</h3>
+          <List ordered>
+            <ListItem href='#'>Need to know</ListItem>
+            <ListItem href='#'>Culture</ListItem>
+            <ListItem href='#'>Hotels</ListItem>
+            <ListItem>
+              <a href='#'>Food and drinks</a>
+              <List>
+                <ListItem href='#'>Smart bites</ListItem>
+                <ListItem href='#'>Top stops</ListItem>
+                <ListItem href='#'>Coffee</ListItem>
+              </List>
+            </ListItem>
+            <ListItem href='#'>Retail</ListItem>
+          </List>
+        </Segment>
+
       </div>
     )
   }
