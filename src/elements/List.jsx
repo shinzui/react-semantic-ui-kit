@@ -10,21 +10,22 @@ class List extends Component {
     relaxed: PropTypes.bool,
     divided: PropTypes.bool,
     bulleted: PropTypes.bool,
-    ordered: PropTypes.bool
+    ordered: PropTypes.bool,
+    simple: PropTypes.bool
   }
 
   element = 'div'
 
   render() {
-    const { bulleted, ordered } = this.props
-    const classesFromProps = propsToClasses(['relaxed', 'divided'], this.props)
+    const { bulleted, ordered, simple } = this.props
+    const classesFromProps = propsToClasses(['relaxed', 'divided', 'bulleted', 'ordered'], this.props)
     const classes = classNames('ui', classesFromProps, 'list', this.props.className)
 
-    if(bulleted) this.element = 'ul'
-    if(ordered) this.element = 'ol'
+    if(bulleted && simple) this.element = 'ul'
+    if(ordered && simple) this.element = 'ol'
 
     const children = React.Children.map(this.props.children, (child) => {
-      return React.cloneElement(child, { bulleted: bulleted, ordered: ordered })
+      return React.cloneElement(child, { bulleted: bulleted, ordered: ordered, simple: simple })
     })
 
     return (
@@ -39,10 +40,10 @@ class ListItem extends Component {
   element = 'div'
 
   render() {
-    const classes = classNames('item', this.props.className)
-    const { bulleted, ordered } = this.props
+    const { bulleted, ordered, simple } = this.props
+    const classes = classNames('item', {'bulleted': bulleted && !simple}, { 'ordered': ordered && !simple},  this.props.className)
 
-    if(bulleted || ordered) this.element = 'li'
+    if((bulleted || ordered) && simple) this.element = 'li'
 
     return (
       <this.element className={classes}>

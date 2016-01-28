@@ -50,11 +50,30 @@ export default class ListDemo extends Component {
         </Segment>
 
         <Segment>
-          <h3>Bulleted List</h3>
-          <List bulleted>
+          <h3>Simple bulleted list</h3>
+          <List simple bulleted>
             <ListItem>HTML</ListItem>
             <ListItem>JavaScript</ListItem>
             <ListItem>CSS</ListItem>
+          </List>
+        </Segment>
+
+        <Segment>
+          <h3>Bulleted list</h3>
+          <List bulleted>
+            <ListItem>
+              GraphQL
+            </ListItem>
+            <ListItem>
+              Relay
+            </ListItem>
+            <ListItem>
+              <div>Databases</div>
+              <List>
+                <ListItem>RethinkDB</ListItem>
+                <ListItem>MongoDB</ListItem>
+              </List>
+            </ListItem>
           </List>
         </Segment>
 
