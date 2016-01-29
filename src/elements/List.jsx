@@ -19,7 +19,7 @@ class List extends Component {
 
   render() {
     const { bulleted, ordered, simple, link } = this.props
-    const classesFromProps = propsToClasses(['relaxed', 'divided', 'bulleted', 'ordered'], this.props)
+    const classesFromProps = propsToClasses(['relaxed', 'divided', 'bulleted', 'ordered', 'link'], this.props)
     const classes = classNames('ui', classesFromProps, 'list', this.props.className)
 
     if(bulleted && simple) this.element = 'ul'
@@ -52,7 +52,7 @@ class ListItem extends Component {
 
   render() {
     const { bulleted, ordered, simple, href, link, active } = this.props
-    const classes = classNames('item', {'bulleted': bulleted && !simple}, { 'ordered': ordered && !simple},  this.props.className)
+    const classes = classNames('item', {'active': active}, {'bulleted': bulleted && !simple}, { 'ordered': ordered && !simple},  this.props.className)
 
     if((bulleted || ordered) && simple) this.element = 'li'
 

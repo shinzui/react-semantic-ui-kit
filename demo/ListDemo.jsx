@@ -112,6 +112,52 @@ export default class ListDemo extends Component {
           </List>
         </Segment>
 
+        <Segment>
+          <h3>Link list</h3>
+          <List link>
+            <ListItem active>Home</ListItem>
+            <ListItem>Product</ListItem>
+            <ListItem>Team</ListItem>
+            <ListItem>About</ListItem>
+          </List>
+        </Segment>
+
+        <Segment>
+          <h3>Header content</h3>
+          <List>
+            <ListItem>
+              <div className='header'>Tokyo</div>
+               Best city in the world
+            </ListItem>
+            <ListItem>
+              <div className='header'>Paris</div>
+                Beautiful city
+            </ListItem>
+          </List>
+        </Segment>
+
+        <Segment>
+          <h3>List with description</h3>
+          <List>
+            <ListItem>
+              <i className='map marker icon' />
+              <div className='content'>
+                <a className='header'>Tokyo</a>
+                <div className='description'>Best city in the world</div>
+              </div>
+            </ListItem>
+            <ListItem>
+              <i className='map marker icon' />
+              <div className='content'>
+                <a className='header'>Paris</a>
+                <div className='description'>
+                  Beautiful city
+                </div>
+              </div>
+            </ListItem>
+          </List>
+        </Segment>
+
       </div>
     )
   }
