@@ -8,6 +8,7 @@
 
  - I needed a comprehensive UI component library to use on my side projects.
  - I am unsatisfied with [Bootstrap](http://getbootstrap.com/) (including boostrap 4 alpha) and [Foundation for sites](http://foundation.zurb.com/).
+ - I wanted to learn how to use Semantic UI.
 
 ## Goals
 
