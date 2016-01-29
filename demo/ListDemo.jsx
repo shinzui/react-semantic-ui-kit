@@ -231,6 +231,23 @@ export default class ListDemo extends Component {
           </List>
         </Segment>
 
+        <Segment inverted>
+          <List relaxed divided inverted>
+            <ListItem>
+              <div className='content'>
+                <div className='header'>Tokyo</div>
+                The best city
+              </div>
+            </ListItem>
+            <ListItem>
+              <div className='content'>
+                <div className='header'>Kyoto</div>
+                Beautiful city
+              </div>
+            </ListItem>
+          </List>
+        </Segment>
+
       </div>
     )
   }
