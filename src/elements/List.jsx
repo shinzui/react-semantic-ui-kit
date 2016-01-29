@@ -2,6 +2,8 @@ import React, { Component, PropTypes } from 'react'
 import classNames from 'classnames'
 
 import propsToClasses from '../util/propsToClasses'
+import SemanticUiPropTypes from '../common/SemanticUiPropTypes'
+import { alignedClasses } from '../common/semanticClasses'
 
 /*eslint "react/no-multi-comp": 0 */
 class List extends Component {
@@ -14,16 +16,18 @@ class List extends Component {
     simple: PropTypes.bool,
     link: PropTypes.bool,
     horizontal: PropTypes.bool,
-    inverted: PropTypes.bool
+    inverted: PropTypes.bool,
+    selection: PropTypes.bool,
+    aligned: SemanticUiPropTypes.verticalAlignment
   }
 
   element = 'div'
 
   render() {
     const { bulleted, ordered, simple, link } = this.props
-    const classesFromProps = propsToClasses(['relaxed', 'horizontal', 'divided',
+    const classesFromProps = propsToClasses(['relaxed', 'horizontal', 'divided', 'selection',
                                             'bulleted', 'ordered', 'link', 'inverted'], this.props)
-    const classes = classNames('ui', classesFromProps, 'list', this.props.className)
+    const classes = classNames('ui', alignedClasses(this.props), classesFromProps, 'list', this.props.className)
 
     if(bulleted && simple) this.element = 'ul'
     if(ordered && simple) this.element = 'ol'

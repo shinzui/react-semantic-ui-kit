@@ -21,7 +21,7 @@ export default class Image extends Component {
     centered: PropTypes.bool,
     hidden: PropTypes.bool,
     disabled: PropTypes.bool,
-    aligned: SemanticUiPropTypes.imageAlignment,
+    aligned: SemanticUiPropTypes.verticalAlignment,
     floated: SemanticUiPropTypes.floated
   }
 

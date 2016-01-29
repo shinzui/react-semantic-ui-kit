@@ -248,6 +248,31 @@ export default class ListDemo extends Component {
           </List>
         </Segment>
 
+        <Segment>
+          <h3>Selection list</h3>
+          <List aligned='middle' selection>
+            <ListItem>
+              <Image avatar src={bomi} />
+              <div className='content'>
+                <div className='header'>Bomi</div>
+              </div>
+            </ListItem>
+            <ListItem>
+              <Image avatar src={bomi} />
+              <div className='content'>
+                <div className='header'>Bomi</div>
+              </div>
+            </ListItem>
+            <ListItem>
+              <Image avatar src={bomi} />
+              <div className='content'>
+                <div className='header'>Bomi</div>
+              </div>
+            </ListItem>
+          </List>
+        </Segment>
+
+
       </div>
     )
   }
