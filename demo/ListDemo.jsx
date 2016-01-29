@@ -1,5 +1,8 @@
 import React, { Component } from 'react'
-import { List, ListItem, Segment } from '../src/index'
+
+import { List, ListItem, Image, Segment } from '../src/index'
+
+import bomi from './bomi.jpg'
 
 export default class ListDemo extends Component {
 
@@ -154,6 +157,76 @@ export default class ListDemo extends Component {
                   Beautiful city
                 </div>
               </div>
+            </ListItem>
+          </List>
+        </Segment>
+
+        <Segment>
+          <h3>Horizontal list</h3>
+          <List horizontal>
+            <ListItem>
+              <Image avatar src={bomi} />
+              <div className='content'>
+                <div className='header'>Bomi</div>
+                Fabulous cat
+              </div>
+            </ListItem>
+            <ListItem>
+              <Image avatar src={bomi} />
+              <div className='content'>
+                <div className='header'>Bomi</div>
+                Fabulous cat
+              </div>
+            </ListItem>
+            <ListItem>
+              <Image avatar src={bomi} />
+              <div className='content'>
+                <div className='header'>Bomi</div>
+                Fabulous cat
+              </div>
+            </ListItem>
+          </List>
+
+        </Segment>
+
+        <Segment>
+          <h3>Ordered horizontal list</h3>
+          <List ordered horizontal>
+            <ListItem>
+              <Image avatar src={bomi} />
+              <div className='content'>
+                <div className='header'>Bomi</div>
+                Fabulous cat
+              </div>
+            </ListItem>
+            <ListItem>
+              <Image avatar src={bomi} />
+              <div className='content'>
+                <div className='header'>Bomi</div>
+                Fabulous cat
+              </div>
+            </ListItem>
+            <ListItem>
+              <Image avatar src={bomi} />
+              <div className='content'>
+                <div className='header'>Bomi</div>
+                Fabulous cat
+              </div>
+            </ListItem>
+          </List>
+        </Segment>
+
+        <Segment>
+          <h3>Horizontal bulleted link list</h3>
+          <List bulleted horizontal link>
+            <ListItem>
+              Home
+            </ListItem>
+            <ListItem>
+              Features
+            </ListItem>
+            <ListItem>
+              About
             </ListItem>
           </List>
         </Segment>

@@ -12,14 +12,15 @@ class List extends Component {
     bulleted: PropTypes.bool,
     ordered: PropTypes.bool,
     simple: PropTypes.bool,
-    link: PropTypes.bool
+    link: PropTypes.bool,
+    horizontal: PropTypes.bool
   }
 
   element = 'div'
 
   render() {
     const { bulleted, ordered, simple, link } = this.props
-    const classesFromProps = propsToClasses(['relaxed', 'divided', 'bulleted', 'ordered', 'link'], this.props)
+    const classesFromProps = propsToClasses(['relaxed', 'horizontal', 'divided', 'bulleted', 'ordered', 'link'], this.props)
     const classes = classNames('ui', classesFromProps, 'list', this.props.className)
 
     if(bulleted && simple) this.element = 'ul'
