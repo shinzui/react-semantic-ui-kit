@@ -10,7 +10,9 @@ class List extends Component {
 
   static propTypes = {
     relaxed: PropTypes.bool,
+    veryRelaxed: PropTypes.bool,
     divided: PropTypes.bool,
+    celled: PropTypes.bool,
     bulleted: PropTypes.bool,
     ordered: PropTypes.bool,
     simple: PropTypes.bool,
@@ -18,16 +20,21 @@ class List extends Component {
     horizontal: PropTypes.bool,
     inverted: PropTypes.bool,
     selection: PropTypes.bool,
-    aligned: SemanticUiPropTypes.verticalAlignment
+    animated: PropTypes.bool,
+    aligned: SemanticUiPropTypes.verticalAlignment,
+    size: SemanticUiPropTypes.size
   }
 
   element = 'div'
 
   render() {
-    const { bulleted, ordered, simple, link } = this.props
-    const classesFromProps = propsToClasses(['relaxed', 'horizontal', 'divided', 'selection',
+    const { bulleted, ordered, simple, link, size, veryRelaxed } = this.props
+    const classesFromProps = propsToClasses(['relaxed', 'animated', 'horizontal', 
+                                            'divided', 'celled', 'selection',
                                             'bulleted', 'ordered', 'link', 'inverted'], this.props)
-    const classes = classNames('ui', alignedClasses(this.props), classesFromProps, 'list', this.props.className)
+
+    const classes = classNames('ui', size, {'very relaxed': veryRelaxed}, 
+                             alignedClasses(this.props), classesFromProps, 'list', this.props.className)
 
     if(bulleted && simple) this.element = 'ul'
     if(ordered && simple) this.element = 'ol'
