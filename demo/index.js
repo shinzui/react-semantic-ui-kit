@@ -20,6 +20,7 @@ import FlagDemo from './FlagDemo'
 import ContainerDemo from './ContainerDemo'
 import GridDemo from './GridDemo'
 import InputDemo from './InputDemo'
+import StepDemo from './StepDemo'
 
 import './example.css'
 
@@ -60,7 +61,8 @@ class Page extends Component {
       flag: FlagDemo,
       container: ContainerDemo,
       grid: GridDemo,
-      input: InputDemo
+      input: InputDemo,
+      step: StepDemo
     }
 
     let hash = window.location.hash
@@ -103,6 +105,7 @@ class Page extends Component {
             <a className='item' href='#flag'>Flag </a>
             <a className='item' href='#container'>Container</a>
             <a className='item' href='#grid'>Grid</a>
+            <a className='item' href='#step'>Step</a>
           </Menu>
         </Column>
         <Column width={13}>

@@ -24,6 +24,8 @@ import Image from './elements/image/Image'
 import ImageGroup from './elements/image/ImageGroup'
 import { List, ListItem} from './elements/List'
 import Rail from './elements/Rail'
+import Step from './elements/step/Step'
+import StepGroup from './elements/step/StepGroup'
 
 import Statistic from './views/Statistic'
 import ItemGroup from './views/item/ItemGroup'
@@ -59,5 +61,7 @@ export {
   Row,
   Segment,
   SegmentGroup,
-  Statistic
+  Statistic,
+  Step,
+  StepGroup
 }
