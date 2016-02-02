@@ -16,6 +16,36 @@ const MessageDemo = (props) => {
       </Segment>
 
       <Segment>
+        <Message>
+          <div className='header'>New Features</div>
+          <ul className='list'>
+            <li>You can now create swimlanes</li>
+            <li>You can upload attachments to cards</li>
+          </ul>
+        </Message>
+      </Segment>
+
+      <Segment>
+        <Message icon>
+          <i className='inbox icon' />
+          <div className='content'>
+            <div className='header'>Do you need help with continuous improvement?</div>
+            <p>Join our mailing list and get tips from the best practitioners.</p>
+          </div>
+        </Message>
+      </Segment>
+
+      <Segment>
+        <Message dismissible>
+          <div className='header'>New Features</div>
+          <ul className='list'>
+            <li>You can now create swimlanes</li>
+            <li>You can upload attachments to cards</li>
+          </ul>
+        </Message>
+      </Segment>
+
+      <Segment>
         <Message compact>
           A compact message
         </Message>
