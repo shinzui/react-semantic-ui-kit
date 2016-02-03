@@ -3,6 +3,7 @@ import React, { Component, PropTypes } from 'react'
 import classNames from 'classnames'
 
 import propsToClasses from '../util/propsToClasses'
+import SemanticUiPropTypes from '../common/SemanticUiPropTypes'
 
 export default class Message extends Component {
 
@@ -20,7 +21,8 @@ export default class Message extends Component {
     icon: PropTypes.bool,
     hidden: PropTypes.bool,
     visible: PropTypes.bool,
-    floating: PropTypes.bool
+    floating: PropTypes.bool,
+    color: SemanticUiPropTypes.color
   }
 
   constructor(props) {
@@ -37,7 +39,7 @@ export default class Message extends Component {
   }
 
   render() {
-    const { size, className } = this.props
+    const { size, className, color } = this.props
     const { dismissed } = this.state
 
     const classesFromProps = propsToClasses(['hidden', 'visible', 'floating',
@@ -46,7 +48,7 @@ export default class Message extends Component {
 
     let classes = classNames('ui', classesFromProps,
                              {'hidden': dismissed},
-                             size, 'message', className)
+                             size, color, 'message', className)
     let dismissIcon = this.props.dismissible ? <i className='close icon' onClick={this.dismiss} /> : undefined
 
     return (

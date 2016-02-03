@@ -3,6 +3,11 @@ import React, { Component } from 'react'
 import { Segment, Message } from '../src/index'
 
 const MessageDemo = (props) => {
+  const colors = ['red', 'orange', 'yellow', 'olive', 'green', 'teal', 'blue',
+                'violet', 'purple', 'pink', 'brown', 'grey', 'black']
+
+  const sizes = ['small', 'large', 'huge', 'massive']
+
   return (
     <div>
       <Segment>
@@ -122,6 +127,22 @@ const MessageDemo = (props) => {
         </Message>
       </Segment>
 
+      <Segment>
+        <h3>Colored messages</h3>
+
+        {colors.map( color => {
+          return <Message key={color} color={color}>{color} message</Message>
+        })}
+      </Segment>
+
+      <Segment>
+        <h3>Sizes</h3>
+
+        {sizes.map( size => {
+          return <Message size={size} key={size}>{size} message</Message>
+        })}
+      </Segment>
+
 
 
     </div>
@@ -129,5 +150,3 @@ const MessageDemo = (props) => {
 }
 
 export default MessageDemo
-
-
