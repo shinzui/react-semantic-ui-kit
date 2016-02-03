@@ -12,7 +12,15 @@ export default class Message extends Component {
     dismissible: PropTypes.bool,
     compact: PropTypes.bool,
     warning: PropTypes.bool,
-    icon: PropTypes.bool
+    info: PropTypes.bool,
+    positive: PropTypes.bool,
+    success: PropTypes.bool,
+    error: PropTypes.bool,
+    success: PropTypes.bool,
+    icon: PropTypes.bool,
+    hidden: PropTypes.bool,
+    visible: PropTypes.bool,
+    floating: PropTypes.bool
   }
 
   constructor(props) {
@@ -32,7 +40,9 @@ export default class Message extends Component {
     const { size, className } = this.props
     const { dismissed } = this.state
 
-    const classesFromProps = propsToClasses(['compact', 'warning', 'icon'], this.props)
+    const classesFromProps = propsToClasses(['hidden', 'visible', 'floating',
+                                            'positive', 'success', 'negative', 'error',
+                                            'compact', 'info', 'warning', 'icon'], this.props)
 
     let classes = classNames('ui', classesFromProps,
                              {'hidden': dismissed},
