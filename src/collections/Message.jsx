@@ -22,7 +22,8 @@ export default class Message extends Component {
     hidden: PropTypes.bool,
     visible: PropTypes.bool,
     floating: PropTypes.bool,
-    color: SemanticUiPropTypes.color
+    color: SemanticUiPropTypes.color,
+    attached: PropTypes.oneOf(['top', 'bottom'])
   }
 
   constructor(props) {
@@ -33,6 +34,17 @@ export default class Message extends Component {
   state = {
     dismissed: false
   }
+
+  attachedClasses() {
+    const { attached } = this.props
+
+    if(attached === 'top') {
+      return 'attached'
+    } else if(attached === 'bottom') {
+      return 'bottom attached'
+    }
+  }
+
 
   dismiss() {
     this.setState({dismissed: true})
@@ -46,7 +58,7 @@ export default class Message extends Component {
                                             'positive', 'success', 'negative', 'error',
                                             'compact', 'info', 'warning', 'icon'], this.props)
 
-    let classes = classNames('ui', classesFromProps,
+    let classes = classNames('ui', this.attachedClasses(), classesFromProps,
                              {'hidden': dismissed},
                              size, color, 'message', className)
     let dismissIcon = this.props.dismissible ? <i className='close icon' onClick={this.dismiss} /> : undefined

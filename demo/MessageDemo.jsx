@@ -70,6 +70,20 @@ const MessageDemo = (props) => {
       </Segment>
 
       <Segment>
+        <Message attached='top'>
+          This is a top attached message
+        </Message>
+        <Segment attached='both'>
+          <div className='content'>
+            Some content
+          </div>
+        </Segment>
+        <Message attached='bottom' warning>
+          Bottom attached warning message
+        </Message>
+      </Segment>
+
+      <Segment>
         <h3>Warning message</h3>
         <Message warning dismissible> 
           <div className='header'>
