@@ -21,6 +21,7 @@ import ContainerDemo from './ContainerDemo'
 import GridDemo from './GridDemo'
 import InputDemo from './InputDemo'
 import StepDemo from './StepDemo'
+import TableDemo from './TableDemo'
 
 import './example.css'
 
@@ -62,7 +63,8 @@ class Page extends Component {
       container: ContainerDemo,
       grid: GridDemo,
       input: InputDemo,
-      step: StepDemo
+      step: StepDemo,
+      table: TableDemo
     }
 
     let hash = window.location.hash
@@ -106,6 +108,7 @@ class Page extends Component {
             <a className='item' href='#container'>Container</a>
             <a className='item' href='#grid'>Grid</a>
             <a className='item' href='#step'>Step</a>
+            <a className='item' href='#table'>Table</a>
           </Menu>
         </Column>
         <Column width={13}>

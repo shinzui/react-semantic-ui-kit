@@ -4,6 +4,7 @@ import Column from './collections/grid/Column'
 import Row from './collections/grid/Row'
 import Menu from './collections/Menu'
 import Message from './collections/Message'
+import Table from './collections/Table'
 
 import Modal from './modules/Modal'
 import ModalHeader from './modules/ModalHeader'
@@ -63,5 +64,6 @@ export {
   SegmentGroup,
   Statistic,
   Step,
-  StepGroup
+  StepGroup,
+  Table
 }
