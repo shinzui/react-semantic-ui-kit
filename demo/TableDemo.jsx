@@ -33,6 +33,31 @@ const TableDemo = (props) => {
           </tbody>
         </Table>
       </Segment>
+
+      <Segment>
+        <h3>Definition table</h3>
+        <Table definition>
+          <thead>
+            <tr>
+              <th></th>
+              <th>Email</th>
+              <th>DOB</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Jun Ji-hyun</td>
+              <td>jihyn@gmail.com</td>
+              <td>30/10/1980</td>
+            </tr>
+            <tr>
+              <td>Kim Eun-joo</td>
+              <td>eunjoo@naver.com</td>
+              <td>31/8/1981</td>
+            </tr>
+          </tbody>
+        </Table>
+      </Segment>
     </div>
   )
 }

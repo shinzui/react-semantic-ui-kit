@@ -8,12 +8,13 @@ export default class Table extends Component {
 
   static propTypes = {
     children: PropTypes.node.isRequired,
-    celled: PropTypes.bool
+    celled: PropTypes.bool,
+    definition: PropTypes.bool
   }
 
   render() {
     const { className } = this.props
-    const classesFromProps = propsToClasses(['celled'], this.props)
+    const classesFromProps = propsToClasses(['celled', 'definition'], this.props)
 
     const classes = classNames('ui', classesFromProps, 'table', className)
 
