@@ -4,7 +4,9 @@ import Column from './collections/grid/Column'
 import Row from './collections/grid/Row'
 import Menu from './collections/Menu'
 import Message from './collections/Message'
-import Table from './collections/Table'
+import Table from './collections/table/Table'
+import TableCell from './collections/table/TableCell'
+import TableRow from './collections/table/TableRow'
 
 import Modal from './modules/Modal'
 import ModalHeader from './modules/ModalHeader'
@@ -65,5 +67,7 @@ export {
   Statistic,
   Step,
   StepGroup,
-  Table
+  Table,
+  TableCell,
+  TableRow
 }
