@@ -273,6 +273,41 @@ const TableDemo = (props) => {
         </Table>
       </Segment>
 
+      <Segment>
+        <h3>Selectable Row</h3>
+        <Table selectable celled>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Status</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <TableRow positive>
+              <td>Yewon</td>
+              <td>Hired</td>
+              <td>None</td>
+            </TableRow>
+            <TableRow>
+              <td>Min Jung</td>
+              <TableCell warning>Waiting</TableCell>
+              <TableCell negative>Background check required</TableCell>
+            </TableRow>
+            <TableRow>
+              <td>Joon Hee</td>
+              <TableCell>Approved</TableCell>
+              <TableCell positive>Requires call</TableCell>
+            </TableRow>
+            <TableRow negative>
+              <td>In Young</td>
+              <td>Rejected</td>
+              <td>Not qualified</td>
+            </TableRow>
+          </tbody>
+        </Table>
+      </Segment>
+
 
 
     </div>
