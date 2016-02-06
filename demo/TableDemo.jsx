@@ -46,12 +46,12 @@ const TableDemo = (props) => {
           </thead>
           <tbody>
             <tr>
-              <td>Jun Ji-hyun</td>
+              <td>Jun Ji Hyun</td>
               <td>jihyn@gmail.com</td>
               <td>30/10/1980</td>
             </tr>
             <tr>
-              <td>Kim Eun-joo</td>
+              <td>Kim Eun Joo</td>
               <td>eunjoo@naver.com</td>
               <td>31/8/1981</td>
             </tr>
@@ -215,6 +215,31 @@ const TableDemo = (props) => {
               <TableCell>Approved</TableCell>
               <TableCell disabled>Requires call</TableCell>
             </TableRow>
+          </tbody>
+        </Table>
+      </Segment>
+
+      <Segment>
+        <h3>Single line tables</h3>
+        <Table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>DOB</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Jun Ji Hyun</td>
+              <td>jihyn@gmail.com</td>
+              <td>30/10/1980</td>
+            </tr>
+            <tr>
+              <td>Kim Eun Joo</td>
+              <td>eunjoo@naver.com</td>
+              <td>31/8/1981</td>
+            </tr>
           </tbody>
         </Table>
       </Segment>

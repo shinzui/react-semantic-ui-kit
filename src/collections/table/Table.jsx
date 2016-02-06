@@ -9,14 +9,16 @@ export default class Table extends Component {
   static propTypes = {
     children: PropTypes.node.isRequired,
     celled: PropTypes.bool,
-    definition: PropTypes.bool
+    definition: PropTypes.bool,
+    singleLine: PropTypes.bool,
   }
 
   render() {
-    const { className } = this.props
+    const { className, singleLine } = this.props
     const classesFromProps = propsToClasses(['celled', 'definition'], this.props)
 
-    const classes = classNames('ui', classesFromProps, 'table', className)
+    const classes = classNames('ui', classesFromProps,
+                               {'single line': singleLine}, 'table', className)
 
     return(
       <table className={classes}>
