@@ -244,6 +244,35 @@ const TableDemo = (props) => {
         </Table>
       </Segment>
 
+      <Segment>
+        <h3>Fixed table</h3>
+        <Table fixed>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Bio</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Jun Ji Hyun</td>
+              <td>jihyn@gmail.com</td>
+              <td>
+                Jun Ji-hyun, also known as Gianna Jun, is a South Korean actress. She is best known for her role as "The Girl" in the romantic comedy My Sassy Girl, one of the highest-grossing Korean comedies of all time. 
+              </td>
+            </tr>
+            <tr>
+              <td>Go Joon Hee</td>
+              <td>eunjoo@naver.com</td>
+              <td>
+                Go Joon-hee (born Kim Eun Joo on August 31, 1985) is a South Korean actress. Kim Eun-joo made her entertainment debut as a school uniform model in 2001, then launched an acting career in 2003.
+              </td>
+            </tr>
+          </tbody>
+        </Table>
+      </Segment>
+
 
 
     </div>
