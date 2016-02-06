@@ -22,6 +22,7 @@ import GridDemo from './GridDemo'
 import InputDemo from './InputDemo'
 import StepDemo from './StepDemo'
 import TableDemo from './TableDemo'
+import CardDemo from './CardDemo'
 
 import './example.css'
 
@@ -64,7 +65,8 @@ class Page extends Component {
       grid: GridDemo,
       input: InputDemo,
       step: StepDemo,
-      table: TableDemo
+      table: TableDemo,
+      card: CardDemo
     }
 
     let hash = window.location.hash
@@ -109,6 +111,7 @@ class Page extends Component {
             <a className='item' href='#grid'>Grid</a>
             <a className='item' href='#step'>Step</a>
             <a className='item' href='#table'>Table</a>
+            <a className='item' href='#card'>Card</a>
           </Menu>
         </Column>
         <Column width={13}>

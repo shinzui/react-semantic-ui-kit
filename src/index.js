@@ -33,11 +33,21 @@ import StepGroup from './elements/step/StepGroup'
 import Statistic from './views/Statistic'
 import ItemGroup from './views/item/ItemGroup'
 import Item from './views/item/Item'
+import Card from './views/card/Card'
+
+import Content from './elements/extra/Content'
+import ContentHeader from './elements/extra/ContentHeader'
+import ContentDescription from './elements/extra/ContentDescription'
+import Meta from './elements/extra/Meta'
 
 
 export {
   Button,
+  Card,
   Container,
+  Content,
+  ContentHeader,
+  ContentDescription,
   Column,
   Divider,
   Header,
@@ -55,6 +65,7 @@ export {
   List,
   ListItem,
   Menu,
+  Meta,
   Modal,
   ModalHeader,
   ModalContent,
