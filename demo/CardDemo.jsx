@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Segment, Card, Meta, Image,
+import { Segment, Card, Meta, Image, Grid, Column,
         Content, ContentDescription, ContentHeader } from '../src/index'
 
 import bomi from './bomi_square.jpg'
@@ -56,6 +56,43 @@ const CardDemo = (props) => {
           </Content>
         </Card>
         
+      </Segment>
+
+      <Segment>
+        <h3>Fluid Card</h3>
+
+        <Grid columns={3}>
+          <Column>
+            <Card fluid>
+              <Image src={bomi} wrapper/>
+              <Content>
+                <ContentHeader>
+                  Bomi
+                </ContentHeader>
+              </Content>
+            </Card>
+          </Column>
+          <Column>
+            <Card fluid>
+              <Image src={bomi} wrapper/>
+              <Content>
+                <ContentHeader>
+                  Bomi
+                </ContentHeader>
+              </Content>
+            </Card>
+          </Column>
+          <Column>
+            <Card fluid>
+              <Image src={bomi} wrapper/>
+              <Content>
+                <ContentHeader>
+                  Bomi
+                </ContentHeader>
+              </Content>
+            </Card>
+          </Column>
+        </Grid>
       </Segment>
     </div>
   )
