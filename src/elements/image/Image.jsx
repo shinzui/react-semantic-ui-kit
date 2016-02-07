@@ -30,18 +30,18 @@ export default class Image extends Component {
   }
 
   render() {
-    const { wrapper, size, src, href, hidden, disabled, className, style } = this.props
+    const { wrapper, size, src, href, hidden, disabled, className, style, children } = this.props
     const classesFromProps = propsToClasses(['avatar', 'bordered', 'fluid', 'rounded', 'circular', 'centered' ], this.props)
     const classes = classNames({'hidden': hidden}, {'disabled': disabled}, 'ui',
                                alignedClasses(this.props), size, floatedClasses(this.props),
                                classesFromProps, 'image', className)
 
     if(wrapper && src) {
-      return <div className={classes} style={style}><img src={src} /></div>
+      return <div className={classes} style={style}><img src={src} />{children}</div>
     } else if(wrapper) {
-      return <div className={classes} style={style}>{this.props.children}</div>
+      return <div className={classes} style={style}>{children}</div>
     } else if(href) {
-      return <a href={href} className={classes} style={style}><img src={src} /></a>
+      return <a href={href} className={classes} style={style}><img src={src} />{children}</a>
     } else {
       return <img className={classes} src={src} style={style} />
     }
