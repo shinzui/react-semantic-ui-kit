@@ -7,12 +7,13 @@ export default class Card extends Component {
 
   static propTypes = {
     children: PropTypes.node,
-    fluid: PropTypes.bool
+    fluid: PropTypes.bool,
+    centered: PropTypes.bool
   }
 
   render() {
     const { className } = this.props
-    const classesFromProps = propsToClasses(['fluid'], this.props)
+    const classesFromProps = propsToClasses(['fluid', 'centered'], this.props)
     const classes = classNames('ui', classesFromProps,
                                'card', className)
 

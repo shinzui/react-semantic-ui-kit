@@ -94,6 +94,17 @@ const CardDemo = (props) => {
           </Column>
         </Grid>
       </Segment>
+      <Segment>
+        <h3>Centered card</h3>
+         <Card centered>
+          <Image src={bomi} wrapper/>
+          <Content>
+            <ContentHeader>
+              Bomi
+            </ContentHeader>
+          </Content>
+        </Card>
+      </Segment>
     </div>
   )
 }
