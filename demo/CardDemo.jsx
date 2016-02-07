@@ -3,6 +3,8 @@ import React from 'react'
 import { Segment, Card, Meta, Image, Grid, Column,
         Content, ContentDescription, ContentHeader } from '../src/index'
 
+import ParagraphExample from './ParagraphExample'
+
 import bomi from './bomi_square.jpg'
 import bomi2 from './bomi.jpg'
 
@@ -94,6 +96,7 @@ const CardDemo = (props) => {
           </Column>
         </Grid>
       </Segment>
+
       <Segment>
         <h3>Centered card</h3>
          <Card centered>
@@ -102,6 +105,32 @@ const CardDemo = (props) => {
             <ContentHeader>
               Bomi
             </ContentHeader>
+          </Content>
+        </Card>
+      </Segment>
+
+      <Segment>
+        <h3>Link card</h3>
+
+        <Card href='#'>
+          <Content>
+            <ContentHeader>
+              Cute Bomi
+            </ContentHeader>
+            <Meta>
+              <span>
+                Bengal cat
+              </span>
+            </Meta>
+            <ContentDescription>
+              <ParagraphExample />
+            </ContentDescription>
+          </Content>
+          <Content extra>
+            <div className='right floated'>
+              <Image avatar src={bomi} />
+                Bomi
+            </div>
           </Content>
         </Card>
       </Segment>

@@ -8,16 +8,22 @@ export default class Card extends Component {
   static propTypes = {
     children: PropTypes.node,
     fluid: PropTypes.bool,
-    centered: PropTypes.bool
+    centered: PropTypes.bool,
+    href: PropTypes.string,
   }
 
   render() {
-    const { className } = this.props
+    const { className, href, children } = this.props
     const classesFromProps = propsToClasses(['fluid', 'centered'], this.props)
     const classes = classNames('ui', classesFromProps,
                                'card', className)
 
-    return <div className={classes}>{this.props.children}</div>
+
+    if(href) {
+      return <a href={href} className={classes}>{children}</a>
+    } else {
+      return <div className={classes}>{children}</div>
+    }
   }
 }
 
