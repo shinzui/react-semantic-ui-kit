@@ -10,12 +10,13 @@ export default class Card extends Component {
     fluid: PropTypes.bool,
     centered: PropTypes.bool,
     href: PropTypes.string,
+    grouped: PropTypes.bool
   }
 
   render() {
-    const { className, href, children } = this.props
+    const { className, href, children, grouped } = this.props
     const classesFromProps = propsToClasses(['fluid', 'centered'], this.props)
-    const classes = classNames('ui', classesFromProps,
+    const classes = classNames({'ui': !grouped}, classesFromProps,
                                'card', className)
 
 

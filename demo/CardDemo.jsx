@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Segment, Card, Meta, Image, Grid, Column,
+import { Segment, Card, CardGroup, Meta, Image, Grid, Column,
         Content, ContentDescription, ContentHeader } from '../src/index'
 
 import ParagraphExample from './ParagraphExample'
@@ -57,7 +57,48 @@ const CardDemo = (props) => {
             </div>
           </Content>
         </Card>
-        
+      </Segment>
+
+      <Segment>
+        <h3>Grouped cards</h3>
+        <CardGroup>
+          <Card>
+            <div className='image'>
+              <img src={bomi} />
+            </div>
+            <Content>
+              <ContentHeader href='#'>Bomi</ContentHeader>
+              <Meta>
+                <span className='date'>Born in 2015</span>
+              </Meta>
+              <ContentDescription>
+                Bomi is a bengal cat.
+              </ContentDescription>
+            </Content>
+            <Content extra>
+              <i className='heart icon'/>
+              323 Likes
+            </Content>
+          </Card>
+          <Card>
+            <div className='image'>
+              <img src={bomi} />
+            </div>
+            <Content>
+              <ContentHeader href='#'>Bomi</ContentHeader>
+              <Meta>
+                <span className='date'>Born in 2015</span>
+              </Meta>
+              <ContentDescription>
+                Bomi is a bengal cat.
+              </ContentDescription>
+            </Content>
+            <Content extra>
+              <i className='heart icon'/>
+              323 Likes
+            </Content>
+          </Card>
+        </CardGroup>
       </Segment>
 
       <Segment>

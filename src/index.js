@@ -34,6 +34,7 @@ import Statistic from './views/Statistic'
 import ItemGroup from './views/item/ItemGroup'
 import Item from './views/item/Item'
 import Card from './views/card/Card'
+import CardGroup from './views/card/CardGroup'
 
 import Content from './elements/extra/Content'
 import ContentHeader from './elements/extra/ContentHeader'
@@ -44,6 +45,7 @@ import Meta from './elements/extra/Meta'
 export {
   Button,
   Card,
+  CardGroup,
   Container,
   Content,
   ContentHeader,
