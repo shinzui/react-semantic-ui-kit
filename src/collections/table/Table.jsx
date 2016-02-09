@@ -12,12 +12,13 @@ export default class Table extends Component {
     definition: PropTypes.bool,
     singleLine: PropTypes.bool,
     fixed: PropTypes.bool,
-    selectable: PropTypes.bool
+    selectable: PropTypes.bool,
+    striped: PropTypes.bool
   }
 
   render() {
     const { className, singleLine } = this.props
-    const classesFromProps = propsToClasses(['selectable', 'celled', 'definition', 'fixed'], this.props)
+    const classesFromProps = propsToClasses(['selectable', 'striped', 'celled', 'definition', 'fixed'], this.props)
 
     const classes = classNames('ui', classesFromProps,
                                {'single line': singleLine}, 'table', className)
