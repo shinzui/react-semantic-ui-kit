@@ -3,6 +3,8 @@ import React from 'react'
 import { Segment, Table, TableCell, TableRow } from '../src/index'
 
 const TableDemo = (props) => {
+  const colors = ['red', 'orange', 'yellow', 'olive', 'green', 'teal', 'blue',
+                          'violet', 'purple', 'pink', 'brown', 'grey', 'black']
   return (
     <div>
       <Segment>
@@ -366,6 +368,62 @@ const TableDemo = (props) => {
               </tr>
             </tbody>
           </Table>
+      </Segment>
+
+      <Segment>
+        <h3>Colored tables</h3>
+        {colors.map( color => {
+          return (
+          <Table key={color} color={color}>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>DOB</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Jun Ji Hyun</td>
+                <td>jihyn@gmail.com</td>
+                <td>30/10/1980</td>
+              </tr>
+              <tr>
+                <td>Kim Eun Joo</td>
+                <td>eunjoo@naver.com</td>
+                <td>31/8/1981</td>
+              </tr>
+            </tbody>
+          </Table>)
+        })}
+      </Segment>
+
+      <Segment>
+        <h3>Inverted tables</h3>
+        {colors.map( color => {
+          return (
+          <Table key={color} color={color} inverted>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>DOB</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Jun Ji Hyun</td>
+                <td>jihyn@gmail.com</td>
+                <td>30/10/1980</td>
+              </tr>
+              <tr>
+                <td>Kim Eun Joo</td>
+                <td>eunjoo@naver.com</td>
+                <td>31/8/1981</td>
+              </tr>
+            </tbody>
+          </Table>)
+        })}
       </Segment>
     </div>
   )

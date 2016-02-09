@@ -2,6 +2,7 @@ import React, { Component, PropTypes } from 'react'
 
 import classNames from 'classnames'
 
+import SemanticUiPropTypes from '../../common/SemanticUiPropTypes'
 import propsToClasses from '../../util/propsToClasses'
 
 export default class Table extends Component {
@@ -14,16 +15,18 @@ export default class Table extends Component {
     fixed: PropTypes.bool,
     selectable: PropTypes.bool,
     striped: PropTypes.bool,
-    basic: PropTypes.bool
+    basic: PropTypes.bool,
+    color: SemanticUiPropTypes.color,
+    inverted: PropTypes.bool
   }
 
   render() {
-    const { className, singleLine } = this.props
+    const { className, singleLine, color } = this.props
     const classesFromProps = propsToClasses(['selectable', 'striped', 'basic',
-                                            'celled', 'definition', 'fixed'], this.props)
+                                            'celled', 'definition', 'fixed', 'inverted'], this.props)
 
     const classes = classNames('ui', classesFromProps,
-                               {'single line': singleLine}, 'table', className)
+                               {'single line': singleLine}, color, 'table', className)
 
     return(
       <table className={classes}>
