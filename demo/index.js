@@ -23,6 +23,7 @@ import InputDemo from './InputDemo'
 import StepDemo from './StepDemo'
 import TableDemo from './TableDemo'
 import CardDemo from './CardDemo'
+import CheckboxDemo from './CheckboxDemo'
 
 import './example.css'
 
@@ -66,7 +67,8 @@ class Page extends Component {
       input: InputDemo,
       step: StepDemo,
       table: TableDemo,
-      card: CardDemo
+      card: CardDemo,
+      checkbox: CheckboxDemo
     }
 
     let hash = window.location.hash
@@ -112,6 +114,7 @@ class Page extends Component {
             <a className='item' href='#step'>Step</a>
             <a className='item' href='#table'>Table</a>
             <a className='item' href='#card'>Card</a>
+            <a className='item' href='#checkbox'>Checkbox</a>
           </Menu>
         </Column>
         <Column width={13}>

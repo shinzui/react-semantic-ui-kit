@@ -43,11 +43,13 @@ import ContentHeader from './elements/extra/ContentHeader'
 import ContentDescription from './elements/extra/ContentDescription'
 import Meta from './elements/extra/Meta'
 
+import Checkbox from './modules/Checkbox'
 
 export {
   Button,
   Card,
   CardGroup,
+  Checkbox,
   Container,
   Content,
   ContentHeader,
