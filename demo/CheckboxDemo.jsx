@@ -9,6 +9,10 @@ const CheckboxDemo = (props) => {
       <Segment>
         <Checkbox name='checkbox' label='I agree to the terms' />
       </Segment>
+
+      <Segment floated='left' compact>
+        <Checkbox name='checkbox' fitted label=' '/>
+      </Segment>
     </div>
   )
 }
