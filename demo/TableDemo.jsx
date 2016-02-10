@@ -1,6 +1,8 @@
 import React from 'react'
 
-import { Segment, Table, TableCell, TableRow } from '../src/index'
+import { Segment, Table, Checkbox, Button,
+          TableHeader, TableFooter,
+          TableCell, TableRow } from '../src/index'
 
 const TableDemo = (props) => {
   const colors = ['red', 'orange', 'yellow', 'olive', 'green', 'teal', 'blue',
@@ -424,6 +426,46 @@ const TableDemo = (props) => {
             </tbody>
           </Table>)
         })}
+      </Segment>
+
+      <Segment>
+        <h3>Full-width header and footer</h3>
+        <Table compact celled definition>
+          <TableHeader fullWidth>
+            <tr>
+              <th></th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>DOB</th>
+            </tr>
+          </TableHeader>
+          <tbody>
+            <tr>
+              <TableCell collapsing>
+                <Checkbox name='checkbox' fitted label=' '/>
+              </TableCell>
+              <td>Jun Ji Hyun</td>
+              <td>jihyn@gmail.com</td>
+              <td>30/10/1980</td>
+            </tr>
+            <tr>
+              <TableCell collapsing>
+                <Checkbox name='checkbox' fitted label=' '/>
+              </TableCell>
+              <td>Kim Eun Joo</td>
+              <td>eunjoo@naver.com</td>
+              <td>31/8/1981</td>
+            </tr>
+          </tbody>
+          <TableFooter fullWidth>
+            <tr>
+              <th></th>
+              <th colSpan='4'>
+                <Button>Add</Button>
+              </th>
+            </tr>
+          </TableFooter>
+        </Table>
       </Segment>
     </div>
   )

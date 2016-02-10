@@ -12,13 +12,14 @@ export default class TableCell extends Component {
     error: PropTypes.bool,
     warning: PropTypes.bool,
     active: PropTypes.bool,
-    disabled: PropTypes.bool
+    disabled: PropTypes.bool,
+    collapsing: PropTypes.bool
   }
 
   render() {
     const { className } = this.props
-    const classesFromProps = propsToClasses(['positive', 'negative',
-                                  'error', 'warning', 'active', 'disabled'], this.props)
+    const classesFromProps = propsToClasses(['positive', 'negative', 'error',
+                                            'warning', 'active', 'disabled', 'collapsing'], this.props)
 
     const classes = classNames(classesFromProps, className)
 
