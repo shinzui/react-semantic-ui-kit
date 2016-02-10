@@ -7,6 +7,8 @@ import Message from './collections/Message'
 import Table from './collections/table/Table'
 import TableCell from './collections/table/TableCell'
 import TableRow from './collections/table/TableRow'
+import TableHeader from './collections/table/TableHeader'
+import TableFooter from './collections/table/TableFooter'
 
 import Modal from './modules/Modal'
 import ModalHeader from './modules/ModalHeader'
@@ -82,5 +84,7 @@ export {
   StepGroup,
   Table,
   TableCell,
-  TableRow
+  TableRow,
+  TableHeader,
+  TableFooter
 }
