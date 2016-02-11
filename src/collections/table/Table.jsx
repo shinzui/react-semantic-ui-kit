@@ -19,16 +19,20 @@ export default class Table extends Component {
     color: SemanticUiPropTypes.color,
     inverted: PropTypes.bool,
     compact: PropTypes.bool,
-    veryCompact: PropTypes.bool
+    veryCompact: PropTypes.bool,
+    padded: PropTypes.bool,
+    veryPadded: PropTypes.bool
   }
 
   render() {
-    const { className, singleLine, color, veryCompact } = this.props
+    const { className, singleLine, color, veryCompact, veryPadded } = this.props
     const classesFromProps = propsToClasses(['selectable', 'striped', 'basic',
-                                            'celled', 'definition', 'fixed', 'inverted', 'compact'], this.props)
+                                            'celled', 'definition', 'fixed',
+                                            'inverted', 'compact', 'padded'], this.props)
 
     const classes = classNames('ui', classesFromProps,
-                               {'single line': singleLine}, {'very compact': veryCompact}, color, 'table', className)
+                               {'single line': singleLine}, {'very compact': veryCompact}, {'very padded': veryPadded},
+                               color, 'table', className)
 
     return(
       <table className={classes}>

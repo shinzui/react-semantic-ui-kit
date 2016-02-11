@@ -535,6 +535,74 @@ const TableDemo = (props) => {
           </tbody>
         </Table>
       </Segment>
+
+      <Segment>
+        <h3>Padded table</h3>
+        <Table padded>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Status</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <TableRow>
+              <td>Yewon</td>
+              <td>Hired</td>
+              <td>None</td>
+            </TableRow>
+            <TableRow>
+              <td>Min Jung</td>
+              <td>Waiting</td>
+              <TableCell>Background check required</TableCell>
+            </TableRow>
+            <TableRow>
+              <td>Joon Hee</td>
+              <TableCell>Approved</TableCell>
+              <TableCell positive>Requires call</TableCell>
+            </TableRow>
+            <TableRow negative>
+              <td>In Young</td>
+              <td>Rejected</td>
+              <td>Not qualified</td>
+            </TableRow>
+          </tbody>
+        </Table>
+
+        <h3>Very padded table</h3>
+        <Table veryPadded>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Status</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <TableRow>
+              <td>Yewon</td>
+              <td>Hired</td>
+              <td>None</td>
+            </TableRow>
+            <TableRow>
+              <td>Min Jung</td>
+              <td>Waiting</td>
+              <TableCell>Background check required</TableCell>
+            </TableRow>
+            <TableRow>
+              <td>Joon Hee</td>
+              <TableCell>Approved</TableCell>
+              <TableCell positive>Requires call</TableCell>
+            </TableRow>
+            <TableRow negative>
+              <td>In Young</td>
+              <td>Rejected</td>
+              <td>Not qualified</td>
+            </TableRow>
+          </tbody>
+        </Table>
+      </Segment>
     </div>
   )
 }
