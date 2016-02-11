@@ -467,6 +467,74 @@ const TableDemo = (props) => {
           </TableFooter>
         </Table>
       </Segment>
+
+      <Segment>
+        <h3>Compact table</h3>
+        <Table compact>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Status</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <TableRow>
+              <td>Yewon</td>
+              <td>Hired</td>
+              <td>None</td>
+            </TableRow>
+            <TableRow>
+              <td>Min Jung</td>
+              <td>Waiting</td>
+              <TableCell>Background check required</TableCell>
+            </TableRow>
+            <TableRow>
+              <td>Joon Hee</td>
+              <TableCell>Approved</TableCell>
+              <TableCell positive>Requires call</TableCell>
+            </TableRow>
+            <TableRow negative>
+              <td>In Young</td>
+              <td>Rejected</td>
+              <td>Not qualified</td>
+            </TableRow>
+          </tbody>
+        </Table>
+
+        <h3>Very compact table</h3>
+        <Table veryCompact>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Status</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <TableRow>
+              <td>Yewon</td>
+              <td>Hired</td>
+              <td>None</td>
+            </TableRow>
+            <TableRow>
+              <td>Min Jung</td>
+              <td>Waiting</td>
+              <TableCell>Background check required</TableCell>
+            </TableRow>
+            <TableRow>
+              <td>Joon Hee</td>
+              <TableCell>Approved</TableCell>
+              <TableCell positive>Requires call</TableCell>
+            </TableRow>
+            <TableRow negative>
+              <td>In Young</td>
+              <td>Rejected</td>
+              <td>Not qualified</td>
+            </TableRow>
+          </tbody>
+        </Table>
+      </Segment>
     </div>
   )
 }
