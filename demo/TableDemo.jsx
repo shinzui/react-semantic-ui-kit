@@ -64,6 +64,64 @@ const TableDemo = (props) => {
       </Segment>
 
       <Segment>
+        <h3>Structured table</h3>
+        <Table structured celled>
+          <thead>
+            <tr>
+              <th rowSpan='2'>Name</th>
+              <th rowSpan='2'>Projects</th>
+              <th rowSpan='2'>Members</th>
+              <th colSpan='3'>
+                Libraries
+              </th>
+            </tr>
+            <tr>
+              <th>React</th>
+              <th>Hapi</th>
+              <th>React Native</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Team A</td>
+              <td>Obeya</td>
+              <TableCell aligned='right'>3</TableCell>
+              <TableCell aligned='center'>
+                <i className='large green checkmark icon' />
+              </TableCell>
+              <td />
+              <td />
+            </tr>
+            <tr>
+              <td rowSpan='2'>Team B</td>
+              <td>Jangso</td>
+              <TableCell aligned='right'>5</TableCell>
+              <TableCell aligned='center'>
+                <i className='large green checkmark icon' />
+              </TableCell>
+              <TableCell aligned='center'>
+                <i className='large green checkmark icon' />
+              </TableCell>
+              <TableCell aligned='center'>
+                <i className='large green checkmark icon' />
+              </TableCell>
+            </tr>
+            <tr>
+              <td>Kawa</td>
+              <TableCell aligned='right'>5</TableCell>
+              <TableCell aligned='center'>
+                <i className='large green checkmark icon' />
+              </TableCell>
+              <TableCell aligned='center'>
+                <i className='large green checkmark icon' />
+              </TableCell>
+              <td />
+            </tr>
+          </tbody>
+        </Table>
+      </Segment>
+
+      <Segment>
         <h3>Positive/Negative rows and cells</h3>
         <Table celled>
           <thead>
@@ -263,7 +321,7 @@ const TableDemo = (props) => {
               <td>Jun Ji Hyun</td>
               <td>jihyn@gmail.com</td>
               <td>
-                Jun Ji-hyun, also known as Gianna Jun, is a South Korean actress. She is best known for her role as "The Girl" in the romantic comedy My Sassy Girl, one of the highest-grossing Korean comedies of all time. 
+                Jun Ji-hyun, also known as Gianna Jun, is a South Korean actress. She is best known for her role as "The Girl" in the romantic comedy My Sassy Girl, one of the highest-grossing Korean comedies of all time.
               </td>
             </tr>
             <tr>

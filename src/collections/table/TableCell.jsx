@@ -3,6 +3,8 @@ import React, { Component, PropTypes } from 'react'
 import classNames from 'classnames'
 
 import propsToClasses from '../../util/propsToClasses'
+import SemanticUiPropTypes from '../../common/SemanticUiPropTypes'
+import { alignedClasses } from '../../common/semanticClasses'
 
 export default class TableCell extends Component {
 
@@ -13,7 +15,8 @@ export default class TableCell extends Component {
     warning: PropTypes.bool,
     active: PropTypes.bool,
     disabled: PropTypes.bool,
-    collapsing: PropTypes.bool
+    collapsing: PropTypes.bool,
+    aligned: SemanticUiPropTypes.aligned
   }
 
   render() {
@@ -21,7 +24,7 @@ export default class TableCell extends Component {
     const classesFromProps = propsToClasses(['positive', 'negative', 'error',
                                             'warning', 'active', 'disabled', 'collapsing'], this.props)
 
-    const classes = classNames(classesFromProps, className)
+    const classes = classNames(classesFromProps, alignedClasses(this.props), className)
 
     return <td className={classes}>{this.props.children}</td>
   }

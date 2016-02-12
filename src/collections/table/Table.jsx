@@ -11,6 +11,7 @@ export default class Table extends Component {
     children: PropTypes.node.isRequired,
     celled: PropTypes.bool,
     definition: PropTypes.bool,
+    structured: PropTypes.bool,
     singleLine: PropTypes.bool,
     fixed: PropTypes.bool,
     selectable: PropTypes.bool,
@@ -26,7 +27,7 @@ export default class Table extends Component {
 
   render() {
     const { className, singleLine, color, veryCompact, veryPadded } = this.props
-    const classesFromProps = propsToClasses(['selectable', 'striped', 'basic',
+    const classesFromProps = propsToClasses(['selectable', 'structured', 'striped', 'basic',
                                             'celled', 'definition', 'fixed',
                                             'inverted', 'compact', 'padded'], this.props)
 
