@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react'
 
 import classNames from 'classnames'
 
-import spellNumber from '../../util/spellNumber'
+import { columnClasses } from '../../common/semanticClasses'
 
 export default class Grid extends Component {
 
@@ -13,15 +13,9 @@ export default class Grid extends Component {
     container: PropTypes.bool
   }
 
-  columnClasses() {
-    const { columns } = this.props
-
-    if(columns) return `${spellNumber(columns)} column`
-  }
-
   render() {
     const { page, container, className } = this.props
-    const classes = classNames('ui', this.columnClasses(), 'grid', {'container': page || container},  className)
+    const classes = classNames('ui', columnClasses(this.props), 'grid', {'container': page || container},  className)
 
     return <div {...this.props} className={classes}>{this.props.children}</div>
   }

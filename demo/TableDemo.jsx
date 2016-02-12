@@ -431,6 +431,44 @@ const TableDemo = (props) => {
       </Segment>
 
       <Segment>
+        <h3>Column count</h3>
+        <Table columns={5}>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Hangul</th>
+              <th>Email</th>
+              <th>DOB</th>
+              <th>Site</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Jun Ji Hyun</td>
+              <td> 전지현</td>
+              <td>jihyn@gmail.com</td>
+              <td>30/10/1980</td>
+              <td>giannajun.com</td>
+            </tr>
+            <tr>
+              <td>Go Joon Hee</td>
+              <td>고준희</td>
+              <td>eunjoo@naver.com</td>
+              <td>31/8/1981</td>
+              <td>instantcoop.com</td>
+            </tr>
+            <tr>
+              <td>Yang Min-a</td>
+              <td>신민아</td>
+              <td>mina@gmail.com</td>
+              <td>4/5/1984</td>
+              <td>shinmina.co.kr</td>
+            </tr>
+          </tbody>
+        </Table>
+    </Segment>
+
+      <Segment>
         <h3>Colored tables</h3>
         {colors.map( color => {
           return (

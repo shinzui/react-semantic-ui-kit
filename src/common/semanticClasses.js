@@ -1,3 +1,5 @@
+import spellNumber from '../util/spellNumber'
+
 export const attachedClasses = (props) => {
   const { attached } = props
 
@@ -44,4 +46,10 @@ export const floatedClasses = (props) => {
   } else if(floated === 'left') {
     return 'left floated'
   }
+}
+
+export const columnClasses = (props) => {
+  const { columns } = props
+
+  if(columns) return `${spellNumber(columns)} column`
 }

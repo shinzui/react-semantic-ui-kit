@@ -4,6 +4,7 @@ import classNames from 'classnames'
 
 import SemanticUiPropTypes from '../../common/SemanticUiPropTypes'
 import propsToClasses from '../../util/propsToClasses'
+import { columnClasses } from '../../common/semanticClasses'
 
 export default class Table extends Component {
 
@@ -22,7 +23,8 @@ export default class Table extends Component {
     compact: PropTypes.bool,
     veryCompact: PropTypes.bool,
     padded: PropTypes.bool,
-    veryPadded: PropTypes.bool
+    veryPadded: PropTypes.bool,
+    columns: PropTypes.number
   }
 
   render() {
@@ -31,7 +33,7 @@ export default class Table extends Component {
                                             'celled', 'definition', 'fixed',
                                             'inverted', 'compact', 'padded'], this.props)
 
-    const classes = classNames('ui', classesFromProps,
+    const classes = classNames('ui', columnClasses(this.props), classesFromProps,
                                {'single line': singleLine}, {'very compact': veryCompact}, {'very padded': veryPadded},
                                color, 'table', className)
 
