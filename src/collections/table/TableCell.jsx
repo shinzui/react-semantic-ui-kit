@@ -16,16 +16,21 @@ export default class TableCell extends Component {
     active: PropTypes.bool,
     disabled: PropTypes.bool,
     collapsing: PropTypes.bool,
-    aligned: SemanticUiPropTypes.aligned
+    aligned: SemanticUiPropTypes.aligned,
+    header: PropTypes.bool
   }
 
   render() {
-    const { className } = this.props
+    const { className, header } = this.props
     const classesFromProps = propsToClasses(['positive', 'negative', 'error',
                                             'warning', 'active', 'disabled', 'collapsing'], this.props)
 
     const classes = classNames(classesFromProps, alignedClasses(this.props), className)
 
-    return <td className={classes}>{this.props.children}</td>
+    if(header) {
+      return <th className={classes}>{this.props.children}</th>
+    } else {
+      return <td className={classes}>{this.props.children}</td>
+    }
   }
 }
