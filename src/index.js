@@ -2,8 +2,9 @@ import { Form, FormField } from './collections/Form'
 import Grid from './collections/grid/Grid'
 import Column from './collections/grid/Column'
 import Row from './collections/grid/Row'
-import Menu from './collections/Menu'
 import Message from './collections/Message'
+import Menu from './collections/menu/Menu'
+import MenuItem from './collections/menu/MenuItem'
 import Table from './collections/table/Table'
 import TableCell from './collections/table/TableCell'
 import TableRow from './collections/table/TableRow'
@@ -71,6 +72,7 @@ export {
   List,
   ListItem,
   Menu,
+  MenuItem,
   Meta,
   Modal,
   ModalHeader,

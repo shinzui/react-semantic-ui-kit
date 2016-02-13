@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 
 import 'semantic-ui-css/semantic.css'
 
-import { Container, Message, Grid, Column, Menu } from '../src/index'
+import { Container, Message, Grid, Column, Menu, MenuItem } from '../src/index'
 import FormDemo from './FormDemo'
 import ButtonDemo from './ButtonDemo'
 import DividerDemo from './DividerDemo'
@@ -24,6 +24,7 @@ import StepDemo from './StepDemo'
 import TableDemo from './TableDemo'
 import CardDemo from './CardDemo'
 import CheckboxDemo from './CheckboxDemo'
+import MenuDemo from './MenuDemo'
 
 import './example.css'
 
@@ -68,7 +69,8 @@ class Page extends Component {
       step: StepDemo,
       table: TableDemo,
       card: CardDemo,
-      checkbox: CheckboxDemo
+      checkbox: CheckboxDemo,
+      menu: MenuDemo
     }
 
     let hash = window.location.hash
@@ -95,26 +97,27 @@ class Page extends Component {
       <Grid page>
         <Column width={3}>
           <Menu vertical>
-            <a className='item' href='#forms'>Form </a>
-            <a className='item' href='#input'>Input</a>
-            <a className='item' href='#buttons'>Button </a>
-            <a className='item' href='#images'>Images </a>
-            <a className='item' href='#labels'>Label </a>
-            <a className='item' href='#messages'>Message </a>
-            <a className='item' href='#divider'>Divider </a>
-            <a className='item' href='#statistic'>Statistic </a>
-            <a className='item' href='#item'>Item </a>
-            <a className='item' href='#header'>Header </a>
-            <a className='item' href='#list'>List </a>
-            <a className='item' href='#rail'>Rail </a>
-            <a className='item' href='#segment'>Segment </a>
-            <a className='item' href='#flag'>Flag </a>
-            <a className='item' href='#container'>Container</a>
-            <a className='item' href='#grid'>Grid</a>
-            <a className='item' href='#step'>Step</a>
-            <a className='item' href='#table'>Table</a>
-            <a className='item' href='#card'>Card</a>
-            <a className='item' href='#checkbox'>Checkbox</a>
+            <MenuItem href='#forms'>Form </MenuItem>
+            <MenuItem href='#input'>Input</MenuItem>
+            <MenuItem href='#buttons'>Button </MenuItem>
+            <MenuItem href='#images'>Images </MenuItem>
+            <MenuItem href='#labels'>Label </MenuItem>
+            <MenuItem href='#messages'>Message </MenuItem>
+            <MenuItem href='#divider'>Divider </MenuItem>
+            <MenuItem href='#statistic'>Statistic </MenuItem>
+            <MenuItem href='#item'>Item </MenuItem>
+            <MenuItem href='#header'>Header </MenuItem>
+            <MenuItem href='#list'>List </MenuItem>
+            <MenuItem href='#rail'>Rail </MenuItem>
+            <MenuItem href='#segment'>Segment </MenuItem>
+            <MenuItem href='#flag'>Flag </MenuItem>
+            <MenuItem href='#container'>Container</MenuItem>
+            <MenuItem href='#grid'>Grid</MenuItem>
+            <MenuItem href='#step'>Step</MenuItem>
+            <MenuItem href='#table'>Table</MenuItem>
+            <MenuItem href='#card'>Card</MenuItem>
+            <MenuItem href='#checkbox'>Checkbox</MenuItem>
+            <MenuItem href='#menu'>Menu</MenuItem>
           </Menu>
         </Column>
         <Column width={13}>

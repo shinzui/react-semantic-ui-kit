@@ -53,3 +53,9 @@ export const columnClasses = (props) => {
 
   if(columns) return `${spellNumber(columns)} column`
 }
+
+export const itemClasses = (props) => {
+  const { items } = props
+
+  if(items) return `${spellNumber(items)} item`
+}
