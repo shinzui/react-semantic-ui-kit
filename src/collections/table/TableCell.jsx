@@ -16,7 +16,7 @@ export default class TableCell extends Component {
     active: PropTypes.bool,
     disabled: PropTypes.bool,
     collapsing: PropTypes.bool,
-    aligned: SemanticUiPropTypes.aligned,
+    aligned: SemanticUiPropTypes.verticalAndHorizontalAlignment,
     header: PropTypes.bool
   }
 

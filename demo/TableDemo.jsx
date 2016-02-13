@@ -431,6 +431,92 @@ const TableDemo = (props) => {
       </Segment>
 
       <Segment>
+        <h3>Alignment</h3>
+        <Table columns={4}>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>DOB</th>
+              <th>Site</th>
+            </tr>
+          </thead>
+          <tbody>
+            <TableRow aligned='right'>
+              <td>Jun Ji Hyun
+                <br /> 전지현
+                <br /> 全智賢
+              </td>
+              <td>jihyn@gmail.com</td>
+              <td>30/10/1980</td>
+              <td>giannajun.com</td>
+            </TableRow>
+            <tr>
+              <td>Go Joon Hee
+                <br />고준희
+                <br />高濬熙
+              </td>
+              <td>eunjoo@naver.com</td>
+              <td>31/8/1981</td>
+              <TableCell aligned='center'>instantcoop.com</TableCell>
+            </tr>
+            <tr>
+              <td>Yang Min-a
+                <br />신민아
+                <br />申敏娥
+              </td>
+              <td>mina@gmail.com</td>
+              <td>4/5/1984</td>
+              <TableCell aligned='right'>shinmina.co.kr</TableCell>
+            </tr>
+          </tbody>
+        </Table>
+      </Segment>
+
+      <Segment>
+        <h3>Vertical alignment</h3>
+        <Table columns={4}>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>DOB</th>
+              <th>Site</th>
+            </tr>
+          </thead>
+          <tbody>
+            <TableRow aligned='bottom'>
+              <td>Jun Ji Hyun
+                <br /> 전지현
+                <br /> 全智賢
+              </td>
+              <td>jihyn@gmail.com</td>
+              <td>30/10/1980</td>
+              <td>giannajun.com</td>
+            </TableRow>
+            <tr>
+              <td>Go Joon Hee
+                <br />고준희
+                <br />高濬熙
+              </td>
+              <td>eunjoo@naver.com</td>
+              <td>31/8/1981</td>
+              <TableCell aligned='bottom'>instantcoop.com</TableCell>
+            </tr>
+            <tr>
+              <td>Yang Min-a
+                <br />신민아
+                <br />申敏娥
+              </td>
+              <td>mina@gmail.com</td>
+              <td>4/5/1984</td>
+              <TableCell aligned='top'>shinmina.co.kr</TableCell>
+            </tr>
+          </tbody>
+        </Table>
+      </Segment>
+
+      <Segment>
         <h3>Column count</h3>
         <Table columns={5}>
           <thead>

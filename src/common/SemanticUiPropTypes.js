@@ -4,6 +4,7 @@ const size = PropTypes.oneOf(['mini', 'tiny', 'small', 'medium', 'large', 'big',
 const attached = PropTypes.oneOf(['top', 'bottom', 'both'])
 const labelAttachment = PropTypes.oneOf(['top', 'bottom', 'right', 'left', 'topLeft', 'bottomLeft', 'topRight', 'bottomRight'])
 const aligned = PropTypes.oneOf(['right', 'left', 'center'])
+const verticalAndHorizontalAlignment = PropTypes.oneOf(['right', 'left', 'center', 'top', 'bottom', 'center'])
 const verticalAlignment = PropTypes.oneOf(['top', 'bottom', 'middle'])
 const floated = PropTypes.oneOf(['right', 'left'])
 const color = PropTypes.oneOf(['red', 'orange', 'yellow', 'olive', 'green', 'teal', 'blue',
@@ -15,6 +16,7 @@ const SemanticUiPropTypes = {
   color,
   floated,
   verticalAlignment,
+  verticalAndHorizontalAlignment,
   labelAttachment,
   size
 }
