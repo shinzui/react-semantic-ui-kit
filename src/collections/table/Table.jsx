@@ -24,16 +24,17 @@ export default class Table extends Component {
     veryCompact: PropTypes.bool,
     padded: PropTypes.bool,
     veryPadded: PropTypes.bool,
-    columns: PropTypes.number
+    columns: PropTypes.number,
+    size: PropTypes.oneOf(['small', 'large'])
   }
 
   render() {
-    const { className, singleLine, color, veryCompact, veryPadded } = this.props
+    const { className, singleLine, color, veryCompact, veryPadded, size } = this.props
     const classesFromProps = propsToClasses(['selectable', 'structured', 'striped', 'basic',
                                             'celled', 'definition', 'fixed',
                                             'inverted', 'compact', 'padded'], this.props)
 
-    const classes = classNames('ui', columnClasses(this.props), classesFromProps,
+    const classes = classNames('ui', columnClasses(this.props), size, classesFromProps,
                                {'single line': singleLine}, {'very compact': veryCompact}, {'very padded': veryPadded},
                                color, 'table', className)
 
