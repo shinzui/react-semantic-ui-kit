@@ -12,6 +12,14 @@ const MenuDemo = (props) => {
           <MenuItem href='#about'>About</MenuItem>
         </Menu>
       </Segment>
+
+      <Segment>
+        <Menu tabular>
+          <MenuItem href='#home' active>Home</MenuItem>
+          <MenuItem href='#features'>Features</MenuItem>
+          <MenuItem href='#about'>About</MenuItem>
+        </Menu>
+      </Segment>
     </div>
   )
 }
