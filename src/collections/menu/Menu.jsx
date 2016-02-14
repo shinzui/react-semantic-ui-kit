@@ -25,12 +25,13 @@ export default class Menu extends Component {
     items: PropTypes.number,
     vertical: PropTypes.bool,
     basic: PropTypes.bool,
-    tabular: PropTypes.bool
+    tabular: PropTypes.bool,
+    text: PropTypes.bool
   }
 
   render() {
     const { className, children } = this.props
-    const classesFromProps = propsToClasses(['vertical', 'basic', 'tabular'], this.props)
+    const classesFromProps = propsToClasses(['vertical', 'text', 'basic', 'tabular'], this.props)
     const classes = classNames('ui', itemClasses(this.props), classesFromProps, 'menu', className)
 
     return <div className={classes}>{children}</div>

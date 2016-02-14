@@ -20,6 +20,20 @@ const MenuDemo = (props) => {
           <MenuItem href='#about'>About</MenuItem>
         </Menu>
       </Segment>
+
+      <Segment>
+        <h3>Text menu</h3>
+        <Menu text>
+          <MenuItem header>Sort by</MenuItem>
+          <MenuItem href='#' active>Most recent</MenuItem>
+          <MenuItem href='#'>Most popular</MenuItem>
+        </Menu>
+        <Menu vertical text>
+          <MenuItem header>Sort by</MenuItem>
+          <MenuItem href='#' active>Most recent</MenuItem>
+          <MenuItem href='#'>Most popular</MenuItem>
+        </Menu>
+      </Segment>
     </div>
   )
 }

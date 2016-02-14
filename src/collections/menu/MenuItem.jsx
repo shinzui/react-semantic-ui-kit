@@ -7,12 +7,13 @@ export default class MenuItem extends Component {
 
   static propTypes = {
     active: PropTypes.bool,
-    href: PropTypes.string
+    href: PropTypes.string,
+    header: PropTypes.bool
   }
 
   render() {
     const { className, href, children } = this.props
-    const classesFromProps = propsToClasses(['active'], this.props)
+    const classesFromProps = propsToClasses(['active', 'header'], this.props)
     const classes = classNames(classesFromProps, 'item', className)
 
     if(href) {
