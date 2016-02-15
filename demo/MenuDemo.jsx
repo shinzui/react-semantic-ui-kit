@@ -88,6 +88,17 @@ const MenuDemo = (props) => {
           <MenuItem href='#'>Most popular</MenuItem>
         </Menu>
       </Segment>
+
+      <Segment>
+        <h3>Pagination</h3>
+        <Menu pagination>
+          <MenuItem>1</MenuItem>
+          <MenuItem>2</MenuItem>
+          <MenuItem disabled>…</MenuItem>
+          <MenuItem>10</MenuItem>
+          <MenuItem>11</MenuItem>
+        </Menu>
+      </Segment>
     </div>
   )
 }

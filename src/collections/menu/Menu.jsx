@@ -30,12 +30,13 @@ export default class Menu extends Component {
     right: PropTypes.bool,
     parentMenu: PropTypes.bool,
     secondary: PropTypes.bool,
-    pointing: PropTypes.bool
+    pointing: PropTypes.bool,
+    pagination: PropTypes.bool
   }
 
   render() {
     const { className, parentMenu } = this.props
-    const classesFromProps = propsToClasses(['secondary', 'right', 'vertical', 'pointing',
+    const classesFromProps = propsToClasses(['secondary', 'right', 'vertical', 'pointing', 'pagination',
                                             'text', 'basic', 'tabular'], this.props)
     const classes = classNames({'ui': !parentMenu}, itemClasses(this.props), classesFromProps, 'menu', className)
 
