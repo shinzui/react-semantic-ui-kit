@@ -1,6 +1,7 @@
 import React from 'react'
 
 import { Segment, Menu, MenuItem, Input } from '../src/index'
+import ParagraphExample from './ParagraphExample'
 
 const MenuDemo = (props) => {
   return (
@@ -37,6 +38,42 @@ const MenuDemo = (props) => {
           </Menu>
         </Menu>
       </Segment>
+
+      <Segment>
+        <h3>Pointing menu</h3>
+        <Menu pointing>
+          <MenuItem href='#home' active>Home</MenuItem>
+          <MenuItem href='#features'>Features</MenuItem>
+          <MenuItem href='#about'>About</MenuItem>
+          <Menu right>
+            <MenuItem>
+              <Input icon>
+                <input type='text' placeholder='Search...'/>
+                <i className='icon search'/>
+              </Input>
+            </MenuItem>
+            <MenuItem href='#logout'>Logout</MenuItem>
+          </Menu>
+        </Menu>
+        <Segment>
+          <ParagraphExample />
+        </Segment>
+      </Segment>
+      <Segment>
+        <h3>Secondary pointing menu</h3>
+        <Menu secondary pointing>
+          <MenuItem href='#home' active>Home</MenuItem>
+          <MenuItem href='#features'>Features</MenuItem>
+          <MenuItem href='#about'>About</MenuItem>
+          <Menu right>
+            <MenuItem href='#logout'>Logout</MenuItem>
+          </Menu>
+        </Menu>
+        <Segment>
+          <ParagraphExample />
+        </Segment>
+      </Segment>
+
 
       <Segment>
         <h3>Text menu</h3>
