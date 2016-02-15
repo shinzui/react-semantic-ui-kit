@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Segment, Menu, MenuItem } from '../src/index'
+import { Segment, Menu, MenuItem, Input } from '../src/index'
 
 const MenuDemo = (props) => {
   return (
@@ -18,6 +18,23 @@ const MenuDemo = (props) => {
           <MenuItem href='#home' active>Home</MenuItem>
           <MenuItem href='#features'>Features</MenuItem>
           <MenuItem href='#about'>About</MenuItem>
+        </Menu>
+      </Segment>
+
+      <Segment>
+        <Menu secondary>
+          <MenuItem href='#home'>Home</MenuItem>
+          <MenuItem href='#features'>Features</MenuItem>
+          <MenuItem href='#about'>About</MenuItem>
+          <Menu right>
+            <MenuItem>
+              <Input icon>
+                <input type='text' placeholder='Search...'/>
+                <i className='icon search'/>
+              </Input>
+            </MenuItem>
+            <MenuItem href='#logout'>Logout</MenuItem>
+          </Menu>
         </Menu>
       </Segment>
 

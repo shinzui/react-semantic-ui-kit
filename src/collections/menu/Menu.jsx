@@ -13,11 +13,11 @@ export default class Menu extends Component {
       const prop = props[propName]
 
       if(Array.isArray(prop)) {
-        if(prop.some( p => p.type !== MenuItem)) {
+        if(prop.some( p => (p.type !== MenuItem && p.type !== Menu))) {
           return new Error(`${componentName} should only have MenuItem as children`)
         }
       } else {
-        if(prop.type !== MenuItem) {
+        if(prop.type !== MenuItem && prop.type !== Menu) {
           return new Error(`${componentName} should only have MenuItem as children`)
         }
       }
@@ -26,14 +26,24 @@ export default class Menu extends Component {
     vertical: PropTypes.bool,
     basic: PropTypes.bool,
     tabular: PropTypes.bool,
-    text: PropTypes.bool
+    text: PropTypes.bool,
+    right: PropTypes.bool,
+    parentMenu: PropTypes.bool,
+    secondary: PropTypes.bool
   }
 
   render() {
-    const { className, children } = this.props
-    const classesFromProps = propsToClasses(['vertical', 'text', 'basic', 'tabular'], this.props)
-    const classes = classNames('ui', itemClasses(this.props), classesFromProps, 'menu', className)
+    const { className, parentMenu } = this.props
+    const classesFromProps = propsToClasses(['secondary', 'right', 'vertical', 'text', 'basic', 'tabular'], this.props)
+    const classes = classNames({'ui': !parentMenu}, itemClasses(this.props), classesFromProps, 'menu', className)
 
+    const children = React.Children.map(this.props.children, (child) => {
+      if(child.type === MenuItem) {
+        return child
+      } else if(child.type === Menu) {
+        return React.cloneElement(child, { parentMenu: true })
+      }
+    })
     return <div className={classes}>{children}</div>
   }
 }
