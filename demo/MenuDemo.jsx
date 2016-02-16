@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Segment, Menu, MenuItem, Input } from '../src/index'
+import { Segment, Menu, MenuItem, Input, Divider } from '../src/index'
 import ParagraphExample from './ParagraphExample'
 
 const MenuDemo = (props) => {
@@ -98,6 +98,25 @@ const MenuDemo = (props) => {
           <MenuItem>10</MenuItem>
           <MenuItem>11</MenuItem>
         </Menu>
+      </Segment>
+
+      <Segment>
+        <h3>States</h3>
+
+        <h5>Hover</h5>
+        <Menu compact>
+          <MenuItem href='#'>Link</MenuItem>
+          <MenuItem link>Div link</MenuItem>
+        </Menu>
+
+        <Divider />
+
+        <h5>Down</h5>
+        <Menu compact>
+          <MenuItem href='#' down>Home</MenuItem>
+          <MenuItem down>About</MenuItem>
+        </Menu>
+
       </Segment>
     </div>
   )
