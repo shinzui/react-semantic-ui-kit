@@ -17,12 +17,13 @@ export default class TableCell extends Component {
     disabled: PropTypes.bool,
     collapsing: PropTypes.bool,
     aligned: SemanticUiPropTypes.verticalAndHorizontalAlignment,
-    header: PropTypes.bool
+    header: PropTypes.bool,
+    selectable: PropTypes.bool
   }
 
   render() {
     const { className, header } = this.props
-    const classesFromProps = propsToClasses(['positive', 'negative', 'error',
+    const classesFromProps = propsToClasses(['selectable', 'positive', 'negative', 'error',
                                             'warning', 'active', 'disabled', 'collapsing'], this.props)
 
     const classes = classNames(classesFromProps, alignedClasses(this.props), className)

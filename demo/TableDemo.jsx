@@ -371,6 +371,42 @@ const TableDemo = (props) => {
       </Segment>
 
       <Segment>
+        <h3>Selectable cell</h3>
+        <Table celled>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Status</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <TableRow>
+              <td>Yewon</td>
+              <td>Hired</td>
+              <td>None</td>
+            </TableRow>
+            <TableRow>
+              <td>Min Jung</td>
+              <td>Waiting</td>
+              <TableCell selectable>None</TableCell>
+            </TableRow>
+            <TableRow>
+              <td>Joon Hee</td>
+              <TableCell selectable>Approved</TableCell>
+              <TableCell selectable warning><i className='attention icon' />Requires call</TableCell>
+            </TableRow>
+            <TableRow warning>
+              <td>In Young</td>
+              <td>Waiting</td>
+              <td>Requires references</td>
+            </TableRow>
+          </tbody>
+        </Table>
+      </Segment>
+
+
+      <Segment>
         <h3>Striped tables</h3>
         <Table striped>
           <thead>
