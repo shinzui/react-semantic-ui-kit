@@ -25,6 +25,8 @@ export default class Table extends Component {
     padded: PropTypes.bool,
     veryPadded: PropTypes.bool,
     columns: PropTypes.number,
+    stackable: PropTypes.bool,
+    unstackable: PropTypes.bool,
     size: PropTypes.oneOf(['small', 'large'])
   }
 
@@ -32,7 +34,8 @@ export default class Table extends Component {
     const { className, singleLine, color, veryCompact, veryPadded, size } = this.props
     const classesFromProps = propsToClasses(['selectable', 'structured', 'striped', 'basic',
                                             'celled', 'definition', 'fixed',
-                                            'inverted', 'compact', 'padded'], this.props)
+                                            'inverted', 'compact', 'padded',
+                                            'stackable', 'unstackable'], this.props)
 
     const classes = classNames('ui', columnClasses(this.props), size, classesFromProps,
                                {'single line': singleLine}, {'very compact': veryCompact}, {'very padded': veryPadded},

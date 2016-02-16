@@ -651,6 +651,79 @@ const TableDemo = (props) => {
       </Segment>
 
       <Segment>
+        <h3>Stackable table</h3>
+        <Table columns={5} stackable>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Hangul</th>
+              <th>Email</th>
+              <th>DOB</th>
+              <th>Site</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Jun Ji Hyun</td>
+              <td> 전지현</td>
+              <td>jihyun@gmail.com</td>
+              <td>30/10/1980</td>
+              <td>giannajun.com</td>
+            </tr>
+            <tr>
+              <td>Go Joon Hee</td>
+              <td>고준희</td>
+              <td>eunjoo@naver.com</td>
+              <td>31/8/1981</td>
+              <td>instantcoop.com</td>
+            </tr>
+            <tr>
+              <td>Yang Min-a</td>
+              <td>신민아</td>
+              <td>mina@gmail.com</td>
+              <td>4/5/1984</td>
+              <td>shinmina.co.kr</td>
+            </tr>
+          </tbody>
+        </Table>
+        <h3>Unstackable table</h3>
+        <Table columns={5} unstackable>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Hangul</th>
+              <th>Email</th>
+              <th>DOB</th>
+              <th>Site</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Jun Ji Hyun</td>
+              <td> 전지현</td>
+              <td>jihyun@gmail.com</td>
+              <td>30/10/1980</td>
+              <td>giannajun.com</td>
+            </tr>
+            <tr>
+              <td>Go Joon Hee</td>
+              <td>고준희</td>
+              <td>eunjoo@naver.com</td>
+              <td>31/8/1981</td>
+              <td>instantcoop.com</td>
+            </tr>
+            <tr>
+              <td>Yang Min-a</td>
+              <td>신민아</td>
+              <td>mina@gmail.com</td>
+              <td>4/5/1984</td>
+              <td>shinmina.co.kr</td>
+            </tr>
+          </tbody>
+        </Table>
+      </Segment>
+
+      <Segment>
         <h3>Compact table</h3>
         <Table compact>
           <thead>
