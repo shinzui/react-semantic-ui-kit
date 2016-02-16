@@ -4,7 +4,7 @@ import classNames from 'classnames'
 
 import propsToClasses from '../../util/propsToClasses'
 import SemanticUiPropTypes from '../../common/SemanticUiPropTypes'
-import { alignedClasses, widthClasses } from '../../common/semanticClasses'
+import { alignedClasses, widthClasses, sortedClasses } from '../../common/semanticClasses'
 
 export default class TableCell extends Component {
 
@@ -19,7 +19,8 @@ export default class TableCell extends Component {
     aligned: SemanticUiPropTypes.verticalAndHorizontalAlignment,
     header: PropTypes.bool,
     selectable: PropTypes.bool,
-    width: PropTypes.number
+    width: PropTypes.number,
+    sorted: PropTypes.oneOf(['ascending', 'descending'])
   }
 
   render() {
@@ -27,7 +28,8 @@ export default class TableCell extends Component {
     const classesFromProps = propsToClasses(['selectable', 'positive', 'negative', 'error',
                                             'warning', 'active', 'disabled', 'collapsing'], this.props)
 
-    const classes = classNames(widthClasses(this.props), classesFromProps, alignedClasses(this.props), className)
+    const classes = classNames(widthClasses(this.props), classesFromProps, alignedClasses(this.props),
+                               sortedClasses(this.props),className)
 
     if(header) {
       return <th className={classes}>{this.props.children}</th>

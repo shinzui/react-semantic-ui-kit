@@ -1,8 +1,8 @@
 import React from 'react'
 
 import { Segment, Table, Checkbox, Button,
-          TableHeader, TableFooter,
-          TableCell, TableRow } from '../src/index'
+        Message, TableHeader, TableFooter,
+        TableCell, TableRow } from '../src/index'
 
 const TableDemo = (props) => {
   const colors = ['red', 'orange', 'yellow', 'olive', 'green', 'teal', 'blue',
@@ -440,6 +440,41 @@ const TableDemo = (props) => {
               <th>Name</th>
               <th>Email</th>
               <th>DOB</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Jun Ji Hyun</td>
+              <td>jihyun@gmail.com</td>
+              <td>30/10/1980</td>
+            </tr>
+            <tr>
+              <td>Kim Eun Joo</td>
+              <td>eunjoo@naver.com</td>
+              <td>31/8/1981</td>
+            </tr>
+            <tr>
+              <td>Han Jihye</td>
+              <td>jihye@gmail.com</td>
+              <td>6/29/1984</td>
+            </tr>
+          </tbody>
+        </Table>
+      </Segment>
+
+      <Segment>
+        <h3>Sortable table</h3>
+        <Message warning>
+          <p>
+            This only provides the styling for sorting.
+          </p>
+        </Message>
+        <Table sortable striped>
+          <thead>
+            <tr>
+              <TableCell sorted='ascending' header>Name</TableCell>
+              <th>Email</th>
+              <TableCell sorted='descending' header>DOB</TableCell>
             </tr>
           </thead>
           <tbody>

@@ -65,3 +65,13 @@ export const widthClasses = (props) => {
 
   if(width) return `${spellNumber(width)} wide`
 }
+
+export const sortedClasses = (props) => {
+  const { sorted } = props
+
+  if(sorted === 'ascending') {
+    return 'sorted ascending'
+  } else if(sorted === 'descending') {
+    return 'sorted descending'
+  }
+}

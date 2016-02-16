@@ -28,13 +28,14 @@ export default class Table extends Component {
     stackable: PropTypes.bool,
     unstackable: PropTypes.bool,
     collapsing: PropTypes.bool,
+    sortable: PropTypes.bool,
     size: PropTypes.oneOf(['small', 'large'])
   }
 
   render() {
     const { className, singleLine, color, veryCompact, veryPadded, size } = this.props
     const classesFromProps = propsToClasses(['selectable', 'structured', 'striped', 'basic',
-                                            'celled', 'definition', 'fixed',
+                                            'celled', 'definition', 'fixed', 'sortable',
                                             'collapsing', 'inverted', 'compact', 'padded',
                                             'stackable', 'unstackable'], this.props)
 
