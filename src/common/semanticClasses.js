@@ -59,3 +59,9 @@ export const itemClasses = (props) => {
 
   if(items) return `${spellNumber(items)} item`
 }
+
+export const widthClasses = (props) => {
+  const { width } = props
+
+  if(width) return `${spellNumber(width)} wide`
+}

@@ -405,6 +405,33 @@ const TableDemo = (props) => {
         </Table>
       </Segment>
 
+      <Segment>
+        <h3>Column width</h3>
+        <Table striped>
+          <thead>
+            <tr>
+              <TableCell header width={10}>Name</TableCell>
+              <th>DOB</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Jun Ji Hyun</td>
+              <td>30/10/1980</td>
+            </tr>
+            <tr>
+              <td>Kim Eun Joo</td>
+              <td>31/8/1981</td>
+            </tr>
+            <tr>
+              <td>Han Jihye</td>
+              <td>6/29/1984</td>
+            </tr>
+          </tbody>
+        </Table>
+      </Segment>
+
+
 
       <Segment>
         <h3>Striped tables</h3>
