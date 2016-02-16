@@ -432,6 +432,35 @@ const TableDemo = (props) => {
       </Segment>
 
 
+      <Segment>
+        <h3>Collapsing table</h3>
+        <Table collapsing striped>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>DOB</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Jun Ji Hyun</td>
+              <td>jihyun@gmail.com</td>
+              <td>30/10/1980</td>
+            </tr>
+            <tr>
+              <td>Kim Eun Joo</td>
+              <td>eunjoo@naver.com</td>
+              <td>31/8/1981</td>
+            </tr>
+            <tr>
+              <td>Han Jihye</td>
+              <td>jihye@gmail.com</td>
+              <td>6/29/1984</td>
+            </tr>
+          </tbody>
+        </Table>
+      </Segment>
 
       <Segment>
         <h3>Striped tables</h3>
