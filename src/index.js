@@ -38,10 +38,14 @@ import ItemGroup from './views/item/ItemGroup'
 import Item from './views/item/Item'
 import Card from './views/card/Card'
 import CardGroup from './views/card/CardGroup'
+import Feed from './views/feed/Feed'
+import FeedEvent from './views/feed/FeedEvent'
 
 import Content from './elements/extra/Content'
 import ContentHeader from './elements/extra/ContentHeader'
 import ContentDescription from './elements/extra/ContentDescription'
+import ContentSummary from './elements/extra/ContentSummary'
+import Date from './elements/extra/Date'
 import Meta from './elements/extra/Meta'
 
 import Checkbox from './modules/Checkbox'
@@ -55,8 +59,12 @@ export {
   Content,
   ContentHeader,
   ContentDescription,
+  ContentSummary,
   Column,
+  Date,
   Divider,
+  Feed,
+  FeedEvent,
   Header,
   Input,
   Flag,

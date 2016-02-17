@@ -25,6 +25,7 @@ import TableDemo from './TableDemo'
 import CardDemo from './CardDemo'
 import CheckboxDemo from './CheckboxDemo'
 import MenuDemo from './MenuDemo'
+import FeedDemo from './FeedDemo'
 
 import './example.css'
 
@@ -70,7 +71,8 @@ class Page extends Component {
       table: TableDemo,
       card: CardDemo,
       checkbox: CheckboxDemo,
-      menu: MenuDemo
+      menu: MenuDemo,
+      feed: FeedDemo
     }
 
     let hash = window.location.hash
@@ -118,6 +120,7 @@ class Page extends Component {
             <MenuItem href='#card'>Card</MenuItem>
             <MenuItem href='#checkbox'>Checkbox</MenuItem>
             <MenuItem href='#menu'>Menu</MenuItem>
+            <MenuItem href='#feed'>Feed</MenuItem>
           </Menu>
         </Column>
         <Column width={13}>

@@ -23,7 +23,8 @@ export default class Label extends Component {
     rightCornor: PropTypes.bool,
     leftRibbon: PropTypes.bool,
     rightRibbon: PropTypes.bool,
-    href: PropTypes.string
+    href: PropTypes.string,
+    generic: PropTypes.bool
   }
 
   pointingClasses() {
@@ -64,11 +65,11 @@ export default class Label extends Component {
   }
 
   render() {
-    const { className, pointingDirection, color, size, floating, href } = this.props
+    const { className, pointingDirection, color, size, floating, href, generic } = this.props
 
     const classesFromProps = propsToClasses(['basic', 'tag', 'circular', 'image', 'horizontal'], this.props)
 
-    const classes = classNames({'floating': floating}, 'ui', this.pointingClasses(),
+    const classes = classNames({'floating': floating}, {'ui': !generic}, this.pointingClasses(),
                                color, attachedClasses(this.props),
                                this.ribbonClasses(), this.cornerClasses(),
                                classesFromProps, size, 'label', className )
