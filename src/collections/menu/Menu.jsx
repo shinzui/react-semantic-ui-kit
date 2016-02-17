@@ -14,11 +14,11 @@ export default class Menu extends Component {
 
       if(Array.isArray(prop)) {
         if(prop.some( p => (p.type !== MenuItem && p.type !== Menu))) {
-          return new Error(`${componentName} should only have MenuItem as children`)
+          return new Error(`${componentName} should only have MenuItem or Menu as children`)
         }
       } else {
         if(prop.type !== MenuItem && prop.type !== Menu) {
-          return new Error(`${componentName} should only have MenuItem as children`)
+          return new Error(`${componentName} should only have MenuItem or Menu as children`)
         }
       }
     },
