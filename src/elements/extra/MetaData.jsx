@@ -5,15 +5,15 @@ import classNames from 'classnames'
 import SemanticUiPropTypes from '../../common/SemanticUiPropTypes'
 import { floatedClasses } from '../../common/semanticClasses'
 
-const Meta = (props) => {
+const MetaData = (props) => {
   const { className, children, floated } = props
   const classes = classNames(floatedClasses(props), 'metadata', className)
 
   return <div className={classes}>{children}</div>
 }
 
-Meta.PropTypes = {
+MetaData.PropTypes = {
   floated: SemanticUiPropTypes.floated
 }
 
-export default Meta
+export default MetaData

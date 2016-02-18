@@ -33,34 +33,46 @@ import Rail from './elements/Rail'
 import Step from './elements/step/Step'
 import StepGroup from './elements/step/StepGroup'
 
-import Statistic from './views/Statistic'
-import ItemGroup from './views/item/ItemGroup'
-import Item from './views/item/Item'
 import Card from './views/card/Card'
 import CardGroup from './views/card/CardGroup'
+import Comment from './views/comment/Comment'
+import CommentGroup from './views/comment/CommentGroup'
 import Feed from './views/feed/Feed'
 import FeedEvent from './views/feed/FeedEvent'
+import Item from './views/item/Item'
+import ItemGroup from './views/item/ItemGroup'
+import Statistic from './views/Statistic'
 
+import Actions from './elements/extra/Actions'
+import Author from './elements/extra/Author'
+import Avatar from './elements/extra/Avatar'
 import Content from './elements/extra/Content'
 import ContentHeader from './elements/extra/ContentHeader'
 import ContentDescription from './elements/extra/ContentDescription'
 import ContentSummary from './elements/extra/ContentSummary'
 import Date from './elements/extra/Date'
 import Meta from './elements/extra/Meta'
+import MetaData from './elements/extra/MetaData'
+import Text from './elements/extra/Text'
 
 import Checkbox from './modules/Checkbox'
 
 export {
+  Actions,
+  Author,
+  Avatar,
   Button,
   Card,
   CardGroup,
   Checkbox,
+  Column,
+  Comment,
+  CommentGroup,
   Container,
   Content,
   ContentHeader,
   ContentDescription,
   ContentSummary,
-  Column,
   Date,
   Divider,
   Feed,
@@ -82,6 +94,7 @@ export {
   Menu,
   MenuItem,
   Meta,
+  MetaData,
   Modal,
   ModalHeader,
   ModalContent,
@@ -98,5 +111,6 @@ export {
   TableCell,
   TableRow,
   TableHeader,
-  TableFooter
+  TableFooter,
+  Text
 }

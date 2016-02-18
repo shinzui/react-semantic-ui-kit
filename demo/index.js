@@ -26,6 +26,7 @@ import CardDemo from './CardDemo'
 import CheckboxDemo from './CheckboxDemo'
 import MenuDemo from './MenuDemo'
 import FeedDemo from './FeedDemo'
+import CommentDemo from './CommentDemo'
 
 import './example.css'
 
@@ -72,7 +73,8 @@ class Page extends Component {
       card: CardDemo,
       checkbox: CheckboxDemo,
       menu: MenuDemo,
-      feed: FeedDemo
+      feed: FeedDemo,
+      comment: CommentDemo
     }
 
     let hash = window.location.hash
@@ -89,16 +91,15 @@ class Page extends Component {
     this.setPage()
   }
 
-
   render() {
     const { Page } = this.state
 
     const content = Page ? <Page /> : undefined
 
-    const items = ['forms', 'input', 'buttons', 'images', 'labels', 
-      'messages', 'divider', 'statistic', 'item', 'header', 
-      'list', 'rail', 'segment', 'flag', 'container', 'grid', 'step', 
-      'table', 'card', 'checkbox', 'menu', 'feed']
+    const items = ['forms', 'input', 'buttons', 'images', 'labels',
+      'messages', 'divider', 'statistic', 'item', 'header',
+      'list', 'rail', 'segment', 'flag', 'container', 'grid', 'step',
+      'table', 'card', 'checkbox', 'menu', 'feed', 'comment']
 
     return (
       <Grid page>
