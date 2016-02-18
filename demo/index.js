@@ -95,32 +95,16 @@ class Page extends Component {
 
     const content = Page ? <Page /> : undefined
 
+    const items = ['forms', 'input', 'buttons', 'images', 'labels', 
+      'messages', 'divider', 'statistic', 'item', 'header', 
+      'list', 'rail', 'segment', 'flag', 'container', 'grid', 'step', 
+      'table', 'card', 'checkbox', 'menu', 'feed']
+
     return (
       <Grid page>
         <Column width={3}>
           <Menu vertical>
-            <MenuItem href='#forms'>Form </MenuItem>
-            <MenuItem href='#input'>Input</MenuItem>
-            <MenuItem href='#buttons'>Button </MenuItem>
-            <MenuItem href='#images'>Images </MenuItem>
-            <MenuItem href='#labels'>Label </MenuItem>
-            <MenuItem href='#messages'>Message </MenuItem>
-            <MenuItem href='#divider'>Divider </MenuItem>
-            <MenuItem href='#statistic'>Statistic </MenuItem>
-            <MenuItem href='#item'>Item </MenuItem>
-            <MenuItem href='#header'>Header </MenuItem>
-            <MenuItem href='#list'>List </MenuItem>
-            <MenuItem href='#rail'>Rail </MenuItem>
-            <MenuItem href='#segment'>Segment </MenuItem>
-            <MenuItem href='#flag'>Flag </MenuItem>
-            <MenuItem href='#container'>Container</MenuItem>
-            <MenuItem href='#grid'>Grid</MenuItem>
-            <MenuItem href='#step'>Step</MenuItem>
-            <MenuItem href='#table'>Table</MenuItem>
-            <MenuItem href='#card'>Card</MenuItem>
-            <MenuItem href='#checkbox'>Checkbox</MenuItem>
-            <MenuItem href='#menu'>Menu</MenuItem>
-            <MenuItem href='#feed'>Feed</MenuItem>
+            {items.map( item => <MenuItem key={item} href={`#${item}`}>{item.charAt(0).toUpperCase() + item.slice(1)}</MenuItem>)}
           </Menu>
         </Column>
         <Column width={13}>
