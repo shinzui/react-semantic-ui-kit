@@ -127,6 +127,62 @@ const MenuDemo = (props) => {
           <MenuItem href='#about'>About</MenuItem>
         </Menu>
       </Segment>
+
+      <Segment>
+        <Menu inverted>
+          <MenuItem href='#home' active>Home</MenuItem>
+          <MenuItem href='#features'>Features</MenuItem>
+          <MenuItem href='#about'>About</MenuItem>
+        </Menu>
+      </Segment>
+
+      <Segment>
+        <Menu inverted vertical>
+          <MenuItem href='#home' active>Home</MenuItem>
+          <MenuItem href='#features'>Features</MenuItem>
+          <MenuItem href='#about'>About</MenuItem>
+        </Menu>
+      </Segment>
+
+      <Segment>
+        <Menu inverted vertical pointing>
+          <MenuItem href='#home' active>Home</MenuItem>
+          <MenuItem href='#features'>Features</MenuItem>
+          <MenuItem href='#about'>About</MenuItem>
+        </Menu>
+      </Segment>
+
+      <Segment inverted>
+        <Menu secondary inverted>
+          <MenuItem href='#home' active>Home</MenuItem>
+          <MenuItem href='#features'>Features</MenuItem>
+          <MenuItem href='#about'>About</MenuItem>
+          <Menu right>
+            <MenuItem>
+              <Input icon>
+                <input type='text' placeholder='Search...'/>
+                <i className='icon search'/>
+              </Input>
+            </MenuItem>
+            <MenuItem href='#logout'>Logout</MenuItem>
+          </Menu>
+        </Menu>
+      </Segment>
+
+      <Segment inverted>
+        <h3>Inverted secondary pointing menu</h3>
+        <Menu inverted secondary pointing>
+          <MenuItem href='#home' active>Home</MenuItem>
+          <MenuItem href='#features'>Features</MenuItem>
+          <MenuItem href='#about'>About</MenuItem>
+          <Menu right>
+            <MenuItem href='#logout'>Logout</MenuItem>
+          </Menu>
+        </Menu>
+        <Segment inverted>
+          <ParagraphExample />
+        </Segment>
+      </Segment>
     </div>
   )
 }
