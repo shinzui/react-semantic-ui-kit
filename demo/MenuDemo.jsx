@@ -118,6 +118,15 @@ const MenuDemo = (props) => {
         </Menu>
 
       </Segment>
+
+      <Segment>
+        <h3>Stackable menu</h3>
+        <Menu stackable>
+          <MenuItem href='#home' active>Home</MenuItem>
+          <MenuItem href='#features'>Features</MenuItem>
+          <MenuItem href='#about'>About</MenuItem>
+        </Menu>
+      </Segment>
     </div>
   )
 }
