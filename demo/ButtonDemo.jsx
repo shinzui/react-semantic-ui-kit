@@ -11,6 +11,10 @@ export default class ButtonDemo extends Component {
           <Button>Simple Button</Button>
         </Segment>
         <Segment>
+          <h3>Basic button</h3>
+          <Button basic>Basic Button</Button>
+        </Segment>
+        <Segment>
           <h3>Primary and secondary buttons</h3>
           <Button primary>Primary Button</Button>
           <Button secondary>Secondary Button</Button>
