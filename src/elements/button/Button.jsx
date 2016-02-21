@@ -13,12 +13,13 @@ export default class Button extends Component {
     secondary: PropTypes.bool,
     fluid: PropTypes.bool,
     floated: SemanticUiPropTypes.floated,
+    icon: PropTypes.bool,
     labeledIcon: PropTypes.bool
   }
 
   render() {
     const { labeledIcon, className } = this.props
-    const classesFromProps = propsToClasses(['primary', 'secondary', 'basic', 'fluid'], this.props)
+    const classesFromProps = propsToClasses(['primary', 'secondary', 'basic', 'fluid', 'icon'], this.props)
     const classes = classNames('ui', classesFromProps, {'labeled icon': labeledIcon}, floatedClasses(this.props),
                                'button', className)
 

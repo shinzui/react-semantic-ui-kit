@@ -21,6 +21,12 @@ export default class ButtonDemo extends Component {
         </Segment>
 
         <Segment>
+          <Button icon>
+            <i className='cloud icon' />
+          </Button>
+        </Segment>
+
+        <Segment>
           <h3>Labeled icon</h3>
           <Button primary labeledIcon>
             <i className='pause icon' />
