@@ -16,7 +16,8 @@ import ModalHeader from './modules/ModalHeader'
 import ModalContent from './modules/ModalContent'
 import ModalActions from './modules/ModalActions'
 
-import Button from './elements/Button'
+import Button from './elements/button/Button'
+import ButtonGroup from './elements/button/ButtonGroup'
 import Container from './elements/Container'
 import Divider from './elements/Divider'
 import Flag from './elements/Flag'
@@ -62,6 +63,7 @@ export {
   Author,
   Avatar,
   Button,
+  ButtonGroup,
   Card,
   CardGroup,
   Checkbox,

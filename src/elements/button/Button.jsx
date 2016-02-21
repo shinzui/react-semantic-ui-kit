@@ -1,9 +1,9 @@
 import React, { Component, PropTypes } from 'react'
 import classNames from 'classnames'
 
-import SemanticUiPropTypes from '../common/SemanticUiPropTypes'
-import propsToClasses from '../util/propsToClasses'
-import { floatedClasses } from '../common/semanticClasses'
+import SemanticUiPropTypes from '../../common/SemanticUiPropTypes'
+import propsToClasses from '../../util/propsToClasses'
+import { floatedClasses } from '../../common/semanticClasses'
 
 export default class Button extends Component {
 

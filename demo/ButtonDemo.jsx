@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Button, Segment } from '../src/index'
+import { Button, ButtonGroup, Segment } from '../src/index'
 
 export default class ButtonDemo extends Component {
 
@@ -26,6 +26,23 @@ export default class ButtonDemo extends Component {
             <i className='pause icon' />
             Pause
           </Button>
+        </Segment>
+
+        <Segment>
+          <ButtonGroup>
+            <Button>One</Button>
+            <Button>Two</Button>
+            <Button>Three</Button>
+          </ButtonGroup>
+        </Segment>
+
+        <Segment>
+          <ButtonGroup icon>
+            <Button><i className='align left icon'/></Button>
+            <Button><i className='align center icon'/></Button>
+            <Button><i className='align right icon'/></Button>
+            <Button><i className='align justify icon'/></Button>
+          </ButtonGroup>
         </Segment>
       </div>
     )
