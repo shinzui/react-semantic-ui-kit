@@ -2,7 +2,7 @@ import React from 'react'
 
 import { Comment, CommentGroup, Segment, Header,
   Content, MetaData, Avatar, Date, Author,
-  Text, Actions } from '../src/index'
+  Text, Actions, Form, Button } from '../src/index'
 
 import bomi from './bomi_square.jpg'
 
@@ -27,9 +27,18 @@ const CommentDemo = (props) => {
               </Actions>
             </Content>
           </Comment>
+          <Form reply>
+            <div className='field'>
+              <textarea />
+            </div>
+            <Button primary labeledIcon>
+              <i className='icon edit' />Add Reply
+            </Button>
+
+          </Form>
         </CommentGroup>
-        
       </Segment>
+
     </div>
   )
 }

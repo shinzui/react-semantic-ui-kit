@@ -4,6 +4,7 @@ import ImmutablePropTypes from 'react-immutable-proptypes'
 
 import Label from '../index'
 import spellNumber from '../util/spellNumber'
+import propsToClasses from '../util/propsToClasses'
 
 import classNames from 'classnames'
 
@@ -11,11 +12,13 @@ import classNames from 'classnames'
 class Form extends Component {
 
   static propTypes = {
-    valid: PropTypes.bool
+    valid: PropTypes.bool,
+    reply: PropTypes.bool
   }
 
   render() {
-    const classes = classNames('ui form', {'error' : !this.props.valid})
+    const classesFromProps = propsToClasses(['reply'], this.props)
+    const classes = classNames('ui', classesFromProps, 'form', {'error' : !this.props.valid})
 
     return (
       <form className={classes}>
