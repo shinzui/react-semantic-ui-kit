@@ -14,13 +14,16 @@ export default class Button extends Component {
     fluid: PropTypes.bool,
     floated: SemanticUiPropTypes.floated,
     icon: PropTypes.bool,
-    labeledIcon: PropTypes.bool
+    labeledIcon: PropTypes.bool,
+    inverted: PropTypes.bool,
+    color: SemanticUiPropTypes.color
   }
 
   render() {
-    const { labeledIcon, className } = this.props
-    const classesFromProps = propsToClasses(['primary', 'secondary', 'basic', 'fluid', 'icon'], this.props)
-    const classes = classNames('ui', classesFromProps, {'labeled icon': labeledIcon}, floatedClasses(this.props),
+    const { labeledIcon, className, color } = this.props
+    const classesFromProps = propsToClasses(['inverted', 'primary', 'secondary', 'basic', 'fluid', 'icon'], this.props)
+    const classes = classNames('ui', classesFromProps, {'labeled icon': labeledIcon},
+                               floatedClasses(this.props), color,
                                'button', className)
 
     return <button className={classes}>{this.props.children}</button>
