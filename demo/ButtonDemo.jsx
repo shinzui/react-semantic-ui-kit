@@ -59,6 +59,11 @@ export default class ButtonDemo extends Component {
         </Segment>
 
         <Segment>
+          <Button positive>Positive button</Button>
+          <Button negative>Negative button</Button>
+        </Segment>
+
+        <Segment>
           {colors.map( color => {
             return <Button key={color} color={color}>{color} button</Button>
           })}
