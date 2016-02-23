@@ -64,6 +64,12 @@ export default class ButtonDemo extends Component {
         </Segment>
 
         <Segment>
+          <Button compact>Compact</Button>
+          <Button compact><i className='pause icon'/></Button>
+          <Button compact labeledIcon><i className='pause icon'/>Pause</Button>
+        </Segment>
+
+        <Segment>
           {colors.map( color => {
             return <Button key={color} color={color}>{color} button</Button>
           })}
