@@ -14,6 +14,9 @@ export default class Button extends Component {
     secondary: PropTypes.bool,
     positive: PropTypes.bool,
     negative: PropTypes.bool,
+    icon: PropTypes.bool,
+    labeled: PropTypes.bool,
+    labelPosition: PropTypes.oneOf(['left', 'right']),
     circular: PropTypes.bool,
     fluid: PropTypes.bool,
     floated: SemanticUiPropTypes.floated,
@@ -23,17 +26,29 @@ export default class Button extends Component {
     color: SemanticUiPropTypes.color
   }
 
+  labelClasses() {
+    const { labeled, labelPosition } = this.props
+
+    if(labeled) {
+      return `${labelPosition} labeled`
+    }
+  }
+
   render() {
     const { labeledIcon, className, color } = this.props
     const classesFromProps = propsToClasses(['circular', 'inverted', 'primary', 'secondary', 'basic',
                                             'fluid', 'icon', 'compact'], this.props)
     const initialClassesFromProps = propsToClasses(['positive', 'negative'], this.props)
-    const classes = classNames(initialClassesFromProps, 'ui', classesFromProps,
+    const classes = classNames(initialClassesFromProps, 'ui', this.labelClasses(this.props), classesFromProps,
                                {'labeled icon': labeledIcon},
                                floatedClasses(this.props), color,
                                'button', className)
 
-    return <button className={classes}>{this.props.children}</button>
+    if(this.props.labeled) {
+      return <div className={classes}>{this.props.children}</div>
+    } else {
+      return <button className={classes}>{this.props.children}</button>
+    }
   }
 
 }
