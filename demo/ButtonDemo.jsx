@@ -94,6 +94,12 @@ export default class ButtonDemo extends Component {
             <Button>Three</Button>
           </ButtonGroup>
         </Segment>
+
+        <Segment>
+          <Button circular icon>
+            <i className='icon settings' />
+          </Button>
+        </Segment>
       </div>
     )
   }

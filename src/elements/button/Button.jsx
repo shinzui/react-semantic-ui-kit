@@ -14,6 +14,7 @@ export default class Button extends Component {
     secondary: PropTypes.bool,
     positive: PropTypes.bool,
     negative: PropTypes.bool,
+    circular: PropTypes.bool,
     fluid: PropTypes.bool,
     floated: SemanticUiPropTypes.floated,
     icon: PropTypes.bool,
@@ -24,7 +25,7 @@ export default class Button extends Component {
 
   render() {
     const { labeledIcon, className, color } = this.props
-    const classesFromProps = propsToClasses(['inverted', 'primary', 'secondary', 'basic',
+    const classesFromProps = propsToClasses(['circular', 'inverted', 'primary', 'secondary', 'basic',
                                             'fluid', 'icon', 'compact'], this.props)
     const initialClassesFromProps = propsToClasses(['positive', 'negative'], this.props)
     const classes = classNames(initialClassesFromProps, 'ui', classesFromProps,
