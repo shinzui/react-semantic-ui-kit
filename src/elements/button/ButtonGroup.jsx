@@ -6,7 +6,7 @@ import SemanticUiPropTypes from '../../common/SemanticUiPropTypes'
 
 export default class Button extends Component {
 
-  propTypes = {
+  static propTypes = {
     icon: PropTypes.bool,
     color: SemanticUiPropTypes.color
   }
