@@ -59,6 +59,14 @@ export default class ButtonDemo extends Component {
         </Segment>
 
         <Segment>
+          <ButtonGroup>
+            <Button>Cancel</Button>
+            <div className='or' />
+            <Button positive>Save</Button>
+          </ButtonGroup>
+        </Segment>
+
+        <Segment>
           <Button positive>Positive button</Button>
           <Button negative>Negative button</Button>
         </Segment>
