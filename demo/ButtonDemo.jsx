@@ -12,6 +12,7 @@ export default class ButtonDemo extends Component {
           <h3>Simple button</h3>
           <Button>Simple Button</Button>
         </Segment>
+
         <Segment>
           <h3>Basic buttons</h3>
           <Button basic>Basic Button</Button>
@@ -107,6 +108,28 @@ export default class ButtonDemo extends Component {
           <Button circular icon>
             <i className='icon settings' />
           </Button>
+        </Segment>
+
+        <Segment>
+          <h3>Active button</h3>
+          <Button active>
+            <i className='user icon' />Follow
+          </Button>
+        </Segment>
+
+        <Segment>
+          <h3>Disabled button</h3>
+          <Button disabled>
+            <i className='user icon' />Follow
+          </Button>
+        </Segment>
+
+        <Segment>
+          <h3>Loading buttons</h3>
+          <Button loading>Loading</Button>
+          <Button basic loading>Loading</Button>
+          <Button primary loading>Loading</Button>
+          <Button secondary loading>Loading</Button>
         </Segment>
 
         <Segment>
