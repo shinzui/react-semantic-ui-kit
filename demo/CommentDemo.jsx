@@ -39,6 +39,37 @@ const CommentDemo = (props) => {
         </CommentGroup>
       </Segment>
 
+      <Segment>
+        <h3>Minimal comments</h3>
+        <CommentGroup minimal>
+          <Header element='h3' dividing>Comments</Header>
+          <Comment>
+            <Avatar src={bomi} href='#'/>
+            <Content>
+              <Author href='#'>Bomi</Author>
+              <MetaData>
+                <Date>Today at 5:42PM</Date>
+              </MetaData>
+              <Text>
+                React is a great library.
+              </Text>
+              <Actions>
+                <a href='#'>Reply</a>
+              </Actions>
+            </Content>
+          </Comment>
+          <Form reply>
+            <div className='field'>
+              <textarea />
+            </div>
+            <Button primary labeledIcon>
+              <i className='icon edit' />Add Reply
+            </Button>
+
+          </Form>
+        </CommentGroup>
+      </Segment>
+
     </div>
   )
 }
