@@ -23,7 +23,14 @@ export default class Button extends Component {
     icon: PropTypes.bool,
     labeledIcon: PropTypes.bool,
     inverted: PropTypes.bool,
-    color: SemanticUiPropTypes.color
+    color: SemanticUiPropTypes.color,
+    onClick: PropTypes.func
+  }
+
+  static defaultProps = {
+    onClick: (event) => {
+      console.error('You did not implement onClick for your <Button>')
+    }
   }
 
   labelClasses() {
@@ -35,7 +42,7 @@ export default class Button extends Component {
   }
 
   render() {
-    const { labeledIcon, className, color } = this.props
+    const { labeledIcon, className, color, onClick } = this.props
     const classesFromProps = propsToClasses(['circular', 'inverted', 'primary', 'secondary', 'basic',
                                             'fluid', 'icon', 'compact'], this.props)
     const initialClassesFromProps = propsToClasses(['positive', 'negative'], this.props)
@@ -45,9 +52,9 @@ export default class Button extends Component {
                                'button', className)
 
     if(this.props.labeled) {
-      return <div className={classes}>{this.props.children}</div>
+      return <div className={classes} onClick={onClick}>{this.props.children}</div>
     } else {
-      return <button className={classes}>{this.props.children}</button>
+      return <button className={classes} onClick={onClick}>{this.props.children}</button>
     }
   }
 
