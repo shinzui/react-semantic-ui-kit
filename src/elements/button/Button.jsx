@@ -3,7 +3,7 @@ import classNames from 'classnames'
 
 import SemanticUiPropTypes from '../../common/SemanticUiPropTypes'
 import propsToClasses from '../../util/propsToClasses'
-import { floatedClasses } from '../../common/semanticClasses'
+import { floatedClasses, attachedClasses } from '../../common/semanticClasses'
 
 export default class Button extends Component {
 
@@ -20,6 +20,7 @@ export default class Button extends Component {
     circular: PropTypes.bool,
     fluid: PropTypes.bool,
     floated: SemanticUiPropTypes.floated,
+    attached: PropTypes.oneOf(['left', 'right', 'top', 'bottom']),
     icon: PropTypes.bool,
     labeledIcon: PropTypes.bool,
     inverted: PropTypes.bool,
@@ -45,17 +46,18 @@ export default class Button extends Component {
   }
 
   render() {
-    const { labeledIcon, className, color, onClick } = this.props
+    const { labeledIcon, className, color, attached, labeled, onClick } = this.props
     const classesFromProps = propsToClasses(['circular', 'inverted', 'primary', 'secondary', 'basic',
                                             'active', 'disabled', 'loading',
                                             'fluid', 'icon', 'compact'], this.props)
     const initialClassesFromProps = propsToClasses(['positive', 'negative'], this.props)
-    const classes = classNames(initialClassesFromProps, 'ui', this.labelClasses(this.props), classesFromProps,
+    const classes = classNames(initialClassesFromProps, 'ui', attachedClasses(this.props),
+                               this.labelClasses(this.props), classesFromProps,
                                {'labeled icon': labeledIcon},
                                floatedClasses(this.props), color,
                                'button', className)
 
-    if(this.props.labeled) {
+    if(labeled || attached) {
       return <div className={classes} onClick={onClick}>{this.props.children}</div>
     } else {
       return <button className={classes} onClick={onClick}>{this.props.children}</button>

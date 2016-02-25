@@ -17,6 +17,10 @@ export const attachedClasses = (props) => {
     return 'bottom right attached'
   } else if(attached === 'bottomLeft') {
     return 'bottom left attached'
+  } else if(attached === 'left') {
+    return 'left attached'
+  } else if(attached === 'right') {
+    return 'right attached'
   }
 }
 

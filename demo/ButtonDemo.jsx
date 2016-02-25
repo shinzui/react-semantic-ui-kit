@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { Button, ButtonGroup, Segment, Label } from '../src/index'
 
+import ParagrahExample from './ParagraphExample'
+
 export default class ButtonDemo extends Component {
 
   render() {
@@ -157,6 +159,21 @@ export default class ButtonDemo extends Component {
             </Button>
             <Label basic color='blue' pointing pointingDirection='left'>2049</Label>
           </Button>
+        </Segment>
+
+        <Segment>
+          <h3>Vertical attachment</h3>
+          <Button attached='top'>Top</Button>
+          <Segment attached='both'>
+            <ParagrahExample />
+          </Segment>
+          <Button attached='bottom'>Bottom</Button>
+        </Segment>
+
+        <Segment>
+          <h3>Horizontal attachment</h3>
+          <Button attached='left'>Left </Button>
+          <Button attached='right'>Right</Button>
         </Segment>
       </div>
     )
