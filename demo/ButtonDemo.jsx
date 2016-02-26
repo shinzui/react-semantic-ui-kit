@@ -175,6 +175,16 @@ export default class ButtonDemo extends Component {
           <Button attached='left'>Left </Button>
           <Button attached='right'>Right</Button>
         </Segment>
+
+        <Segment>
+          <h3>Vertical button group</h3>
+          <ButtonGroup vertical>
+            <Button>Feed</Button>
+            <Button>Messages</Button>
+            <Button>Events</Button>
+            <Button>Photos</Button>
+          </ButtonGroup>
+        </Segment>
       </div>
     )
   }
