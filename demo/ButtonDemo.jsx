@@ -143,6 +143,14 @@ export default class ButtonDemo extends Component {
           <Button fluid>Fluid buttons</Button>
         </Segment>
 
+        <Segment clearing>
+          <h3>Floated buttons</h3>
+
+          <Button floated='right'>Right floated</Button>
+          <Button floated='left'>Left floated</Button>
+
+        </Segment>
+
         <Segment>
           <Button labeled>
             <Button>

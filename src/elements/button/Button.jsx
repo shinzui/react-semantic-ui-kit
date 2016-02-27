@@ -17,6 +17,7 @@ export default class Button extends Component {
     icon: PropTypes.bool,
     labeled: PropTypes.bool,
     labelPosition: PropTypes.oneOf(['left', 'right']),
+    floated: SemanticUiPropTypes.floated,
     fluid: PropTypes.bool,
     circular: PropTypes.bool,
     fluid: PropTypes.bool,
