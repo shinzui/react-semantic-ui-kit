@@ -17,6 +17,7 @@ export default class Button extends Component {
     icon: PropTypes.bool,
     labeled: PropTypes.bool,
     labelPosition: PropTypes.oneOf(['left', 'right']),
+    fluid: PropTypes.bool,
     circular: PropTypes.bool,
     fluid: PropTypes.bool,
     floated: SemanticUiPropTypes.floated,
@@ -51,7 +52,7 @@ export default class Button extends Component {
     const classesFromProps = propsToClasses(['circular', 'inverted', 'primary', 'secondary', 'basic',
                                             'active', 'disabled', 'loading',
                                             'fluid', 'icon', 'compact'], this.props)
-    const initialClassesFromProps = propsToClasses(['positive', 'negative'], this.props)
+    const initialClassesFromProps = propsToClasses(['positive', 'negative', 'fluid'], this.props)
     const classes = classNames(initialClassesFromProps, 'ui', attachedClasses(this.props),
                                this.labelClasses(this.props), classesFromProps,
                                {'labeled icon': labeledIcon}, size,

@@ -139,6 +139,11 @@ export default class ButtonDemo extends Component {
         </Segment>
 
         <Segment>
+          <h3>Fluid buttons</h3>
+          <Button fluid>Fluid buttons</Button>
+        </Segment>
+
+        <Segment>
           <Button labeled>
             <Button>
               <i className='heart icon' /> Like
