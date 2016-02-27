@@ -1,6 +1,6 @@
 {
   "name": "react-semantic-ui-kit",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Semantic UI components built with React",
   "main": "lib/index.js",
   "files": [
