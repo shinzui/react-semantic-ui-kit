@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Button, ButtonGroup, Header,
+import { Button, ButtonGroup, Header, Content,
          Divider, Segment, Label } from '../src/index'
 
 import ParagrahExample from './ParagraphExample'
@@ -253,6 +253,22 @@ export default class ButtonDemo extends Component {
             <Button>Events</Button>
             <Button>Photos</Button>
           </ButtonGroup>
+        </Segment>
+
+        <Segment>
+          <h3>Animated buttons</h3>
+          <Button animation='horizontal'>
+            <Content visible>Next</Content>
+            <Content hidden><i className='right arrow icon' /></Content>
+          </Button>
+          <Button animation='vertical'>
+            <Content visible>Shop</Content>
+            <Content hidden><i className='shop icon' /></Content>
+          </Button>
+          <Button animation='fade'>
+            <Content visible>Sign-up for a pro account</Content>
+            <Content hidden>$12.99/month</Content>
+          </Button>
         </Segment>
 
         <Segment>

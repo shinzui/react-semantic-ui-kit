@@ -32,6 +32,7 @@ export default class Button extends Component {
     disabled: PropTypes.bool,
     loading: PropTypes.bool,
     color: SemanticUiPropTypes.color,
+    animation: PropTypes.oneOf(['horizontal', 'vertical', 'fade']),
     onClick: PropTypes.func
   }
 
@@ -49,6 +50,18 @@ export default class Button extends Component {
     }
   }
 
+  animationClasses() {
+    const { animation } = this.props
+
+    if(animation === 'horizontal') {
+      return 'animated'
+    } else if (animation === 'vertical') {
+      return 'vertical animated'
+    } else if(animation === 'fade') {
+      return 'animated fade'
+    }
+  }
+
   render() {
     const { labeledIcon, className, color, attached, labeled, size, onClick } = this.props
     const classesFromProps = propsToClasses(['circular', 'inverted', 'primary', 'secondary', 'basic',
@@ -60,7 +73,7 @@ export default class Button extends Component {
     const classes = classNames(initialClassesFromProps, 'ui', attachedClasses(this.props),
                                this.labelClasses(this.props), classesFromProps,
                                {'labeled icon': labeledIcon}, size,
-                               socialClasses(this.props),
+                               socialClasses(this.props), this.animationClasses(),
                                floatedClasses(this.props), color,
                                'button', className)
 
