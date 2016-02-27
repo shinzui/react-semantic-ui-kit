@@ -179,6 +179,30 @@ export default class ButtonDemo extends Component {
         </Segment>
 
         <Segment>
+          <Button social='facebook'>
+            <i className='facebook icon' />Facebook
+          </Button>
+          <Button social='twitter'>
+            <i className='twitter icon' />Twitter
+          </Button>
+          <Button social='googlePlus'>
+            <i className='google plus icon' />Google Plus
+          </Button>
+          <Button social='instagram'>
+            <i className='instagram icon' />Instagram
+          </Button>
+          <Button social='linkedIn'>
+            <i className='linkedin icon' />LinkedIn
+          </Button>
+          <Button social='youtube'>
+            <i className='youtube icon' />YouTube
+          </Button>
+          <Button social='vk'>
+            <i className='vk icon' />VK
+          </Button>
+        </Segment>
+
+        <Segment>
           <Header element='h3'>Sizes</Header>
 
           {sizes.map( size => {

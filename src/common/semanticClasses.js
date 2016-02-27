@@ -79,3 +79,15 @@ export const sortedClasses = (props) => {
     return 'sorted descending'
   }
 }
+
+export const socialClasses = (props) => {
+  const { social } = props
+
+  if(social === 'googlePlus') {
+    return 'google plus'
+  } else if(social === 'linkedIn') {
+    return 'linkedin'
+  } else if(social) {
+    return social
+  }
+}
