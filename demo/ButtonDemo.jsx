@@ -185,6 +185,24 @@ export default class ButtonDemo extends Component {
             <Button>Photos</Button>
           </ButtonGroup>
         </Segment>
+
+        <Segment>
+          <h3>Vertical labeled icon buttons</h3>
+          <ButtonGroup vertical labeledIcon>
+            <Button>
+              <i className='pause icon' />
+              Pause
+            </Button>
+            <Button>
+              <i className='play icon' />
+              Play
+            </Button>
+            <Button>
+              <i className='shuffle icon' />
+              Shuffle
+            </Button>
+          </ButtonGroup>
+        </Segment>
       </div>
     )
   }
