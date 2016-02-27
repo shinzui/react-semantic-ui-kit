@@ -70,6 +70,12 @@ export const widthClasses = (props) => {
   if(width) return `${spellNumber(width)} wide`
 }
 
+export const buttonClasses = (props) => {
+  const { buttons } = props
+
+  if(buttons) return spellNumber(buttons)
+}
+
 export const sortedClasses = (props) => {
   const { sorted } = props
 

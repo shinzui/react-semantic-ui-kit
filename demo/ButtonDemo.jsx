@@ -57,6 +57,25 @@ export default class ButtonDemo extends Component {
         </Segment>
 
         <Segment>
+          <h3>Equal width button group</h3>
+          <ButtonGroup buttons={3}>
+            <Button>One</Button>
+            <Button>Two</Button>
+            <Button>Three</Button>
+          </ButtonGroup>
+
+          <Divider />
+
+          <ButtonGroup buttons={5}>
+            <Button>One</Button>
+            <Button>Two</Button>
+            <Button>Three</Button>
+            <Button>Four</Button>
+            <Button>Five</Button>
+          </ButtonGroup>
+        </Segment>
+
+        <Segment>
           <ButtonGroup icon>
             <Button><i className='align left icon'/></Button>
             <Button><i className='align center icon'/></Button>
