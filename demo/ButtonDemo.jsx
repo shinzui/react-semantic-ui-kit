@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import { Button, ButtonGroup, Segment, Label } from '../src/index'
+import { Button, ButtonGroup, Header,
+         Divider, Segment, Label } from '../src/index'
 
 import ParagrahExample from './ParagraphExample'
 
@@ -8,6 +9,9 @@ export default class ButtonDemo extends Component {
   render() {
     const colors = ['red', 'orange', 'yellow', 'olive', 'green', 'teal', 'blue',
                             'violet', 'purple', 'pink', 'brown', 'grey', 'black']
+
+    const sizes = ['mini', 'tiny', 'small', 'medium', 'large', 'big', 'huge', 'massive']
+
     return (
       <div>
         <Segment>
@@ -162,6 +166,14 @@ export default class ButtonDemo extends Component {
         </Segment>
 
         <Segment>
+          <Header element='h3'>Sizes</Header>
+
+          {sizes.map( size => {
+            return <Button size={size} key={size}>{size} button</Button>
+          })}
+        </Segment>
+
+        <Segment>
           <h3>Vertical attachment</h3>
           <Button attached='top'>Top</Button>
           <Segment attached='both'>
@@ -222,6 +234,22 @@ export default class ButtonDemo extends Component {
               Shuffle
             </Button>
           </ButtonGroup>
+        </Segment>
+
+        <Segment>
+          <Header element='h3'>Button group sizes</Header>
+
+          {sizes.map( size => {
+            return <div key={size}>
+              <ButtonGroup size={size}>
+                <Button>One</Button>
+                <Button>Two</Button>
+                <Button>Three</Button>
+              </ButtonGroup>
+              <Divider />
+            </div>
+          })}
+
         </Segment>
       </div>
     )
