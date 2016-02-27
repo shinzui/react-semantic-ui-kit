@@ -187,6 +187,26 @@ export default class ButtonDemo extends Component {
         </Segment>
 
         <Segment>
+          <h3>Basic vertical button group</h3>
+          <ButtonGroup basic vertical>
+            <Button>Feed</Button>
+            <Button>Messages</Button>
+            <Button>Events</Button>
+            <Button>Photos</Button>
+          </ButtonGroup>
+        </Segment>
+
+        <Segment>
+          <h3>Basic button group</h3>
+          <ButtonGroup basic>
+            <Button>Feed</Button>
+            <Button>Messages</Button>
+            <Button>Events</Button>
+            <Button>Photos</Button>
+          </ButtonGroup>
+        </Segment>
+
+        <Segment>
           <h3>Vertical labeled icon buttons</h3>
           <ButtonGroup vertical labeledIcon>
             <Button>

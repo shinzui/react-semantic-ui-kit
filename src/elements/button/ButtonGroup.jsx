@@ -10,12 +10,13 @@ export default class Button extends Component {
     icon: PropTypes.bool,
     vertical: PropTypes.bool,
     color: SemanticUiPropTypes.color,
-    labeledIcon: PropTypes.bool
+    labeledIcon: PropTypes.bool,
+    basic: PropTypes.bool
   }
 
   render() {
     const { className, color, labeledIcon } = this.props
-    const classesFromProps = propsToClasses(['icon', 'vertical'], this.props)
+    const classesFromProps = propsToClasses(['icon', 'vertical', 'basic'], this.props)
     const classes = classNames(color, 'ui', classesFromProps,
                                {'labeled icon': labeledIcon}, 'buttons', className)
 
