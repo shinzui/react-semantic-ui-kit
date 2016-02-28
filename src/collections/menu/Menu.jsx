@@ -51,6 +51,7 @@ export default class Menu extends Component {
         return React.cloneElement(child, { parentMenu: true })
       }
     })
+
     return <div className={classes}>{children}</div>
   }
 }
