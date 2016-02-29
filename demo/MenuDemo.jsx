@@ -1,6 +1,7 @@
 import React from 'react'
 
-import { Segment, Menu, MenuItem, Input, Divider } from '../src/index'
+import { Segment, Menu, MenuItem, Label,
+         Button, Input, Divider } from '../src/index'
 import ParagraphExample from './ParagraphExample'
 
 const MenuDemo = (props) => {
@@ -76,7 +77,6 @@ const MenuDemo = (props) => {
           <ParagraphExample />
         </Segment>
       </Segment>
-
 
       <Segment>
         <h3>Text menu</h3>
@@ -268,6 +268,100 @@ const MenuDemo = (props) => {
           <MenuItem href='#home' active>Home</MenuItem>
           <MenuItem href='#features'>Features</MenuItem>
           <MenuItem href='#about'>About</MenuItem>
+        </Menu>
+      </Segment>
+
+      <Segment>
+        <h3>Evenly divided</h3>
+        <Menu fluid items={3}>
+          <MenuItem href='#home' active>Home</MenuItem>
+          <MenuItem href='#features'>Features</MenuItem>
+          <MenuItem href='#about'>About</MenuItem>
+        </Menu>
+      </Segment>
+
+      <Segment>
+        <h3>Large horizontal menu</h3>
+        <Menu size='large'>
+          <MenuItem href='#home' active>Home</MenuItem>
+          <MenuItem href='#messages'>Messages</MenuItem>
+          <Menu right>
+            <MenuItem>
+              <Button primary>Log in</Button>
+            </MenuItem>
+          </Menu>
+        </Menu>
+
+        <h3>Regular horizontal menu</h3>
+        <Menu>
+          <MenuItem href='#home' active>Home</MenuItem>
+          <MenuItem href='#messages'>Messages</MenuItem>
+          <Menu right>
+            <MenuItem>
+              <Button primary>Log in</Button>
+            </MenuItem>
+          </Menu>
+        </Menu>
+
+        <h3>Small horizontal menu</h3>
+        <Menu size='small'>
+          <MenuItem href='#home' active>Home</MenuItem>
+          <MenuItem href='#messages'>Messages</MenuItem>
+          <Menu right>
+            <MenuItem>
+              <Button primary>Log in</Button>
+            </MenuItem>
+          </Menu>
+        </Menu>
+      </Segment>
+
+      <Segment>
+        <h3>Large vertical menu</h3>
+        <Menu vertical size='large'>
+          <MenuItem href='#inbox' active>
+            <Label color='teal'>7</Label>
+            Inbox
+          </MenuItem>
+          <MenuItem href='#spam'>
+            <Label>9</Label>
+            Spam
+          </MenuItem>
+          <MenuItem href='#sent'>
+            <Label>19</Label>
+            Sent
+          </MenuItem>
+        </Menu>
+
+        <h3>Regular vertical menu</h3>
+        <Menu vertical>
+          <MenuItem href='#inbox' active>
+            <Label color='teal'>7</Label>
+            Inbox
+          </MenuItem>
+          <MenuItem href='#spam'>
+            <Label>9</Label>
+            Spam
+          </MenuItem>
+          <MenuItem href='#sent'>
+            <Label>19</Label>
+            Sent
+          </MenuItem>
+        </Menu>
+
+        <h3>Small vertical menu</h3>
+        <Menu vertical size='small'>
+          <MenuItem href='#inbox' active>
+            <Label color='teal'>7</Label>
+            Inbox
+          </MenuItem>
+          <MenuItem href='#spam'>
+            <Label>9</Label>
+            Spam
+          </MenuItem>
+          <MenuItem href='#sent'>
+            <Label>19</Label>
+            Sent
+          </MenuItem>
         </Menu>
       </Segment>
 

@@ -39,16 +39,17 @@ export default class Menu extends Component {
     icon: PropTypes.bool,
     labeledIcon: PropTypes.bool,
     fluid: PropTypes.bool,
-    color: SemanticUiPropTypes.color
+    color: SemanticUiPropTypes.color,
+    size: PropTypes.oneOf(['small', 'large'])
   }
 
   render() {
-    const { className, parentMenu, color, labeledIcon } = this.props
+    const { className, parentMenu, color, labeledIcon, size } = this.props
     const classesFromProps = propsToClasses(['secondary', 'right', 'vertical',
                                             'compact', 'pointing', 'pagination',
                                             'icon', 'text', 'basic', 'fluid',
                                             'tabular', 'stackable', 'inverted'], this.props)
-    const classes = classNames({'ui': !parentMenu}, color, itemClasses(this.props),
+    const classes = classNames({'ui': !parentMenu}, color, size, itemClasses(this.props),
                                {'labeled icon': labeledIcon}, classesFromProps, 'menu', className)
 
     const children = React.Children.map(this.props.children, (child) => {
