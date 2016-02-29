@@ -4,6 +4,9 @@ import { Segment, Menu, MenuItem, Input, Divider } from '../src/index'
 import ParagraphExample from './ParagraphExample'
 
 const MenuDemo = (props) => {
+
+  const colors = ['red', 'orange', 'yellow', 'olive', 'green', 'teal', 'blue',
+                          'violet', 'purple', 'pink', 'brown', 'grey', 'black']
   return (
     <div>
       <Segment>
@@ -183,6 +186,28 @@ const MenuDemo = (props) => {
           <ParagraphExample />
         </Segment>
       </Segment>
+
+      <Segment>
+        <h3>Colored menus</h3>
+        {colors.map( color => {
+          return <Menu items={3} color={color} key={color}>
+            <MenuItem href='#home' active>Home</MenuItem>
+            <MenuItem href='#features'>Features</MenuItem>
+            <MenuItem href='#about'>About</MenuItem>
+          </Menu>
+          })}
+      </Segment>
+
+      <Segment>
+        <h3>Colored menu items</h3>
+        <Menu>
+        {colors.slice(0,9).map( (color, index) => {
+          const active = index === 0
+          return <MenuItem key={color} color={color} active={active}>{color}</MenuItem>
+        })}
+        </Menu>
+      </Segment>
+
     </div>
   )
 }
