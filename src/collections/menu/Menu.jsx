@@ -36,6 +36,7 @@ export default class Menu extends Component {
     compact: PropTypes.bool,
     stackable: PropTypes.bool,
     inverted: PropTypes.bool,
+    icon: PropTypes.bool,
     color: SemanticUiPropTypes.color
   }
 
@@ -43,7 +44,8 @@ export default class Menu extends Component {
     const { className, parentMenu, color } = this.props
     const classesFromProps = propsToClasses(['secondary', 'right', 'vertical',
                                             'compact', 'pointing', 'pagination',
-                                            'text', 'basic', 'tabular', 'stackable', 'inverted'], this.props)
+                                            'icon', 'text', 'basic', 
+                                            'tabular', 'stackable', 'inverted'], this.props)
     const classes = classNames({'ui': !parentMenu}, color, itemClasses(this.props), classesFromProps, 'menu', className)
 
     const children = React.Children.map(this.props.children, (child) => {

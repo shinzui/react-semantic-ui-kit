@@ -208,6 +208,33 @@ const MenuDemo = (props) => {
         </Menu>
       </Segment>
 
+      <Segment>
+        <h3>Icon menu</h3>
+        <Menu icon>
+          <MenuItem href='#pause'>
+            <i className='pause icon' />
+          </MenuItem>
+          <MenuItem href='#play'>
+            <i className='play icon' />
+          </MenuItem>
+          <MenuItem href='#shuffle'>
+            <i className='shuffle icon' />
+          </MenuItem>
+        </Menu>
+
+        <Menu vertical icon>
+          <MenuItem href='#pause'>
+            <i className='pause icon' />
+          </MenuItem>
+          <MenuItem href='#play'>
+            <i className='play icon' />
+          </MenuItem>
+          <MenuItem href='#shuffle'>
+            <i className='shuffle icon' />
+          </MenuItem>
+        </Menu>
+      </Segment>
+
     </div>
   )
 }
