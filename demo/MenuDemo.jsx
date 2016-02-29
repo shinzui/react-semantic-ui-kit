@@ -262,6 +262,15 @@ const MenuDemo = (props) => {
         </Menu>
       </Segment>
 
+      <Segment>
+        <h3>Fluid vertical menu</h3>
+        <Menu vertical fluid>
+          <MenuItem href='#home' active>Home</MenuItem>
+          <MenuItem href='#features'>Features</MenuItem>
+          <MenuItem href='#about'>About</MenuItem>
+        </Menu>
+      </Segment>
+
     </div>
   )
 }
