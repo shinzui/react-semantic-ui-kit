@@ -58,6 +58,18 @@ export const columnClasses = (props) => {
   if(columns) return `${spellNumber(columns)} column`
 }
 
+export const fittedClasses = (props) => {
+  const { fitted } = props
+
+  if(fitted === 'both') {
+    return 'fitted'
+  } else if(fitted === 'horizontally') {
+    return 'horizontally fitted'
+  } else if(fitted === 'vertically') {
+    return 'vertically fitted'
+  }
+}
+
 export const itemClasses = (props) => {
   const { items } = props
 

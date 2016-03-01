@@ -10,11 +10,13 @@ const floated = PropTypes.oneOf(['right', 'left'])
 const color = PropTypes.oneOf(['red', 'orange', 'yellow', 'olive', 'green', 'teal', 'blue',
                               'violet', 'purple', 'pink', 'brown', 'grey', 'black'])
 const social = PropTypes.oneOf(['facebook', 'twitter', 'googlePlus' , 'vk', 'linkedIn', 'instagram', 'youtube'])
+const fitted = PropTypes.oneOf(['both', 'horizontally', 'vertically'])
 
 const SemanticUiPropTypes = {
   attached,
   aligned,
   color,
+  fitted,
   floated,
   social,
   verticalAlignment,

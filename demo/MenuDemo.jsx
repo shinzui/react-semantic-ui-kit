@@ -365,6 +365,20 @@ const MenuDemo = (props) => {
         </Menu>
       </Segment>
 
+      <Segment>
+        <h3>Fitted menu</h3>
+        <Menu>
+          <MenuItem fitted='both'>
+            No padding
+          </MenuItem>
+          <MenuItem fitted='horizontally'>
+            No Horizontal padding
+          </MenuItem>
+          <MenuItem fitted='vertically'>
+            No vertical padding
+          </MenuItem>
+        </Menu>
+      </Segment>
     </div>
   )
 }

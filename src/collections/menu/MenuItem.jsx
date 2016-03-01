@@ -3,6 +3,7 @@ import React, { Component, PropTypes } from 'react'
 import classNames from 'classnames'
 import propsToClasses from '../../util/propsToClasses'
 import SemanticUiPropTypes from '../../common/SemanticUiPropTypes'
+import { fittedClasses } from '../../common/semanticClasses'
 
 export default class MenuItem extends Component {
 
@@ -13,6 +14,7 @@ export default class MenuItem extends Component {
     disabled: PropTypes.bool,
     link: PropTypes.bool,
     down: PropTypes.bool,
+    fitted: SemanticUiPropTypes.fitted,
     onClick: PropTypes.func,
     color: SemanticUiPropTypes.color
   }
@@ -20,7 +22,7 @@ export default class MenuItem extends Component {
   render() {
     const { className, href, children, onClick, color } = this.props
     const classesFromProps = propsToClasses(['active', 'disabled', 'link', 'down', 'header'], this.props)
-    const classes = classNames(color, classesFromProps, 'item', className)
+    const classes = classNames(color, classesFromProps, fittedClasses(this.props), 'item', className)
 
     if(href) {
       return <a href={href} className={classes} onClick={onClick}>{children}</a>
