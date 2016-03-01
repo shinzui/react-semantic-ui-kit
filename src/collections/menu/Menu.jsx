@@ -26,6 +26,7 @@ export default class Menu extends Component {
     items: PropTypes.number,
     vertical: PropTypes.bool,
     basic: PropTypes.bool,
+    borderless: PropTypes.bool,
     tabular: PropTypes.bool,
     text: PropTypes.bool,
     right: PropTypes.bool,
@@ -46,7 +47,7 @@ export default class Menu extends Component {
   render() {
     const { className, parentMenu, color, labeledIcon, size } = this.props
     const classesFromProps = propsToClasses(['secondary', 'right', 'vertical',
-                                            'compact', 'pointing', 'pagination',
+                                            'borderless', 'compact', 'pointing', 'pagination',
                                             'icon', 'text', 'basic', 'fluid',
                                             'tabular', 'stackable', 'inverted'], this.props)
     const classes = classNames({'ui': !parentMenu}, color, size, itemClasses(this.props),

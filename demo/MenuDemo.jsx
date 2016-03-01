@@ -379,6 +379,16 @@ const MenuDemo = (props) => {
           </MenuItem>
         </Menu>
       </Segment>
+
+      <Segment>
+        <h3>Borderless menu</h3>
+        <Menu borderless>
+          <MenuItem>1</MenuItem>
+          <MenuItem>2</MenuItem>
+          <MenuItem>3</MenuItem>
+          <MenuItem>4</MenuItem>
+        </Menu>
+      </Segment>
     </div>
   )
 }
