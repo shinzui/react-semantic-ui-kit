@@ -1,6 +1,7 @@
 import React from 'react'
 
 import { Segment, Icon, Grid, Column } from '../src/index'
+import { iconType } from '../src/elements/Icon'
 
 const IconDemo = (props) => {
   const webIcons1 = [
@@ -12,8 +13,14 @@ const IconDemo = (props) => {
     'eyedropper', 'feed', 'find', 'heartbeat', 'history',
     'home', 'idea', 'inbox', 'lab', 'mail', 
     {type: 'mail', outline: true, key: 'mailOuline'}, {type: 'mail', square: true, key: 'mailSquare'},
-    'map', 'options'
+    'map', 'options', 'paintBrush'
   ]
+
+  const iconName = (type) => {
+    const classes = iconType(type)
+    return classes.charAt(0).toUpperCase() + classes.slice(1) 
+  }
+
   return (
     <div className='iconExample'>
       <Segment>
@@ -33,14 +40,14 @@ const IconDemo = (props) => {
           </Column>
           {webIcons1.map( icon => {
             if(typeof icon === 'string') {
-              return <Column key={icon}> <Icon type={icon} /> {icon.charAt(0).toUpperCase() + icon.slice(1)}</Column>
+              return <Column key={icon}> <Icon type={icon} /> {iconName(icon)}</Column>
             } else {
               let suffix = ''
               if(icon.square) suffix =  ' square'
               if(icon.outline) suffix = suffix + ' outline'
 
               return <Column key={icon.key}><Icon type={icon.type} square={icon.square} outline={icon.outline}/>
-                {icon.type.charAt(0).toUpperCase() + icon.type.slice(1) + suffix}
+                {iconName(icon.type) + suffix}
               </Column>
             }
           })}
