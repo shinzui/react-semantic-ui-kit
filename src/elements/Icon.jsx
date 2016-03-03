@@ -3,14 +3,16 @@ import classNames from 'classnames'
 
 const Icon = (props) => {
 
-  const { className, type, outline, slash } = props
-  const classes = classNames(type, {'slash': slash}, {'outline': outline}, 'icon', className)
+  const { className, type, outline, slash, square } = props
+  const classes = classNames(type, {'square': square}, {'slash': slash}, {'outline': outline}, 'icon', className)
 
-  return <i className={classes} /> 
+  return <i className={classes} />
 }
 
 Icon.propTypes = {
+  type: PropTypes.string.isRequired,
   outline: PropTypes.bool,
+  square: PropTypes.bool,
   slash: PropTypes.bool
 }
 
