@@ -14,6 +14,15 @@ const IconDemo = (props) => {
           <Column>
             <Icon type='alarm' outline/> Alarm outline
           </Column>
+          <Column>
+            <Icon type='alarm' slash/> Alarm slash
+          </Column>
+          <Column>
+            <Icon type='alarm' slash outline/> Alarm outline
+          </Column>
+          <Column>
+            <Icon type='at'/> At
+          </Column>
         </Grid>
       </Segment>
     </div>
