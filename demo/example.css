@@ -10,3 +10,23 @@
   display: block;
   min-height: 50px;
 }
+
+.iconExample .grid {
+  text-align: left;
+}
+
+.iconExample .grid > .column {
+  opacity: 0.7;
+  text-align: center;
+  color: #777777;
+  align-items: center;
+}
+
+.iconExample .column .icon {
+  opacity: 1;
+  height: 1em;
+  display: block;
+  color: #333333;
+  font-size: 2em;
+  margin: 0em auto 0.25em;
+}

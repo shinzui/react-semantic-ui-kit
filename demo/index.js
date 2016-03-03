@@ -27,6 +27,7 @@ import CheckboxDemo from './CheckboxDemo'
 import MenuDemo from './MenuDemo'
 import FeedDemo from './FeedDemo'
 import CommentDemo from './CommentDemo'
+import IconDemo from './IconDemo'
 
 import './example.css'
 
@@ -74,7 +75,8 @@ class Page extends Component {
       checkbox: CheckboxDemo,
       menu: MenuDemo,
       feed: FeedDemo,
-      comment: CommentDemo
+      comment: CommentDemo,
+      icon: IconDemo
     }
 
     let hash = window.location.hash
@@ -99,7 +101,7 @@ class Page extends Component {
     const items = ['forms', 'input', 'buttons', 'images', 'labels',
       'messages', 'divider', 'statistic', 'item', 'header',
       'list', 'rail', 'segment', 'flag', 'container', 'grid', 'step',
-      'table', 'card', 'checkbox', 'menu', 'feed', 'comment']
+      'table', 'card', 'checkbox', 'menu', 'feed', 'comment', 'icon']
 
     return (
       <Grid page>

@@ -22,6 +22,7 @@ import Container from './elements/Container'
 import Divider from './elements/Divider'
 import Flag from './elements/Flag'
 import Header from './elements/Header'
+import Icon from './elements/Icon'
 import Input from './elements/Input'
 import Label from './elements/label/Label'
 import LabelGroup from './elements/label/LabelGroup'
@@ -80,6 +81,7 @@ export {
   Feed,
   FeedEvent,
   Header,
+  Icon,
   Input,
   Flag,
   Form,
