@@ -9,16 +9,18 @@ const IconDemo = (props) => {
     'cloud', 'code', 'comments', {type: 'comments', outline: true, key: 'commentsOutline'},
     'comment', {type: 'comment', outline: true, key: 'commentOutline'},
     'copyright', 'dashboard', 'dropdown', 'external',
-    {type: 'external', square: true, key: 'externalSquare'}, 
+    {type: 'external', square: true, key: 'externalSquare'},
     'eyedropper', 'feed', 'find', 'heartbeat', 'history',
-    'home', 'idea', 'inbox', 'lab', 'mail', 
+    'home', 'idea', 'inbox', 'lab', 'mail',
     {type: 'mail', outline: true, key: 'mailOuline'}, {type: 'mail', square: true, key: 'mailSquare'},
-    'map', 'options', 'paintBrush'
+    'map', 'options', 'paintBrush', 'payment', 'phone', {type: 'phone', square: true}, 'privacy',
+    'protect', 'search', 'setting', 'settings', 'shop', 'sidebar', 'signal', 'sitemap', 'tag',
+    'tags', 'tasks', 'terminal', 'textTelephone', 'ticket', 'trophy', 'wifi'
   ]
 
   const iconName = (type) => {
     const classes = iconType(type)
-    return classes.charAt(0).toUpperCase() + classes.slice(1) 
+    return classes.charAt(0).toUpperCase() + classes.slice(1)
   }
 
   return (
