@@ -7,6 +7,7 @@ import FeedEvent from './FeedEvent'
 export default class Feed extends Component {
 
   static propTypes = {
+    size: PropTypes.oneOf(['small', 'large']),
     children: (props, propName, componentName) => {
       const prop = props[propName]
 
@@ -23,8 +24,8 @@ export default class Feed extends Component {
   }
 
   render() {
-    const { className } = this.props
-    const classes = classNames('ui', 'feed', className)
+    const { className, size } = this.props
+    const classes = classNames('ui', size, 'feed', className)
 
     return <div className={classes}>{this.props.children}</div>
   }
