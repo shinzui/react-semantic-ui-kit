@@ -51,6 +51,7 @@ import Avatar from './elements/extra/Avatar'
 import Content from './elements/extra/Content'
 import ContentHeader from './elements/extra/ContentHeader'
 import ContentDescription from './elements/extra/ContentDescription'
+import ContentImages from './elements/extra/ContentImages'
 import ContentSummary from './elements/extra/ContentSummary'
 import Date from './elements/extra/Date'
 import Meta from './elements/extra/Meta'
@@ -75,6 +76,7 @@ export {
   Content,
   ContentHeader,
   ContentDescription,
+  ContentImages,
   ContentSummary,
   Date,
   Divider,
