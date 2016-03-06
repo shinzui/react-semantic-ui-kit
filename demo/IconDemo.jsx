@@ -13,14 +13,30 @@ const IconDemo = (props) => {
     'eyedropper', 'feed', 'find', 'heartbeat', 'history',
     'home', 'idea', 'inbox', 'lab', 'mail',
     {type: 'mail', outline: true, key: 'mailOuline'}, {type: 'mail', square: true, key: 'mailSquare'},
-    'map', 'options', 'paintBrush', 'payment', 'phone', {type: 'phone', square: true}, 'privacy',
-    'protect', 'search', 'setting', 'settings', 'shop', 'sidebar', 'signal', 'sitemap', 'tag',
+    'map', 'options', 'paintBrush', 'payment', 'phone', {type: 'phone', square: true, key: 'phoneSquare'}, 
+    'privacy', 'protect', 'search', 'setting', 'settings', 'shop', 'sidebar', 'signal', 'sitemap', 'tag',
     'tags', 'tasks', 'terminal', 'textTelephone', 'ticket', 'trophy', 'wifi'
   ]
+
+  const userIcons = [ 'adjust', 'addUser', 'addToCart', 'archive', 'ban']
 
   const iconName = (type) => {
     const classes = iconType(type)
     return classes.charAt(0).toUpperCase() + classes.slice(1)
+  }
+
+  const renderIcon = (icon) => {
+    if(typeof icon === 'string') {
+      return <Column key={icon}> <Icon type={icon} /> {iconName(icon)}</Column>
+    } else {
+      let suffix = ''
+      if(icon.square) suffix =  ' square'
+      if(icon.outline) suffix = suffix + ' outline'
+
+      return <Column key={icon.key}><Icon type={icon.type} square={icon.square} outline={icon.outline}/>
+        {iconName(icon.type) + suffix}
+      </Column>
+    }
   }
 
   return (
@@ -40,19 +56,14 @@ const IconDemo = (props) => {
           <Column>
             <Icon type='alarm' slash outline/> Alarm outline
           </Column>
-          {webIcons1.map( icon => {
-            if(typeof icon === 'string') {
-              return <Column key={icon}> <Icon type={icon} /> {iconName(icon)}</Column>
-            } else {
-              let suffix = ''
-              if(icon.square) suffix =  ' square'
-              if(icon.outline) suffix = suffix + ' outline'
+          {webIcons1.map(renderIcon)}
+        </Grid>
+      </Segment>
 
-              return <Column key={icon.key}><Icon type={icon.type} square={icon.square} outline={icon.outline}/>
-                {iconName(icon.type) + suffix}
-              </Column>
-            }
-          })}
+      <Segment>
+        <h3>User actions</h3>
+        <Grid columns={5}>
+          {userIcons.map(renderIcon)} 
         </Grid>
       </Segment>
     </div>

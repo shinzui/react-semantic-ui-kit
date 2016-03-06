@@ -1,6 +1,8 @@
 import React, { PropTypes } from 'react'
 import classNames from 'classnames'
 
+import { lowercase } from '../util/string'
+
 const Icon = (props) => {
 
   const { className, type, outline, slash, square } = props
@@ -10,14 +12,15 @@ const Icon = (props) => {
 }
 
 export const iconType = (type) => {
-  const re = /(.*)([A-Z].*)/
+  const re = /(.*?)([A-Z][a-z]*)([A-Z].*)?/
   const result = type.match(re)
 
   if(result) {
     const firstWord = result[1]
-    const secondWord = result[2]
+    const secondWord = lowercase(result[2]) || ''
+    const thirdWord = lowercase(result[3]) || ''
 
-    return `${firstWord} ${secondWord.charAt(0).toLowerCase() + secondWord.slice(1)}`
+    return `${firstWord} ${secondWord} ${thirdWord}`
   } else {
     return type
   }
