@@ -12,9 +12,9 @@ export default class Column extends Component {
   }
 
   render() {
-    const { className } = this.props
+    const { className, style } = this.props
     const classes = classNames(widthClasses(this.props), floatedClasses(this.props), 'column', className)
 
-    return <div className={classes} style={this.props.style}>{this.props.children}</div>
+    return <div className={classes} style={style}>{this.props.children}</div>
   }
 }

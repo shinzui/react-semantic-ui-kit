@@ -18,12 +18,12 @@ export default class Grid extends Component {
   }
 
   render() {
-    const { page, container, internallyCelled, className } = this.props
+    const { page, container, internallyCelled, style, className } = this.props
     const classesFromProps = propsToClasses(['relaxed', 'celled'], this.props)
     const classes = classNames('ui', classesFromProps, {'internally celled': internallyCelled},
                                columnClasses(this.props), 'grid', {'container': page || container},  className)
 
-    return <div {...this.props} className={classes}>{this.props.children}</div>
+    return <div {...this.props} className={classes} style={style}>{this.props.children}</div>
   }
 
 }

@@ -17,9 +17,10 @@ export default class Row extends Component {
   }
 
   render() {
-    let classes = classNames('ui', this.columnClasses(), 'row', this.props.className)
+    const { style, className } = this.props
+    let classes = classNames('ui', this.columnClasses(), 'row', className)
 
-    return <div className={classes}>{this.props.children}</div>
+    return <div className={classes} style={style}>{this.props.children}</div>
   }
 }
 
