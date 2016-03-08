@@ -62,6 +62,23 @@ export default class GridDemo extends Component {
           </Row>
         </Grid>
       </Segment>
+
+      <Segment>
+        <h3>Clearing content</h3>
+        <Grid>
+          <Row columns={4}>
+            <Column floated='left' />
+            <Column floated='right' />
+          </Row>
+          <Row>
+            <Column width={3} />
+            <Column width={8} />
+            <Column width={5} />
+          </Row>
+
+
+        </Grid>
+      </Segment>
       </div>
     )
   }
