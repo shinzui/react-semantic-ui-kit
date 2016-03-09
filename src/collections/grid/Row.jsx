@@ -2,12 +2,14 @@ import React, { Component, PropTypes } from 'react'
 
 import classNames from 'classnames'
 import spellNumber from '../../util/spellNumber'
+import propsToClasses from '../../util/propsToClasses'
 
 export default class Row extends Component {
 
   static propTypes = {
     children: PropTypes.node,
-    columns: PropTypes.number
+    columns: PropTypes.number,
+    centered: PropTypes.bool
   }
 
   columnClasses() {
@@ -18,7 +20,8 @@ export default class Row extends Component {
 
   render() {
     const { style, className } = this.props
-    let classes = classNames('ui', this.columnClasses(), 'row', className)
+    const classesFromProps = propsToClasses(['centered'], this.props)
+    let classes = classNames('ui', this.columnClasses(), classesFromProps, 'row', className)
 
     return <div className={classes} style={style}>{this.props.children}</div>
   }

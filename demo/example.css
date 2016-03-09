@@ -24,7 +24,7 @@
   z-index: 11;
 }
 
-.gridExample .grid .column:after {
+.gridExample .grid .column:not(.grid):not(.row):after {
   background-color: rgba(86, 61, 124, .1);
   -webkit-box-shadow: 0px 0px 0px 1px rgba(86, 61, 124, 0.2) inset;
   box-shadow: 0px 0px 0px 1px rgba(86, 61, 124, 0.2) inset;

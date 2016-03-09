@@ -80,6 +80,16 @@ export default class GridDemo extends Component {
               </Row>
             </Grid>
           </Segment>
+
+          <Segment>
+            <Grid columns={2} centered>
+              <Column />
+              <Row columns={4} centered>
+                <Column />
+                <Column />
+              </Row>
+            </Grid>
+          </Segment>
         </div>
 
         <Segment>

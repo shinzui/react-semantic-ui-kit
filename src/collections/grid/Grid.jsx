@@ -14,14 +14,16 @@ export default class Grid extends Component {
     container: PropTypes.bool,
     relaxed: PropTypes.bool,
     celled: PropTypes.bool,
+    centered: PropTypes.bool,
     internallyCelled: PropTypes.bool
   }
 
   render() {
     const { page, container, internallyCelled, style, className } = this.props
-    const classesFromProps = propsToClasses(['relaxed', 'celled'], this.props)
-    const classes = classNames('ui', classesFromProps, {'internally celled': internallyCelled},
-                               columnClasses(this.props), 'grid', {'container': page || container},  className)
+    const classesFromProps = propsToClasses(['relaxed', 'celled', 'centered'], this.props)
+    const classes = classNames('ui', columnClasses(this.props), classesFromProps,
+                               {'internally celled': internallyCelled},
+                               'grid', {'container': page || container},  className)
 
     return <div {...this.props} className={classes} style={style}>{this.props.children}</div>
   }
