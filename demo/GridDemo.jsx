@@ -82,9 +82,23 @@ export default class GridDemo extends Component {
           </Segment>
 
           <Segment>
+            <h3>Centered content</h3>
             <Grid columns={2} centered>
               <Column />
               <Row columns={4} centered>
+                <Column />
+                <Column />
+              </Row>
+            </Grid>
+          </Segment>
+
+          <Segment>
+            <h3>Automatic column count</h3>
+            <Grid equalWidth>
+              <Column />
+              <Column />
+              <Column />
+              <Row equalWidth>
                 <Column />
                 <Column />
               </Row>

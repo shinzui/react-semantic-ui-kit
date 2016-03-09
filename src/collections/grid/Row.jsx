@@ -9,7 +9,8 @@ export default class Row extends Component {
   static propTypes = {
     children: PropTypes.node,
     columns: PropTypes.number,
-    centered: PropTypes.bool
+    centered: PropTypes.bool,
+    equalWidth: PropTypes.bool
   }
 
   columnClasses() {
@@ -19,9 +20,10 @@ export default class Row extends Component {
   }
 
   render() {
-    const { style, className } = this.props
+    const { style, className, equalWidth } = this.props
     const classesFromProps = propsToClasses(['centered'], this.props)
-    let classes = classNames('ui', this.columnClasses(), classesFromProps, 'row', className)
+    let classes = classNames('ui', this.columnClasses(), {'equal width': equalWidth},
+                             classesFromProps, 'row', className)
 
     return <div className={classes} style={style}>{this.props.children}</div>
   }
