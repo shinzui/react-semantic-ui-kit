@@ -104,6 +104,36 @@ export default class GridDemo extends Component {
               </Row>
             </Grid>
           </Segment>
+
+          <Segment>
+            <h3>Doubling</h3>
+            <Grid>
+              <Row doubling columns={8}>
+                <Column />
+                <Column />
+                <Column />
+                <Column />
+                <Column />
+                <Column />
+                <Column />
+                <Column />
+              </Row>
+              <Row doubling columns={6}>
+                <Column />
+                <Column />
+                <Column />
+                <Column />
+                <Column />
+                <Column />
+              </Row>
+              <Row doubling columns={4}>
+                <Column />
+                <Column />
+                <Column />
+                <Column />
+              </Row>
+            </Grid>
+          </Segment>
         </div>
 
         <Segment>
