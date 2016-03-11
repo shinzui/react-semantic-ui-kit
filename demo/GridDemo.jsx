@@ -136,10 +136,16 @@ export default class GridDemo extends Component {
           </Segment>
 
           <Segment>
-            <Grid>
+            <h3>Manual tweaks</h3>
+            <Grid centered>
               <Row devices={['computer']}>
                 <Column />
               </Row>
+              <Column tabletWidth={6} computerWidth={8} />
+              <Column tabletWidth={6} computerWidth={8} />
+              <Column tabletWidth={6} computerWidth={8} />
+              <Column tabletWidth={6} computerWidth={8} />
+              <Column tabletWidth={6} computerWidth={8} />
             </Grid>
           </Segment>
         </div>

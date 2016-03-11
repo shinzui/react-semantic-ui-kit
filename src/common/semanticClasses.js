@@ -83,6 +83,23 @@ export const widthClasses = (props) => {
   if(width) return `${spellNumber(width)} wide`
 }
 
+export const deviceWidthClasses = (props) => {
+  const classes = []
+  const devices = ['mobile', 'tablet', 'computer']
+
+  devices.forEach( (device) => {
+    let width = props[`${device}Width`]
+
+    if(width) {
+      classes.push(`${spellNumber(width)} wide ${device}`)
+    }
+  })
+
+  if(classes.length > 0) {
+    return classes.join(' ')
+  }
+}
+
 export const buttonClasses = (props) => {
   const { buttons } = props
 
