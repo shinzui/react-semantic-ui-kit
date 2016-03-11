@@ -1,4 +1,5 @@
 import spellNumber from '../util/spellNumber'
+import { splitAndLowerCamelCase } from '../util/string'
 
 export const attachedClasses = (props) => {
   const { attached } = props
@@ -107,5 +108,19 @@ export const socialClasses = (props) => {
     return 'linkedin'
   } else if(social) {
     return social
+  }
+}
+
+export const deviceClasses = (props) => {
+  const { devices } = props
+
+  if(devices) {
+    const classes = []
+
+    devices.forEach( (device) => {
+      classes.push(splitAndLowerCamelCase(device))
+    })
+
+    return `${classes.join(' ')} only`
   }
 }

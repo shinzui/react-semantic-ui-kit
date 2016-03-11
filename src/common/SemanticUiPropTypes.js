@@ -12,10 +12,13 @@ const color = PropTypes.oneOf(['red', 'orange', 'yellow', 'olive', 'green', 'tea
 const social = PropTypes.oneOf(['facebook', 'twitter', 'googlePlus' , 'vk', 'linkedIn', 'instagram', 'youtube'])
 const fitted = PropTypes.oneOf(['both', 'horizontally', 'vertically'])
 
+const devices = PropTypes.arrayOf(PropTypes.oneOf(['computer', 'tablet', 'mobile', 'largeScreen']))
+
 const SemanticUiPropTypes = {
   attached,
   aligned,
   color,
+  devices,
   fitted,
   floated,
   social,

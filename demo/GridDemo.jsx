@@ -134,6 +134,14 @@ export default class GridDemo extends Component {
               </Row>
             </Grid>
           </Segment>
+
+          <Segment>
+            <Grid>
+              <Row devices={['computer']}>
+                <Column />
+              </Row>
+            </Grid>
+          </Segment>
         </div>
 
         <Segment>

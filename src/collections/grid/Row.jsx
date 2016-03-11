@@ -3,6 +3,8 @@ import React, { Component, PropTypes } from 'react'
 import classNames from 'classnames'
 import spellNumber from '../../util/spellNumber'
 import propsToClasses from '../../util/propsToClasses'
+import SemanticUiPropTypes from '../../common/SemanticUiPropTypes'
+import { deviceClasses } from '../../common/semanticClasses'
 
 export default class Row extends Component {
 
@@ -11,7 +13,8 @@ export default class Row extends Component {
     columns: PropTypes.number,
     doubling: PropTypes.bool,
     centered: PropTypes.bool,
-    equalWidth: PropTypes.bool
+    equalWidth: PropTypes.bool,
+    devices: SemanticUiPropTypes.devices
   }
 
   columnClasses() {
@@ -23,7 +26,7 @@ export default class Row extends Component {
   render() {
     const { style, className, equalWidth } = this.props
     const classesFromProps = propsToClasses(['centered', 'doubling'], this.props)
-    let classes = classNames('ui', this.columnClasses(), {'equal width': equalWidth},
+    let classes = classNames('ui', deviceClasses(this.props), this.columnClasses(), {'equal width': equalWidth},
                              classesFromProps, 'row', className)
 
     return <div className={classes} style={style}>{this.props.children}</div>
