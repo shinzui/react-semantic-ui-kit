@@ -83,6 +83,19 @@ export const widthClasses = (props) => {
   if(width) return `${spellNumber(width)} wide`
 }
 
+export const reversedDevicesClasses = (props) => {
+  const classes = []
+  const { reversedDevices } = props
+
+  if(reversedDevices) {
+    reversedDevices.forEach( (device) => {
+      classes.push(`${device} reversed`)
+    })
+
+    return classes.join(' ')
+  }
+}
+
 export const deviceWidthClasses = (props) => {
   const classes = []
   const devices = ['mobile', 'tablet', 'computer']

@@ -1,6 +1,6 @@
 import { expect } from 'chai'
 
-import { deviceWidthClasses } from '../../src/common/semanticClasses'
+import { deviceWidthClasses, reversedDevicesClasses } from '../../src/common/semanticClasses'
 
 describe('deviceWidthClasses ', () => {
 
@@ -17,4 +17,17 @@ describe('deviceWidthClasses ', () => {
   it('should not break with missing props', () => {
     expect(deviceWidthClasses({})).to.eq(undefined)
   })
+})
+
+describe('reversedDeviceWidthClasses', () => {
+
+  it('should return the reversed devices classes', () => {
+    const expectedClasses = 'mobile reversed tablet reversed'
+    expect(reversedDevicesClasses({reversedDevices: ['mobile', 'tablet']})).to.eq(expectedClasses)
+  })
+
+  it('should not break with missing props', () => {
+    expect(deviceWidthClasses({})).to.eq(undefined)
+  })
+
 })

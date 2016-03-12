@@ -149,6 +149,7 @@ export default class GridDemo extends Component {
             </Grid>
           </Segment>
 
+
           <Segment>
             <h3>Stackable grid</h3>
             <Grid columns={4} stackable>
@@ -200,6 +201,16 @@ export default class GridDemo extends Component {
               </Column>
             </Row>
           </Grid>
+        </Segment>
+
+        <Segment>
+          <h3>Reverse order</h3>
+          <Grid reversedDevices={['mobile']} equalWidth>
+            <Column>First</Column>
+            <Column>Second</Column>
+            <Column>Third</Column>
+          </Grid>
+
         </Segment>
       </div>
     )
