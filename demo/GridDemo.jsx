@@ -136,6 +136,16 @@ export default class GridDemo extends Component {
           </Segment>
 
           <Segment>
+            <h3>Stackable grid</h3>
+            <Grid columns={4} stackable>
+              <Column />
+              <Column />
+              <Column />
+              <Column />
+            </Grid>
+          </Segment>
+
+          <Segment>
             <h3>Manual tweaks</h3>
             <Grid centered>
               <Row devices={['computer']}>
