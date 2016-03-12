@@ -136,6 +136,20 @@ export default class GridDemo extends Component {
           </Segment>
 
           <Segment>
+            <h3>Containers</h3>
+            <Grid container>
+              <Column width={4} />
+              <Column width={4} />
+              <Column width={4} />
+              <Column width={4} />
+              <Column width={4} />
+              <Column width={4} />
+              <Column width={4} />
+              <Column width={4} />
+            </Grid>
+          </Segment>
+
+          <Segment>
             <h3>Stackable grid</h3>
             <Grid columns={4} stackable>
               <Column />
