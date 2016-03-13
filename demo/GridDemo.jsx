@@ -204,6 +204,69 @@ export default class GridDemo extends Component {
         </Segment>
 
         <Segment>
+          <Grid>
+            <Column floated='left' aligned='right' width={6}>
+              <Segment>
+                Left floated right aligned column
+              </Segment>
+            </Column>
+            <Column floated='right' aligned='left' width={6}>
+              <Segment>
+                Right floated left aligned column
+              </Segment>
+            </Column>
+          </Grid>
+
+          <Grid aligned='right'>
+            <Column width={16}>
+              <Segment>
+                Right aligned grid
+              </Segment>
+            </Column>
+          </Grid>
+
+          <Grid>
+            <h3>Text alignment</h3>
+            <Row aligned='center' columns={2}>
+              <Column>
+                <Segment>
+                  Center aligned row
+                </Segment>
+              </Column>
+              <Column>
+                <Segment>
+                  Center aligned row
+                </Segment>
+              </Column>
+            </Row>
+            <Row aligned='left' columns={2}>
+              <Column>
+                <Segment>
+                  Left aligned row
+                </Segment>
+              </Column>
+              <Column>
+                <Segment>
+                  Left aligned row
+                </Segment>
+              </Column>
+            </Row>
+            <Row aligned='right' columns={2}>
+              <Column>
+                <Segment>
+                  Right aligned row
+                </Segment>
+              </Column>
+              <Column>
+                <Segment>
+                  Right aligned row
+                </Segment>
+              </Column>
+            </Row>
+          </Grid>
+        </Segment>
+
+        <Segment>
           <h3>Reverse order</h3>
           <Grid reversedDevices={['mobile']} equalWidth>
             <Column>First</Column>
