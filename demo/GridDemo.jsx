@@ -292,6 +292,29 @@ export default class GridDemo extends Component {
           </Grid>
 
         </Segment>
+
+        <Segment>
+          <h3>Colored columns</h3>
+          <Grid padded equalWidth aligned='center'>
+            <Row>
+              <Column color='blue'>
+                blue
+              </Column>
+              <Column color='red'>
+                red
+              </Column>
+            </Row>
+            <Row>
+              <Column color='green'>
+                green
+              </Column>
+            </Row>
+            <Row>
+              <Column color='orange'>orange</Column>
+              <Column color='purple'>purple</Column>
+            </Row>
+          </Grid>
+        </Segment>
       </div>
     )
   }

@@ -12,15 +12,16 @@ export default class Column extends Component {
     mobileWidth: PropTypes.number,
     tabletWidth: PropTypes.number,
     computerWidth: PropTypes.number,
+    color: SemanticUiPropTypes.color,
     floated: SemanticUiPropTypes.floated,
     aligned: SemanticUiPropTypes.aligned
   }
 
   render() {
-    const { className, style } = this.props
+    const { className, style, color } = this.props
     const classes = classNames(widthClasses(this.props), deviceWidthClasses(this.props),
                                alignedClasses(this.props), floatedClasses(this.props),
-                               'column', className)
+                               color, 'column', className)
 
     return <div className={classes} style={style}>{this.props.children}</div>
   }
