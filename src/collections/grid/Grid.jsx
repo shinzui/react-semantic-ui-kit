@@ -22,7 +22,8 @@ export default class Grid extends Component {
     internallyCelled: PropTypes.bool,
     equalWidth: PropTypes.bool,
     aligned: SemanticUiPropTypes.verticalAndHorizontalAlignment,
-    reversedDevices: SemanticUiPropTypes.commonDevices
+    reversedDevices: SemanticUiPropTypes.commonDevices,
+    style: PropTypes.object
   }
 
   render() {

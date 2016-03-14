@@ -14,7 +14,8 @@ export default class Column extends Component {
     computerWidth: PropTypes.number,
     color: SemanticUiPropTypes.color,
     floated: SemanticUiPropTypes.floated,
-    aligned: SemanticUiPropTypes.aligned
+    aligned: SemanticUiPropTypes.aligned,
+    style: PropTypes.object
   }
 
   render() {

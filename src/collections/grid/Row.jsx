@@ -15,7 +15,8 @@ export default class Row extends Component {
     centered: PropTypes.bool,
     equalWidth: PropTypes.bool,
     aligned: SemanticUiPropTypes.aligned,
-    devices: SemanticUiPropTypes.devices
+    devices: SemanticUiPropTypes.devices,
+    style: PropTypes.object
   }
 
   columnClasses() {
