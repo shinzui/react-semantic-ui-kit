@@ -18,6 +18,7 @@ export default class Grid extends Component {
     celled: PropTypes.bool,
     centered: PropTypes.bool,
     stackable: PropTypes.bool,
+    padded: PropTypes.bool,
     internallyCelled: PropTypes.bool,
     equalWidth: PropTypes.bool,
     aligned: SemanticUiPropTypes.verticalAndHorizontalAlignment,
@@ -26,7 +27,7 @@ export default class Grid extends Component {
 
   render() {
     const { page, container, internallyCelled, style, equalWidth, className } = this.props
-    const classesFromProps = propsToClasses(['relaxed', 'celled', 'centered', 'stackable'], this.props)
+    const classesFromProps = propsToClasses(['relaxed', 'celled', 'centered', 'stackable', 'padded'], this.props)
     const classes = classNames('ui', alignedClasses(this.props), columnClasses(this.props), classesFromProps,
                                reversedDevicesClasses(this.props),
                                {'internally celled': internallyCelled},

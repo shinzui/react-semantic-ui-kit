@@ -67,6 +67,23 @@ export default class GridDemo extends Component {
           </Segment>
 
           <Segment>
+            <h3>Padded grid</h3>
+            <Grid padded equalWidth>
+              <Row>
+                <Column />
+                <Column />
+              </Row>
+              <Row>
+                <Column />
+              </Row>
+              <Row>
+                <Column />
+                <Column />
+              </Row>
+            </Grid>
+          </Segment>
+
+          <Segment>
             <h3>Clearing content</h3>
             <Grid>
               <Row columns={4}>
