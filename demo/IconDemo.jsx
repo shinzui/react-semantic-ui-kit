@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { Segment, Icon, Grid, Column } from '../src/index'
-import { splitAndLowerCamelCase } from '../src/util/string' 
+import { splitAndLowerCamelCase } from '../src/util/string'
 
 const IconDemo = (props) => {
   const webIcons1 = [
@@ -13,12 +13,21 @@ const IconDemo = (props) => {
     'eyedropper', 'feed', 'find', 'heartbeat', 'history',
     'home', 'idea', 'inbox', 'lab', 'mail',
     {type: 'mail', outline: true, key: 'mailOuline'}, {type: 'mail', square: true, key: 'mailSquare'},
-    'map', 'options', 'paintBrush', 'payment', 'phone', {type: 'phone', square: true, key: 'phoneSquare'}, 
+    'map', 'options', 'paintBrush', 'payment', 'phone', {type: 'phone', square: true, key: 'phoneSquare'},
     'privacy', 'protect', 'search', 'setting', 'settings', 'shop', 'sidebar', 'signal', 'sitemap', 'tag',
     'tags', 'tasks', 'terminal', 'textTelephone', 'ticket', 'trophy', 'wifi'
   ]
 
-  const userIcons = [ 'adjust', 'addUser', 'addToCart', 'archive', 'ban']
+  const userIcons = [ 'adjust', 'addUser', 'addToCart', 'archive', 'ban',
+    'bookmark', 'call',{type: 'call', square: true, key: 'callSquare'}, 'cloudDownload', 'cloudUpload',
+    'compress', 'configure', 'download', 'edit', 'erase', 'exchange', 'externalShare', 'expand',
+    'filter', 'flag', {type: 'flag', outline: true, key:'flagOutline'}, 'forwardMail', 'hide',
+    'inCart', 'lock', 'pin', 'print', 'random', 'recycle', 'refresh', 'removeBookmark', 'removeUser',
+    'repeat', 'replyAll', 'reply', 'retweet', 'send', {type: 'send', outline: true, key: 'sendOutline'},
+    'shareAlternate', {type: 'shareAlternate', square: true, key:'shareAlternateS'} , 'share',
+    {type: 'share', square: true, key: 'shareSquare'}, 'signIn', 'signOut', 
+    'theme', 'translate', 'undo', 'unhide', 'unlockAlternate', 'unlock', 'upload', 'wait', 
+    'wizard', 'write', {type: 'write', square: true, key: 'writeSquare'}]
 
   const iconName = (type) => {
     const classes = splitAndLowerCamelCase(type)
@@ -63,7 +72,7 @@ const IconDemo = (props) => {
       <Segment>
         <h3>User actions</h3>
         <Grid columns={5}>
-          {userIcons.map(renderIcon)} 
+          {userIcons.map(renderIcon)}
         </Grid>
       </Segment>
     </div>
