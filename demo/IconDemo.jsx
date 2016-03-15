@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { Segment, Icon, Grid, Column } from '../src/index'
-import { iconType } from '../src/elements/Icon'
+import { splitAndLowerCamelCase } from '../src/util/string' 
 
 const IconDemo = (props) => {
   const webIcons1 = [
@@ -21,7 +21,7 @@ const IconDemo = (props) => {
   const userIcons = [ 'adjust', 'addUser', 'addToCart', 'archive', 'ban']
 
   const iconName = (type) => {
-    const classes = iconType(type)
+    const classes = splitAndLowerCamelCase(type)
     return classes.charAt(0).toUpperCase() + classes.slice(1)
   }
 
