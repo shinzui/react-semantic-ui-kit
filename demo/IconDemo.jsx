@@ -29,6 +29,10 @@ const IconDemo = (props) => {
     'theme', 'translate', 'undo', 'unhide', 'unlockAlternate', 'unlock', 'upload', 'wait', 
     'wizard', 'write', {type: 'write', square: true, key: 'writeSquare'}]
 
+    const messageIcons = ['announcement', 'birthday', 'flag', 'help', {type: 'help', circle: true, key: 'helpCircle'},
+      'info', {type: 'info', circle: true, key: 'infoCircle'}, 'warning', {type: 'warning', circle: true, key: 'warningCircle'}, 
+      'warningSign']
+
   const iconName = (type) => {
     const classes = splitAndLowerCamelCase(type)
     return classes.charAt(0).toUpperCase() + classes.slice(1)
@@ -40,9 +44,10 @@ const IconDemo = (props) => {
     } else {
       let suffix = ''
       if(icon.square) suffix =  ' square'
+      if(icon.circle) suffix = ' circle'
       if(icon.outline) suffix = suffix + ' outline'
 
-      return <Column key={icon.key}><Icon type={icon.type} square={icon.square} outline={icon.outline}/>
+      return <Column key={icon.key}><Icon type={icon.type} square={icon.square} circle={icon.circle} outline={icon.outline}/>
         {iconName(icon.type) + suffix}
       </Column>
     }
@@ -73,6 +78,13 @@ const IconDemo = (props) => {
         <h3>User actions</h3>
         <Grid columns={5}>
           {userIcons.map(renderIcon)}
+        </Grid>
+      </Segment>
+
+      <Segment>
+        <h3>Message</h3>
+        <Grid columns={5}>
+          {messageIcons.map(renderIcon)}
         </Grid>
       </Segment>
     </div>
