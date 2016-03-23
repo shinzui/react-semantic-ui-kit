@@ -5,8 +5,9 @@ import { lowercase, splitAndLowerCamelCase } from '../util/string'
 
 const Icon = (props) => {
 
-  const { className, type, outline, slash, square } = props
-  const classes = classNames(splitAndLowerCamelCase(type), {'square': square}, {'slash': slash}, {'outline': outline}, 'icon', className)
+  const { className, type, outline, slash, square, circle } = props
+  const classes = classNames(splitAndLowerCamelCase(type), {'square': square}, {'circle': circle},
+                             {'slash': slash}, {'outline': outline}, 'icon', className)
 
   return <i className={classes} />
 }
