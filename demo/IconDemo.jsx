@@ -29,9 +29,11 @@ const IconDemo = (props) => {
     'theme', 'translate', 'undo', 'unhide', 'unlockAlternate', 'unlock', 'upload', 'wait', 
     'wizard', 'write', {type: 'write', square: true, key: 'writeSquare'}]
 
-    const messageIcons = ['announcement', 'birthday', 'flag', 'help', {type: 'help', circle: true, key: 'helpCircle'},
-      'info', {type: 'info', circle: true, key: 'infoCircle'}, 'warning', {type: 'warning', circle: true, key: 'warningCircle'}, 
-      'warningSign']
+  const messageIcons = ['announcement', 'birthday', 'flag', 'help', {type: 'help', circle: true, key: 'helpCircle'},
+    'info', {type: 'info', circle: true, key: 'infoCircle'}, 'warning', {type: 'warning', circle: true, key: 'warningCircle'}, 
+    'warningSign']
+
+  const userTypesIcons = ['child', 'doctor', 'handicap', 'spy', 'student', 'user', 'users']
 
   const iconName = (type) => {
     const classes = splitAndLowerCamelCase(type)
@@ -85,6 +87,13 @@ const IconDemo = (props) => {
         <h3>Message</h3>
         <Grid columns={5}>
           {messageIcons.map(renderIcon)}
+        </Grid>
+      </Segment>
+
+      <Segment>
+        <h3>User types</h3>
+        <Grid columns={5}>
+          {userTypesIcons.map(renderIcon)}
         </Grid>
       </Segment>
     </div>
