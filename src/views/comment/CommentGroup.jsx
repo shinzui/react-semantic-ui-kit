@@ -8,12 +8,13 @@ export default class CommentGroup extends Component {
 
   static propTypes = {
     minimal: PropTypes.bool,
-    collapsed: PropTypes.bool
+    collapsed: PropTypes.bool,
+    threaded: PropTypes.bool
   }
 
   render() {
     const { className } = this.props
-    const classesFromProps = propsToClasses(['minimal', 'collapsed'], this.props)
+    const classesFromProps = propsToClasses(['minimal', 'collapsed', 'threaded'], this.props)
     const classes = classNames('ui', classesFromProps, 'comments', className)
 
     return <div className={classes}>{this.props.children}</div>

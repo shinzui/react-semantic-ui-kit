@@ -65,7 +65,6 @@ const CommentDemo = (props) => {
             <Button primary labeledIcon>
               <i className='icon edit' />Add Reply
             </Button>
-
           </Form>
         </CommentGroup>
       </Segment>
@@ -90,7 +89,6 @@ const CommentDemo = (props) => {
             </Content>
           </Comment>
           <CommentGroup collapsed>
-            <Header element='h3' dividing>Comment</Header>
             <Comment>
               <Avatar src={bomi} href='#'/>
               <Content>
@@ -110,6 +108,67 @@ const CommentDemo = (props) => {
         </CommentGroup>
       </Segment>
 
+      <Segment>
+        <CommentGroup threaded>
+          <Header element='h3' dividing>Comment</Header>
+          <Comment>
+            <Avatar src={bomi} href='#'/>
+            <Content>
+              <Author href='#'>Bomi</Author>
+              <MetaData>
+                <Date>Today at 5:42PM</Date>
+              </MetaData>
+              <Text>
+                React is a great library.
+              </Text>
+              <Actions>
+                <a href='#'>Reply</a>
+              </Actions>
+            </Content>
+            <CommentGroup>
+              <Comment>
+                <Avatar src={bomi} href='#'/>
+                <Content>
+                  <Author href='#'>Bomi</Author>
+                  <MetaData>
+                    <Date>Today at 5:42PM</Date>
+                  </MetaData>
+                  <Text>
+                    I agree. 
+                  </Text>
+                  <Actions>
+                    <a href='#'>Reply</a>
+                  </Actions>
+                </Content>
+              </Comment>
+            </CommentGroup>
+            </Comment>
+            <Comment>
+              <Avatar src={bomi} href='#'/>
+              <Content>
+                <Author href='#'>Bomi</Author>
+                <MetaData>
+                  <Date>Today at 5:42PM</Date>
+                </MetaData>
+                <Text>
+                  Redux is also nice.
+                </Text>
+                <Actions>
+                  <a href='#'>Reply</a>
+                </Actions>
+              </Content>
+            </Comment>
+            <Form reply>
+              <div className='field'>
+                <textarea />
+              </div>
+              <Button primary labeledIcon>
+                <i className='icon edit' />Add Reply
+              </Button>
+
+            </Form>
+          </CommentGroup>
+      </Segment>
     </div>
   )
 }
