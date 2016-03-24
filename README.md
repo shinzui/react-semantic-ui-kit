@@ -16,7 +16,8 @@
 
 ## Current status
 
-The project is still in its infancy but you can check the demo to see what's already implemented.
+The project is under heavy development. The goal is to initially implement all components without their javascript behaviors for the [0.2 milestone](https://github.com/shinzui/react-semantic-ui-kit/milestones/0.2).
+Please check the demo to see what's already implemented.
 
 To run the demo:
 
@@ -25,7 +26,7 @@ To run the demo:
 
 Then go to http://localhost:8080/demo
 
-Alternatively, you can look at the [closed component issues](https://github.com/shinzui/react-semantic-ui-kit/issues?q=is%3Aissue+label%3AComponent+is%3Aclosed) which has all the
+Alternatively, you can look at the [closed component issues](https://github.com/shinzui/react-semantic-ui-kit/issues?utf8=%E2%9C%93&q=milestone%3A0.2+) which has all the
 **fully implemented** Semantic UI components.
 
 Please note that the API will likely change as I use it on my projects.
