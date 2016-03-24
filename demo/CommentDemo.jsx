@@ -70,6 +70,46 @@ const CommentDemo = (props) => {
         </CommentGroup>
       </Segment>
 
+      <Segment>
+        <h3>Collapsed (hidden) comments</h3>
+        <CommentGroup>
+          <Header element='h3' dividing>Comment</Header>
+          <Comment>
+            <Avatar src={bomi} href='#'/>
+            <Content>
+              <Author href='#'>Bomi</Author>
+              <MetaData>
+                <Date>Today at 5:42PM</Date>
+              </MetaData>
+              <Text>
+                React is a great library.
+              </Text>
+              <Actions>
+                <a href='#'>Reply</a>
+              </Actions>
+            </Content>
+          </Comment>
+          <CommentGroup collapsed>
+            <Header element='h3' dividing>Comment</Header>
+            <Comment>
+              <Avatar src={bomi} href='#'/>
+              <Content>
+                <Author href='#'>Bomi</Author>
+                <MetaData>
+                  <Date>Today at 5:42PM</Date>
+                </MetaData>
+                <Text>
+                  React is a great library.
+                </Text>
+                <Actions>
+                  <a href='#'>Reply</a>
+                </Actions>
+              </Content>
+            </Comment>
+          </CommentGroup>
+        </CommentGroup>
+      </Segment>
+
     </div>
   )
 }
