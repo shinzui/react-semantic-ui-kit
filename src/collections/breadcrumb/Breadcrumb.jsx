@@ -1,11 +1,12 @@
 import React, { Component, PropTypes } from 'react'
 
+import SemanticUiPropTypes from '../../common/SemanticUiPropTypes'
 import classNames from 'classnames'
 
 export default class Breadcrumb extends Component {
 
   static propTypes = {
-    size: PropTypes.oneOf(['small', 'large', 'huge']),
+    size: SemanticUiPropTypes.size,
     children: PropTypes.node.isRequired
   }
 
