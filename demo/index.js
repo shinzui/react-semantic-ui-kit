@@ -28,6 +28,7 @@ import MenuDemo from './MenuDemo'
 import FeedDemo from './FeedDemo'
 import CommentDemo from './CommentDemo'
 import IconDemo from './IconDemo'
+import BreadcrumbDemo from './BreadcrumbDemo'
 
 import './example.css'
 
@@ -76,7 +77,8 @@ class Page extends Component {
       menu: MenuDemo,
       feed: FeedDemo,
       comment: CommentDemo,
-      icon: IconDemo
+      icon: IconDemo,
+      breadcrumb: BreadcrumbDemo
     }
 
     let hash = window.location.hash
@@ -101,7 +103,8 @@ class Page extends Component {
     const items = ['forms', 'input', 'buttons', 'images', 'labels',
       'messages', 'divider', 'statistic', 'item', 'header',
       'list', 'rail', 'segment', 'flag', 'container', 'grid', 'step',
-      'table', 'card', 'checkbox', 'menu', 'feed', 'comment', 'icon']
+      'table', 'card', 'checkbox', 'menu', 'feed', 'comment', 'icon',
+      'breadcrumb']
 
     return (
       <Grid page>

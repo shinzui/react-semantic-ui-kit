@@ -1,3 +1,6 @@
+import Breadcrumb from './collections/breadcrumb/Breadcrumb'
+import BreadcrumbDivider from './collections/breadcrumb/BreadcrumbDivider'
+import BreadcrumbSection from './collections/breadcrumb/BreadcrumbSection'
 import { Form, FormField } from './collections/Form'
 import Grid from './collections/grid/Grid'
 import Column from './collections/grid/Column'
@@ -64,6 +67,9 @@ export {
   Actions,
   Author,
   Avatar,
+  Breadcrumb,
+  BreadcrumbDivider,
+  BreadcrumbSection,
   Button,
   ButtonGroup,
   Card,
