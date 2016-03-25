@@ -16,6 +16,26 @@ const BreadcrumbDemo = (props) => {
       </Segment>
 
       <Segment>
+        <Breadcrumb>
+          <BreadcrumbSection href='#home' text='Home'/>
+          <Icon type='rightAngle' divider />
+          <BreadcrumbSection href='#registration' text='Registration'/>
+          <Icon type='rightAngle' divider />
+          <BreadcrumbSection href='#info' active text='Personal Information' />
+        </Breadcrumb>
+      </Segment>
+
+      <Segment>
+        <Breadcrumb>
+          <BreadcrumbSection href='#home' text='Home' />
+          <BreadcrumbDivider />
+          <BreadcrumbSection active>
+            Search for: <a href='#search'>properties</a>
+          </BreadcrumbSection>
+        </Breadcrumb>
+      </Segment>
+
+      <Segment>
         {sizes.map( size => {
           return (
             <div key={size}>
