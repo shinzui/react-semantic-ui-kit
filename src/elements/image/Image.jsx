@@ -22,7 +22,8 @@ export default class Image extends Component {
     hidden: PropTypes.bool,
     disabled: PropTypes.bool,
     aligned: SemanticUiPropTypes.verticalAlignment,
-    floated: SemanticUiPropTypes.floated
+    floated: SemanticUiPropTypes.floated,
+    dependent: PropTypes.bool
   }
 
   static defaultProps = {
@@ -30,9 +31,9 @@ export default class Image extends Component {
   }
 
   render() {
-    const { wrapper, size, src, href, hidden, disabled, className, style, children } = this.props
+    const { wrapper, size, src, href, hidden, disabled, className, style, children, dependent } = this.props
     const classesFromProps = propsToClasses(['avatar', 'bordered', 'fluid', 'rounded', 'circular', 'centered' ], this.props)
-    const classes = classNames({'hidden': hidden}, {'disabled': disabled}, 'ui',
+    const classes = classNames({'hidden': hidden}, {'disabled': disabled}, {'ui': !dependent},
                                alignedClasses(this.props), size, floatedClasses(this.props),
                                classesFromProps, 'image', className)
 
