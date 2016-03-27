@@ -57,6 +57,7 @@ import ContentDescription from './elements/extra/ContentDescription'
 import ContentImages from './elements/extra/ContentImages'
 import ContentSummary from './elements/extra/ContentSummary'
 import Date from './elements/extra/Date'
+import Extra from './elements/extra/Extra'
 import Meta from './elements/extra/Meta'
 import MetaData from './elements/extra/MetaData'
 import Text from './elements/extra/Text'
@@ -86,6 +87,7 @@ export {
   ContentSummary,
   Date,
   Divider,
+  Extra,
   Feed,
   FeedEvent,
   Header,
