@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { ItemGroup, Image, Item, Segment, Extra, Label,
+import { ItemGroup, Image, Item, Segment, Extra, Label, Button,
          Content, ContentHeader, Meta, ContentDescription } from '../src/index'
 
 import ParagraphExample from './ParagraphExample'
@@ -85,6 +85,9 @@ export default class ItemDemo extends Component {
                   <ParagraphExample />
                 </ContentDescription>
                 <Extra>
+                  <Button primary floated='right'>
+                    Buy coffee
+                  </Button>
                   <Label>Limited</Label>
                 </Extra>
               </Content>
@@ -156,6 +159,36 @@ export default class ItemDemo extends Component {
                 <ContentDescription>
                   <ParagraphExample />
                 </ContentDescription>
+              </Content>
+            </Item>
+          </ItemGroup>
+        </Segment>
+
+        <Segment>
+          <h3>Vertical alignment</h3>
+          <ItemGroup>
+            <Item>
+              <Image src={image} size='tiny' wrapper />
+              <Content aligned='top'>
+                <ContentHeader>
+                  Yojimbo
+                </ContentHeader>
+              </Content>
+            </Item>
+            <Item>
+              <Image src={image} size='tiny' wrapper />
+              <Content aligned='middle'>
+                <ContentHeader>
+                  Rashomon
+                </ContentHeader>
+              </Content>
+            </Item>
+            <Item>
+              <Image src={image} size='tiny' wrapper />
+              <Content aligned='bottom'>
+                <ContentHeader>
+                  Seven Samurai
+                </ContentHeader>
               </Content>
             </Item>
           </ItemGroup>
