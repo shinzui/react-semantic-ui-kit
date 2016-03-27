@@ -88,9 +88,37 @@ export default class ItemDemo extends Component {
                   <Label>Limited</Label>
                 </Extra>
               </Content>
-
             </Item>
+          </ItemGroup>
+        </Segment>
 
+        <Segment>
+          <h3>Relaxed</h3>
+          <ItemGroup relaxed>
+            <Item>
+              <Image src={image} size='tiny' wrapper />
+              <Content aligned='middle'>
+                <ContentHeader>
+                  Yojimbo
+                </ContentHeader>
+              </Content>
+            </Item>
+            <Item>
+              <Image src={image} size='tiny' wrapper />
+              <Content aligned='middle'>
+                <ContentHeader>
+                  Rashomon
+                </ContentHeader>
+              </Content>
+            </Item>
+            <Item>
+              <Image src={image} size='tiny' wrapper />
+              <Content aligned='middle'>
+                <ContentHeader>
+                  Seven Samurai
+                </ContentHeader>
+              </Content>
+            </Item>
           </ItemGroup>
         </Segment>
       </div>
