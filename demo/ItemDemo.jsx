@@ -121,6 +121,45 @@ export default class ItemDemo extends Component {
             </Item>
           </ItemGroup>
         </Segment>
+
+        <Segment>
+          <h3>Link Item</h3>
+          <ItemGroup link>
+            <Item>
+              <Image src={image} size='tiny' wrapper />
+              <Content>
+                <ContentHeader>
+                  Yojimbo
+                </ContentHeader>
+                <ContentDescription>
+                  <ParagraphExample />
+                </ContentDescription>
+              </Content>
+            </Item>
+            <Item>
+              <Image src={image} size='tiny' wrapper />
+              <Content>
+                <ContentHeader>
+                  Rashomon
+                </ContentHeader>
+                <ContentDescription>
+                  <ParagraphExample />
+                </ContentDescription>
+              </Content>
+            </Item>
+            <Item>
+              <Image src={image} size='tiny' wrapper />
+              <Content>
+                <ContentHeader>
+                  Seven Samurai
+                </ContentHeader>
+                <ContentDescription>
+                  <ParagraphExample />
+                </ContentDescription>
+              </Content>
+            </Item>
+          </ItemGroup>
+        </Segment>
       </div>
     )
   }
