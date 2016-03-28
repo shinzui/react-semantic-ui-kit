@@ -7,6 +7,7 @@ import ParagraphExample from './ParagraphExample'
 
 import bomi from './bomi_square.jpg'
 import bomi2 from './bomi.jpg'
+import image from './image.png'
 
 const CardDemo = (props) => {
   return (
@@ -174,6 +175,24 @@ const CardDemo = (props) => {
             </div>
           </Content>
         </Card>
+      </Segment>
+
+      <Segment>
+        <h3>Column count</h3>
+        <CardGroup columns={4}>
+          {[1,2,3,4,5,6,7,8].map( (e) => {
+            return (
+              <Card key={e}>
+                <Image src={image} wrapper/>
+                <Content>
+                  <ContentHeader>
+                    Card
+                  </ContentHeader>
+                </Content>
+              </Card>
+              )
+          })}
+        </CardGroup>
       </Segment>
     </div>
   )

@@ -2,11 +2,13 @@ import React, { Component, PropTypes } from 'react'
 
 import classNames from 'classnames'
 
+import spellNumber from '../../util/spellNumber'
 import Card from './Card'
 
 export default class CardGroup extends Component {
 
   static propTypes = {
+    columns: PropTypes.number,
     children: (props, propName, componentName) => {
       const prop = props[propName]
 
@@ -23,8 +25,8 @@ export default class CardGroup extends Component {
   }
 
   render() {
-    const { className, children } = this.props
-    const classes = classNames('ui', 'cards', className)
+    const { className, children, columns } = this.props
+    const classes = classNames('ui', spellNumber(columns), 'cards', className)
 
     return (
       <div className={classes}>
