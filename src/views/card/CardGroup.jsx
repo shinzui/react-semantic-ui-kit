@@ -11,6 +11,7 @@ export default class CardGroup extends Component {
   static propTypes = {
     columns: PropTypes.number,
     stackable: PropTypes.bool,
+    doubling: PropTypes.bool,
     children: (props, propName, componentName) => {
       const prop = props[propName]
 
@@ -28,7 +29,7 @@ export default class CardGroup extends Component {
 
   render() {
     const { className, children, columns } = this.props
-    const classFromProps = propsToClasses(['stackable'], this.props)
+    const classFromProps = propsToClasses(['stackable', 'doubling'], this.props)
     const classes = classNames('ui', spellNumber(columns), classFromProps, 'cards', className)
 
     return (
