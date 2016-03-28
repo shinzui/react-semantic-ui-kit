@@ -194,6 +194,25 @@ const CardDemo = (props) => {
           })}
         </CardGroup>
       </Segment>
+
+      <Segment>
+        <h3>Stackable </h3>
+        <CardGroup columns={3} stackable>
+          {[1,2,3,4,5,6].map( (e) => {
+            return (
+              <Card key={e}>
+                <Image src={image} wrapper/>
+                <Content>
+                  <ContentHeader>
+                    Card
+                  </ContentHeader>
+                </Content>
+              </Card>
+              )
+          })}
+        </CardGroup>
+      </Segment>
+
     </div>
   )
 }
