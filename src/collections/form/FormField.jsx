@@ -1,34 +1,13 @@
 import React, { Component, PropTypes } from 'react'
 
+import classNames from 'classnames'
 import ImmutablePropTypes from 'react-immutable-proptypes'
 
-import Label from '../index'
-import spellNumber from '../util/spellNumber'
-import propsToClasses from '../util/propsToClasses'
+import spellNumber from '../../util/spellNumber'
 
-import classNames from 'classnames'
+import Label from '../../index'
 
-/*eslint "react/no-multi-comp": 0 */
-class Form extends Component {
-
-  static propTypes = {
-    valid: PropTypes.bool,
-    reply: PropTypes.bool
-  }
-
-  render() {
-    const classesFromProps = propsToClasses(['reply'], this.props)
-    const classes = classNames('ui', classesFromProps, 'form', {'error' : !this.props.valid})
-
-    return (
-      <form className={classes}>
-        {this.props.children}
-      </form>
-    )
-  }
-}
-
-class FormField extends Component {
+export default class FormField extends Component {
 
   static propTypes = {
     name: PropTypes.string.isRequired,
@@ -92,10 +71,4 @@ class FormField extends Component {
       </div>
     )
   }
-}
-
-
-export {
-  Form,
-  FormField
 }
