@@ -10,6 +10,8 @@ import bomi2 from './bomi.jpg'
 import image from './image.png'
 
 const CardDemo = (props) => {
+  const colors = ['red', 'orange', 'yellow', 'olive', 'green', 'teal', 'blue',
+                          'violet', 'purple', 'pink', 'brown', 'grey', 'black']
   return (
     <div>
       <Segment>
@@ -175,6 +177,24 @@ const CardDemo = (props) => {
             </div>
           </Content>
         </Card>
+      </Segment>
+
+      <Segment>
+        <h3>Colored</h3>
+        <CardGroup columns={4}>
+          {colors.map( color => {
+            return (
+              <Card key={color} color={color}>
+                <Image src={image} wrapper/>
+                <Content>
+                  <ContentHeader>
+                    {color} card
+                  </ContentHeader>
+                </Content>
+              </Card>
+              )
+          })}
+        </CardGroup>
       </Segment>
 
       <Segment>
