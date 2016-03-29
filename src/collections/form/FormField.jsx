@@ -19,7 +19,8 @@ export default class FormField extends Component {
     onChange: PropTypes.func.isRequired,
     onBlur: PropTypes.func.isRequired,
     onFocus: PropTypes.func.isRequired,
-    disabled: PropTypes.bool
+    disabled: PropTypes.bool,
+    inline: PropTypes.bool
   }
 
   static defaultProps = {
@@ -66,7 +67,7 @@ export default class FormField extends Component {
 
     let widthClasses = this.widthClasses()
     let label = labelText ? <label>{labelText}</label> : ''
-    const classFromProps = propsToClasses(['disabled'], this.props)
+    const classFromProps = propsToClasses(['disabled', 'inline'], this.props)
     let fieldClasses = classNames('ui', classFromProps, 'field', {'error': hasErrors}, widthClasses )
     let pointingLabel = hasErrors ? <Label basic pointing className='prompt red'>{errors.get(0)}</Label> : undefined
 

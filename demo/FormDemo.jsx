@@ -48,6 +48,16 @@ export default class FormDemo extends Component {
             <Button submit>Submit</Button>
           </Form>
         </Segment>
+
+        <Segment>
+          <h3>Inline fields</h3>
+          <Form>
+            <FormField inline name='username' label='Username' placeholder='Username'/>
+
+            <FormField inline name='password' label='Password' placeholder='Password'/>
+            <Button submit>Submit</Button>
+          </Form>
+        </Segment>
       </div>
     )
   }
