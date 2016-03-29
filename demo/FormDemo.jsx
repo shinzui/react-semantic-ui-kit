@@ -38,6 +38,16 @@ export default class FormDemo extends Component {
             <Button submit>Submit</Button>
           </Form>
         </Segment>
+
+        <Segment>
+          <h3>Disabled fields</h3>
+          <Form>
+            <FormField disabled name='username' label='Username' width={6} placeholder='Username'/>
+
+            <FormField disabled name='password' label='Password' width={6} placeholder='Password'/>
+            <Button submit>Submit</Button>
+          </Form>
+        </Segment>
       </div>
     )
   }

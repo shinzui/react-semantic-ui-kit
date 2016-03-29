@@ -4,6 +4,7 @@ import classNames from 'classnames'
 import ImmutablePropTypes from 'react-immutable-proptypes'
 
 import spellNumber from '../../util/spellNumber'
+import propsToClasses from '../../util/propsToClasses'
 
 import Label from '../../index'
 
@@ -17,7 +18,8 @@ export default class FormField extends Component {
     errors: ImmutablePropTypes.list,
     onChange: PropTypes.func.isRequired,
     onBlur: PropTypes.func.isRequired,
-    onFocus: PropTypes.func.isRequired
+    onFocus: PropTypes.func.isRequired,
+    disabled: PropTypes.bool
   }
 
   static defaultProps = {
@@ -64,7 +66,8 @@ export default class FormField extends Component {
 
     let widthClasses = this.widthClasses()
     let label = labelText ? <label>{labelText}</label> : ''
-    let fieldClasses = classNames('ui', 'field', {'error': hasErrors}, widthClasses )
+    const classFromProps = propsToClasses(['disabled'], this.props)
+    let fieldClasses = classNames('ui', classFromProps, 'field', {'error': hasErrors}, widthClasses )
     let pointingLabel = hasErrors ? <Label basic pointing className='prompt red'>{errors.get(0)}</Label> : undefined
 
     const input = this.inputControl()
