@@ -30,6 +30,17 @@ export default class FormDemo extends Component {
         </Segment>
 
         <Segment>
+          <Form>
+            <h3>Equal width field group</h3>
+            <FormFieldGroup equalWidth>
+              <FormField name='username' label='Username' placeholder='Username'/>
+
+              <FormField name='password' label='Password' placeholder='Password'/>
+            </FormFieldGroup>
+          </Form>
+        </Segment>
+
+        <Segment>
           <h3>Loading form</h3>
           <Form loading>
             <FormField name='username' label='Username' width={6} placeholder='Username'/>
