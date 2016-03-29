@@ -12,6 +12,7 @@ export default class Button extends Component {
     compact: PropTypes.bool,
     primary: PropTypes.bool,
     secondary: PropTypes.bool,
+    submit: PropTypes.bool,
     positive: PropTypes.bool,
     negative: PropTypes.bool,
     icon: PropTypes.bool,
@@ -65,7 +66,7 @@ export default class Button extends Component {
   render() {
     const { labeledIcon, className, color, attached, labeled, size, onClick } = this.props
     const classesFromProps = propsToClasses(['circular', 'inverted', 'primary', 'secondary', 'basic',
-                                            'active', 'disabled', 'loading',
+                                            'active', 'disabled', 'loading', 'submit',
                                             'fluid', 'icon', 'compact'], this.props)
 
     const initialClassesFromProps = propsToClasses(['positive', 'negative', 'fluid'], this.props)

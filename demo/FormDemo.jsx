@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Form, FormField, FormFieldGroup, Segment } from '../src/index'
+import { Form, FormField, FormFieldGroup, Segment, Button } from '../src/index'
 
 export default class FormDemo extends Component {
 
@@ -14,6 +14,7 @@ export default class FormDemo extends Component {
 
               <FormField name='password' label='Password' width={6} placeholder='Password'/>
             </FormFieldGroup>
+            <Button submit>Submit</Button>
           </Form>
         </Segment>
 
