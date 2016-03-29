@@ -8,11 +8,12 @@ export default class Form extends Component {
 
   static propTypes = {
     valid: PropTypes.bool,
-    reply: PropTypes.bool
+    reply: PropTypes.bool,
+    loading: PropTypes.bool
   }
 
   render() {
-    const classesFromProps = propsToClasses(['reply'], this.props)
+    const classesFromProps = propsToClasses(['reply', 'loading'], this.props)
     const classes = classNames('ui', classesFromProps, 'form', {'error' : !this.props.valid})
 
     return (

@@ -28,6 +28,16 @@ export default class FormDemo extends Component {
             </FormFieldGroup>
           </Form>
         </Segment>
+
+        <Segment>
+          <h3>Loading form</h3>
+          <Form loading>
+            <FormField name='username' label='Username' width={6} placeholder='Username'/>
+
+            <FormField name='password' label='Password' width={6} placeholder='Password'/>
+            <Button submit>Submit</Button>
+          </Form>
+        </Segment>
       </div>
     )
   }
