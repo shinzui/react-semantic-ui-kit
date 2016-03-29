@@ -1,9 +1,11 @@
+import { splitAndLowerCamelCase } from './string'
+
 const propToClasses = (propNames, props) => {
   let classes = []
 
   propNames.forEach( (prop) => {
     if(props[prop]) {
-      classes.push(prop)
+      classes.push(splitAndLowerCamelCase(prop))
     }
   })
 
