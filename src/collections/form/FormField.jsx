@@ -11,6 +11,8 @@ export default class FormField extends Component {
 
   static propTypes = {
     name: PropTypes.string.isRequired,
+    label: PropTypes.string,
+    placeholder: PropTypes.string,
     width: PropTypes.number,
     errors: ImmutablePropTypes.list,
     onChange: PropTypes.func.isRequired,
@@ -19,7 +21,10 @@ export default class FormField extends Component {
   }
 
   static defaultProps = {
-    value: ''
+    value: '',
+    onChange: () => {},
+    onBlur: () => {},
+    onFocus: () => {}
   }
 
   constructor(props) {
@@ -33,13 +38,15 @@ export default class FormField extends Component {
   }
 
   inputControl() {
-    const { errors, label: labelText, name, value } = this.props
+    const { errors, label: labelText, name, value, placeholder } = this.props
+    const { onBlur, onFocus, onChange } = this.props
+
     const input =
       <input type='text' name={name} value={value}
-             onChange={this.props.onChange}
-             onBlur={this.props.onBlur}
-             onFocus={this.props.onFocus}
-             placeholder={this.props.placeholder} />
+             onChange={onChange}
+             onBlur={onBlur}
+             onFocus={onFocus}
+             placeholder={placeholder} />
 
     if(this.props.busy) {
       return (<div className='ui input icon loading'>

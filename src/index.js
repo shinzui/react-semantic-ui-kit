@@ -3,6 +3,7 @@ import BreadcrumbDivider from './collections/breadcrumb/BreadcrumbDivider'
 import BreadcrumbSection from './collections/breadcrumb/BreadcrumbSection'
 import Form from './collections/form/Form'
 import FormField from './collections/form/FormField'
+import FormFieldGroup from './collections/form/FormFieldGroup'
 import Grid from './collections/grid/Grid'
 import Column from './collections/grid/Column'
 import Row from './collections/grid/Row'
@@ -97,6 +98,7 @@ export {
   Flag,
   Form,
   FormField,
+  FormFieldGroup,
   Grid,
   Image,
   ImageGroup,
