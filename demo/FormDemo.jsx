@@ -51,6 +51,21 @@ export default class FormDemo extends Component {
         </Segment>
 
         <Segment>
+          <h3>Equal width form</h3>
+          <Form equalWidth>
+            <FormFieldGroup>
+              <FormField name='username' label='Username' placeholder='Username' />
+              <FormField name='password' label='Password' placeholder='Password' />
+            </FormFieldGroup>
+            <FormFieldGroup>
+              <FormField name='firstName' label='First Name' placeholder='First Name' />
+              <FormField name='middleName' label='Middle Name' placeholder='Middle Name' />
+              <FormField name='lastName' label='Last Name' placeholder='Last Name' />
+            </FormFieldGroup>
+          </Form>
+        </Segment>
+
+        <Segment>
           <h3>Disabled fields</h3>
           <Form>
             <FormField disabled name='username' label='Username' width={6} placeholder='Username'/>
