@@ -51,6 +51,24 @@ export default class FormDemo extends Component {
         </Segment>
 
         <Segment>
+          <h3>Small form</h3>
+          <Form size='small'>
+            <FormFieldGroup>
+              <FormField name='username' label='Username' placeholder='Username' />
+              <FormField name='password' label='Password' placeholder='Password' />
+            </FormFieldGroup>
+          </Form>
+
+          <h3>Large form</h3>
+          <Form size='large'>
+            <FormFieldGroup>
+              <FormField name='username' label='Username' placeholder='Username' />
+              <FormField name='password' label='Password' placeholder='Password' />
+            </FormFieldGroup>
+          </Form>
+        </Segment>
+
+        <Segment>
           <h3>Equal width form</h3>
           <Form equalWidth>
             <FormFieldGroup>
