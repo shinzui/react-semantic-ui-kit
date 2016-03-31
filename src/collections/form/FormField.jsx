@@ -63,7 +63,7 @@ export default class FormField extends Component {
   }
 
   render() {
-    const { errors, label: labelText, name, value } = this.props
+    const { errors, label: labelText, name, value, children } = this.props
     const hasErrors = errors && errors.size > 0
 
     let widthClasses = this.widthClasses()
@@ -72,7 +72,7 @@ export default class FormField extends Component {
     let fieldClasses = classNames('ui', classFromProps, 'field', {'error': hasErrors}, widthClasses )
     let pointingLabel = hasErrors ? <Label basic pointing className='prompt red'>{errors.get(0)}</Label> : undefined
 
-    const input = this.inputControl()
+    const input = children ? children : this.inputControl()
     return (
       <div className={fieldClasses}>
         {label}
