@@ -10,9 +10,18 @@ const CheckboxDemo = (props) => {
         <Checkbox name='checkbox' label='I agree to the terms' />
       </Segment>
 
-      <Segment floated='left' compact>
-        <Checkbox name='checkbox' fitted label=' '/>
+      <Segment clearing>
+        <Segment floated='left' compact>
+          <Checkbox name='checkbox' fitted label=' '/>
+        </Segment>
       </Segment>
+
+      <Segment>
+        <h3>Radio</h3>
+
+        <Checkbox radio name='radio' label='Radio choice' />
+      </Segment>
+
     </div>
   )
 }
