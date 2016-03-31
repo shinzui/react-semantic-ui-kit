@@ -23,12 +23,13 @@ export default class FormFieldGroup extends Component {
     },
     fields: PropTypes.number,
     inline: PropTypes.bool,
-    equalWidth: PropTypes.bool
+    equalWidth: PropTypes.bool,
+    grouped: PropTypes.bool
   }
 
   render() {
     const { className, children, fields } = this.props
-    const classFromProps = propsToClasses(['inline', 'equalWidth'], this.props)
+    const classFromProps = propsToClasses(['inline', 'equalWidth', 'grouped'], this.props)
     const classes = classNames(spellNumber(fields), classFromProps, 'fields', className)
 
     return <div className={classes}>{children}</div>

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Form, FormField, FormFieldGroup, Segment, Button } from '../src/index'
+import { Form, FormField, FormFieldGroup, Segment, Button, Checkbox } from '../src/index'
 
 export default class FormDemo extends Component {
 
@@ -100,6 +100,23 @@ export default class FormDemo extends Component {
 
             <FormField inline name='password' label='Password' placeholder='Password'/>
             <Button submit>Submit</Button>
+          </Form>
+        </Segment>
+
+        <Segment>
+          <h3>Grouped fields</h3>
+          <Form>
+            <FormFieldGroup grouped>
+              <FormField>
+                <Checkbox name='tokyo' label='Tokyo' />
+              </FormField>
+              <FormField>
+                <Checkbox name='kyoto' label='Kyoto' />
+              </FormField>
+              <FormField>
+                <Checkbox name='osaka' label='Osaka' />
+              </FormField>
+            </FormFieldGroup>
           </Form>
         </Segment>
 
