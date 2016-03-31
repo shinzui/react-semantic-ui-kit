@@ -102,6 +102,16 @@ export default class FormDemo extends Component {
             <Button submit>Submit</Button>
           </Form>
         </Segment>
+
+        <Segment>
+          <h3>Required fields</h3>
+          <Form>
+            <FormField required name='username' label='Username' placeholder='Username'/>
+
+            <FormField required name='password' label='Password' placeholder='Password'/>
+            <Button submit>Submit</Button>
+          </Form>
+        </Segment>
       </div>
     )
   }
