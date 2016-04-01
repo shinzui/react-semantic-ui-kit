@@ -48,7 +48,8 @@ import Feed from './views/feed/Feed'
 import FeedEvent from './views/feed/FeedEvent'
 import Item from './views/item/Item'
 import ItemGroup from './views/item/ItemGroup'
-import Statistic from './views/Statistic'
+import Statistic from './views/statistic/Statistic'
+import StatisticGroup from './views/statistic/StatisticGroup'
 
 import Actions from './elements/extra/Actions'
 import Author from './elements/extra/Author'
@@ -122,6 +123,7 @@ export {
   Segment,
   SegmentGroup,
   Statistic,
+  StatisticGroup,
   Step,
   StepGroup,
   Table,

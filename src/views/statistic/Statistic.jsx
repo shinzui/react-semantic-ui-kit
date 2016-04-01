@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react'
 import classNames from 'classnames'
 
-import SemanticUiPropTypes from '../common/SemanticUiPropTypes'
+import SemanticUiPropTypes from '../../common/SemanticUiPropTypes'
 
 export default class Statistic extends Component {
 

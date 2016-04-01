@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Statistic, Segment } from '../src/index'
+import { Statistic, Segment, StatisticGroup } from '../src/index'
 
 export default class StatisticDemo extends Component {
 
@@ -11,6 +11,15 @@ export default class StatisticDemo extends Component {
         </Segment>
         <Segment>
           <Statistic label='Likes' value='999' labelPosition='top' />
+        </Segment>
+
+        <Segment>
+          <h3>Statistic group</h3>
+          <StatisticGroup>
+            <Statistic label='Favorites' value='1000' />
+            <Statistic label='Views' value='99000' />
+            <Statistic label='Members' value='7000' />
+          </StatisticGroup>
         </Segment>
         <Segment>
           <h3>Various Sizes</h3>
