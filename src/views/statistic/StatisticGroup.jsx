@@ -9,6 +9,7 @@ export default class StatisticGroup extends Component {
 
   static propTypes = {
     style: PropTypes.object,
+    horizontal: PropTypes.bool,
     children: (props, propName, componentName) => {
       const prop = props[propName]
 
@@ -25,8 +26,8 @@ export default class StatisticGroup extends Component {
   }
 
   render() {
-    const { className, children, style } = this.props
-    const classes = classNames('ui', 'statistics', className)
+    const { className, children, style, horizontal } = this.props
+    const classes = classNames('ui', {'horizontal': horizontal}, 'statistics', className)
 
     return <div className={classes} style={style}>{children}</div>
   }

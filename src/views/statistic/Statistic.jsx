@@ -9,7 +9,8 @@ export default class Statistic extends Component {
     value: PropTypes.string.isRequired,
     label: PropTypes.string.isRequired,
     size: SemanticUiPropTypes.size,
-    labelPosition: PropTypes.oneOf(['top', 'bottom'])
+    labelPosition: PropTypes.oneOf(['top', 'bottom']),
+    horizontal: PropTypes.bool
   }
 
   static defaultProps = {
@@ -17,8 +18,8 @@ export default class Statistic extends Component {
   }
 
   render() {
-    const { value, label, className, size, labelPosition } = this.props
-    const classes = classNames('ui', size, 'statistic', className)
+    const { value, label, className, size, horizontal, labelPosition } = this.props
+    const classes = classNames('ui', {'horizontal': horizontal}, size, 'statistic', className)
 
     const valueEl = <div className='value'>{value}</div>
     const labelEl = <div className='label'>{label}</div>

@@ -21,6 +21,21 @@ export default class StatisticDemo extends Component {
             <Statistic label='Members' value='7000' />
           </StatisticGroup>
         </Segment>
+
+        <Segment>
+          <h3>Horizontal statistic</h3>
+          <Statistic label='Likes' value='999' horizontal />
+        </Segment>
+
+        <Segment>
+          <h3>Horizontal statistic group</h3>
+          <StatisticGroup horizontal>
+            <Statistic label='Favorites' value='1000' />
+            <Statistic label='Views' value='99000' />
+            <Statistic label='Members' value='7000' />
+          </StatisticGroup>
+        </Segment>
+
         <Segment>
           <h3>Various Sizes</h3>
           <Statistic label='Views' value='1000' size='mini' />
