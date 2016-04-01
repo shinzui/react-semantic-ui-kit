@@ -37,6 +37,15 @@ export default class StatisticDemo extends Component {
         </Segment>
 
         <Segment>
+          <h3>Evenly divided</h3>
+          <StatisticGroup stats={3}>
+            <Statistic label='Favorites' value='1000' />
+            <Statistic label='Views' value='99000' />
+            <Statistic label='Members' value='7000' />
+          </StatisticGroup>
+        </Segment>
+
+        <Segment>
           <h3>Various Sizes</h3>
           <Statistic label='Views' value='1000' size='mini' />
           <Statistic label='Views' value='1500' size='tiny' />
