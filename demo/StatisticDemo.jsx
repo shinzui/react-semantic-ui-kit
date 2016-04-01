@@ -4,6 +4,9 @@ import { Statistic, Segment, StatisticGroup } from '../src/index'
 export default class StatisticDemo extends Component {
 
   render() {
+    const colors = ['red', 'orange', 'yellow', 'olive', 'green', 'teal', 'blue',
+                            'violet', 'purple', 'pink', 'brown', 'grey', 'black']
+
     return (
       <div>
         <Segment>
@@ -42,6 +45,15 @@ export default class StatisticDemo extends Component {
             <Statistic label='Favorites' value='1000' />
             <Statistic label='Views' value='99000' />
             <Statistic label='Members' value='7000' />
+          </StatisticGroup>
+        </Segment>
+
+        <Segment>
+          <h3>Color</h3>
+          <StatisticGroup>
+            {colors.map( color => {
+              return <Statistic key={color} color={color} label={color} value={Math.floor(Math.random() * 10)} />
+            })}
           </StatisticGroup>
         </Segment>
 
