@@ -6,6 +6,7 @@ export default class StatisticDemo extends Component {
   render() {
     const colors = ['red', 'orange', 'yellow', 'olive', 'green', 'teal', 'blue',
                             'violet', 'purple', 'pink', 'brown', 'grey', 'black']
+    const sizes = ['mini', 'tiny', 'small', 'medium', 'large', 'big', 'huge', 'massive']
 
     return (
       <div>
@@ -52,18 +53,23 @@ export default class StatisticDemo extends Component {
           <h3>Color</h3>
           <StatisticGroup>
             {colors.map( color => {
-              return <Statistic key={color} color={color} label={color} value={Math.floor(Math.random() * 10)} />
+              return <Statistic key={color} color={color} label={color} value={Math.floor(Math.random() * 10).toString()} />
             })}
           </StatisticGroup>
         </Segment>
 
         <Segment>
-          <h3>Various Sizes</h3>
-          <Statistic label='Views' value='1000' size='mini' />
-          <Statistic label='Views' value='1500' size='tiny' />
-          <Statistic label='Views' value='2000' size='small' />
-          <Statistic label='Views' value='5000' size='large' />
-          <Statistic label='Views' value='90000' size='huge' />
+          <h3>Size</h3>
+          {sizes.map( size => {
+            return <Statistic key={size} size={size} label={size} value={Math.floor(Math.random() * 10).toString()} />
+          })}
+        </Segment>
+
+        <Segment>
+          <h3>Horizontal sizes</h3>
+          {sizes.map( size => {
+            return <Statistic horizontal key={size} size={size} label={size} value={Math.floor(Math.random() * 10).toString()} />
+          })}
         </Segment>
       </div>
     )
