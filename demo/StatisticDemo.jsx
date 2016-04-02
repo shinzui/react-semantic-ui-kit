@@ -53,7 +53,7 @@ export default class StatisticDemo extends Component {
           <h3>Color</h3>
           <StatisticGroup>
             {colors.map( color => {
-              return <Statistic key={color} color={color} label={color} value={Math.floor(Math.random() * 10).toString()} />
+              return <Statistic key={color} color={color} label={color} value={Math.floor(Math.random() * 10)} />
             })}
           </StatisticGroup>
         </Segment>
@@ -61,14 +61,14 @@ export default class StatisticDemo extends Component {
         <Segment>
           <h3>Size</h3>
           {sizes.map( size => {
-            return <Statistic key={size} size={size} label={size} value={Math.floor(Math.random() * 10).toString()} />
+            return <Statistic key={size} size={size} label={size} value={Math.floor(Math.random() * 10)} />
           })}
         </Segment>
 
         <Segment>
           <h3>Horizontal sizes</h3>
           {sizes.map( size => {
-            return <Statistic horizontal key={size} size={size} label={size} value={Math.floor(Math.random() * 10).toString()} />
+            return <Statistic horizontal key={size} size={size} label={size} value={Math.floor(Math.random() * 10)} />
           })}
         </Segment>
       </div>

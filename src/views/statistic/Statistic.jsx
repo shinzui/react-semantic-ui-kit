@@ -6,7 +6,7 @@ import SemanticUiPropTypes from '../../common/SemanticUiPropTypes'
 export default class Statistic extends Component {
 
   static propTypes = {
-    value: PropTypes.string.isRequired,
+    value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
     label: PropTypes.string.isRequired,
     size: SemanticUiPropTypes.size,
     color: SemanticUiPropTypes.color,
