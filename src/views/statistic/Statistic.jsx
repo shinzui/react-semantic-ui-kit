@@ -12,6 +12,7 @@ export default class Statistic extends Component {
     color: SemanticUiPropTypes.color,
     labelPosition: PropTypes.oneOf(['top', 'bottom']),
     horizontal: PropTypes.bool,
+    inverted: PropTypes.bool,
     style: PropTypes.object
   }
 
@@ -21,8 +22,8 @@ export default class Statistic extends Component {
 
   render() {
     const { value, label, className, size, style,
-      horizontal, labelPosition, color } = this.props
-    const classes = classNames('ui', {'horizontal': horizontal}, size, color, 'statistic', className)
+      horizontal, labelPosition, color, inverted } = this.props
+    const classes = classNames('ui', {'inverted': inverted} , {'horizontal': horizontal}, size, color, 'statistic', className)
 
     const valueEl = <div className='value'>{value}</div>
     const labelEl = <div className='label'>{label}</div>

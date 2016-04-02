@@ -58,6 +58,13 @@ export default class StatisticDemo extends Component {
           </StatisticGroup>
         </Segment>
 
+        <Segment inverted>
+          <h3>Color</h3>
+          {colors.map( color => {
+            return <Statistic inverted key={color} color={color} label={color} value={Math.floor(Math.random() * 10)} />
+          })}
+        </Segment>
+
         <Segment>
           <h3>Size</h3>
           {sizes.map( size => {
