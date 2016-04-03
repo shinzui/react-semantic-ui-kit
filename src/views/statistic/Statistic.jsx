@@ -2,6 +2,7 @@ import React, { Component, PropTypes } from 'react'
 import classNames from 'classnames'
 
 import SemanticUiPropTypes from '../../common/SemanticUiPropTypes'
+import propsToClasses from '../../util/propsToClasses'
 
 export default class Statistic extends Component {
 
@@ -13,6 +14,7 @@ export default class Statistic extends Component {
     labelPosition: PropTypes.oneOf(['top', 'bottom']),
     horizontal: PropTypes.bool,
     inverted: PropTypes.bool,
+    textValue: PropTypes.bool,
     style: PropTypes.object
   }
 
@@ -21,11 +23,15 @@ export default class Statistic extends Component {
   }
 
   render() {
-    const { value, label, className, size, style,
-      horizontal, labelPosition, color, inverted } = this.props
-    const classes = classNames('ui', {'inverted': inverted} , {'horizontal': horizontal}, size, color, 'statistic', className)
+    const { value, label, className, size, style, textValue,
+      horizontal, labelPosition, color, inverted, children } = this.props
 
-    const valueEl = <div className='value'>{value}</div>
+    const classesFromProps = propsToClasses(['inverted', 'horizontal'], this.props)
+
+    const classes = classNames('ui', classesFromProps, size, color, 'statistic', className)
+    const valueClasses = classNames({'text': textValue}, 'value')
+
+    const valueEl = <div className={valueClasses}>{value}</div>
     const labelEl = <div className='label'>{label}</div>
 
     const top = labelPosition === 'top' ?  labelEl : valueEl

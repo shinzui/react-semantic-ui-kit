@@ -50,6 +50,11 @@ export default class StatisticDemo extends Component {
         </Segment>
 
         <Segment>
+          <h3>Text value</h3>
+          <Statistic label='Signups' value='Thousand' textValue />
+        </Segment>
+
+        <Segment>
           <h3>Color</h3>
           <StatisticGroup>
             {colors.map( color => {
