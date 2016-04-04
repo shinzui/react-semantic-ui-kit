@@ -11,7 +11,13 @@ import Label from '../../index'
 export default class FormField extends Component {
 
   static propTypes = {
-    name: PropTypes.string.isRequired,
+    name: (props, propName, componentName) => {
+      if(!props.hasOwnProperty('children')) {
+        if(!props.hasOwnProperty(propName)) {
+          return new Error(`Required ${propName} was not specified in ${componentName}`)
+        }
+      }
+    },
     label: PropTypes.string,
     placeholder: PropTypes.string,
     width: PropTypes.number,
