@@ -129,6 +129,16 @@ export default class FormDemo extends Component {
             <Button submit>Submit</Button>
           </Form>
         </Segment>
+
+        <Segment>
+          <h3>Read-only fields</h3>
+          <Form>
+            <FormField readOnly name='username' label='Username' placeholder='Username'/>
+
+            <FormField readOnly name='password' label='Password' placeholder='Password'/>
+            <Button submit>Submit</Button>
+          </Form>
+        </Segment>
       </div>
     )
   }

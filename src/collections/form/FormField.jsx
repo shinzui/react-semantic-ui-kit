@@ -21,7 +21,8 @@ export default class FormField extends Component {
     onFocus: PropTypes.func.isRequired,
     disabled: PropTypes.bool,
     inline: PropTypes.bool,
-    required: PropTypes.bool
+    required: PropTypes.bool,
+    readOnly: PropTypes.bool
   }
 
   static defaultProps = {
@@ -42,7 +43,7 @@ export default class FormField extends Component {
   }
 
   inputControl() {
-    const { errors, label: labelText, name, value, placeholder } = this.props
+    const { errors, label: labelText, name, value, placeholder, readOnly } = this.props
     const { onBlur, onFocus, onChange } = this.props
 
     const input =
@@ -50,7 +51,7 @@ export default class FormField extends Component {
              onChange={onChange}
              onBlur={onBlur}
              onFocus={onFocus}
-             placeholder={placeholder} />
+             placeholder={placeholder} readOnly={readOnly}/>
 
     if(this.props.busy) {
       return (<div className='ui input icon loading'>
