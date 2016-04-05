@@ -83,6 +83,16 @@ export default class FormDemo extends Component {
           </Form>
         </Segment>
 
+        <Segment inverted>
+          <h3>Inverted form</h3>
+          <Form inverted>
+            <FormFieldGroup>
+              <FormField name='username' label='Username' placeholder='Username' />
+              <FormField name='password' label='Password' placeholder='Password' />
+            </FormFieldGroup>
+          </Form>
+        </Segment>
+
         <Segment>
           <h3>Disabled fields</h3>
           <Form>

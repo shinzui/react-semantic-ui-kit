@@ -11,12 +11,13 @@ export default class Form extends Component {
     reply: PropTypes.bool,
     loading: PropTypes.bool,
     equalWidth: PropTypes.bool,
+    inverted: PropTypes.bool,
     size: PropTypes.oneOf(['small', 'large'])
   }
 
   render() {
     const { size, className } = this.props
-    const classesFromProps = propsToClasses(['reply', 'equalWidth', 'loading'], this.props)
+    const classesFromProps = propsToClasses(['reply', 'equalWidth', 'loading', 'inverted'], this.props)
     const classes = classNames('ui', classesFromProps, size, 'form', {'error' : !this.props.valid}, className)
 
     return (
