@@ -70,13 +70,13 @@ export default class FormField extends Component {
   }
 
   render() {
-    const { errors, label: labelText, name, value, children } = this.props
+    const { errors, label: labelText, name, value, className, children } = this.props
     const hasErrors = errors && errors.size > 0
 
     let widthClasses = this.widthClasses()
     let label = labelText ? <label>{labelText}</label> : ''
     const classFromProps = propsToClasses(['disabled', 'inline', 'required'], this.props)
-    let fieldClasses = classNames('ui', classFromProps, 'field', {'error': hasErrors}, widthClasses )
+    let fieldClasses = classNames('ui', classFromProps, 'field', {'error': hasErrors}, widthClasses, className )
     let pointingLabel = hasErrors ? <Label basic pointing className='prompt red'>{errors.get(0)}</Label> : undefined
 
     const input = children ? children : this.inputControl()
