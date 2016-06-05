@@ -65,7 +65,11 @@ export default class FormField extends Component {
         <i className='icon' />
       </div>)
     } else {
-      return input
+      return (
+        <div className='ui input'>
+          {input}
+        </div>
+      )
     }
   }
 
@@ -79,13 +83,11 @@ export default class FormField extends Component {
     let fieldClasses = classNames('ui', classFromProps, 'field', {'error': hasErrors}, widthClasses, className )
     let pointingLabel = hasErrors ? <Label basic pointing className='prompt red'>{errors.get(0)}</Label> : undefined
 
-    const input = children ? children : this.inputControl()
+    const input = children ? <div className='ui input'>{children}</div> : this.inputControl()
     return (
       <div className={fieldClasses}>
         {label}
-        <div className='ui input icon loading'>
-          {input}
-        </div>
+        {input}
         {pointingLabel}
       </div>
     )
