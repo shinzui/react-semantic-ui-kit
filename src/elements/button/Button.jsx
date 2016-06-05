@@ -64,7 +64,7 @@ export default class Button extends Component {
   }
 
   render() {
-    const { labeledIcon, className, color, attached, labeled, size, onClick } = this.props
+    const { labeledIcon, className, color, attached, labeled, size, onClick, ...other } = this.props
     const classesFromProps = propsToClasses(['circular', 'inverted', 'primary', 'secondary', 'basic',
                                             'active', 'disabled', 'loading', 'submit',
                                             'fluid', 'icon', 'compact'], this.props)
@@ -78,11 +78,9 @@ export default class Button extends Component {
                                floatedClasses(this.props), color,
                                'button', className)
 
-    if(labeled || attached) {
-      return <div className={classes} onClick={onClick}>{this.props.children}</div>
-    } else {
-      return <button className={classes} onClick={onClick}>{this.props.children}</button>
-    }
+    const Component = labeled || attached ? 'div' : 'button'
+
+    return <Component className={classes} onClick={onClick} {...other}>{this.props.children}</Component>
   }
 
 }
